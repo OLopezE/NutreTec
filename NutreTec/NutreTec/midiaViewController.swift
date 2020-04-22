@@ -9,14 +9,35 @@
 import UIKit
 
 class midiaViewController: UIViewController {
+    
+    @IBOutlet weak var fecha: UILabel!
+    
+    var date = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        obtenDia()
     }
     
-
+    
+    
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        date = date.addingTimeInterval(-86400)
+        obtenDia()
+    }
+    
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        date = date.addingTimeInterval(86400)
+        obtenDia()
+    }
+    
+    func obtenDia(){
+        let dia: DateFormatter = DateFormatter()
+        dia.dateFormat = "MMM dd, yyyy"
+        fecha.text = dia.string(from: date)
+    }
     /*
     // MARK: - Navigation
 

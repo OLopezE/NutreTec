@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cOi-3B-xa4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -61,13 +61,40 @@
                     <view key="view" contentMode="scaleToFill" id="FM9-0H-zCD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-9u-dG7">
+                                <rect key="frame" x="169" y="36" width="225" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="NNk-R5-H4V"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WmG-W1-4F1" appends="YES" id="5xt-DS-Ks0"/>
+                            <outletCollection property="gestureRecognizers" destination="smh-DP-Grw" appends="YES" id="ZFI-m4-1gK"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="fecha" destination="iYn-9u-dG7" id="taq-as-4jT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3E-7t-fb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="WmG-W1-4F1">
+                    <connections>
+                        <action selector="swipeRight:" destination="cOi-3B-xa4" id="YAB-gu-GeE"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="smh-DP-Grw">
+                    <connections>
+                        <action selector="swipeLeft:" destination="cOi-3B-xa4" id="g6h-v5-EdD"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2817" y="86"/>
+            <point key="canvasLocation" x="2937.68115942029" y="-35.491071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J1n-Yi-u7u">
