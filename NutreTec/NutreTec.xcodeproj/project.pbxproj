@@ -7,31 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E6B273244E5329000995DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6B272244E5329000995DD /* AppDelegate.swift */; };
-		00E6B275244E5329000995DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6B274244E5329000995DD /* SceneDelegate.swift */; };
-		00E6B277244E5329000995DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6B276244E5329000995DD /* ViewController.swift */; };
-		00E6B27A244E5329000995DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E6B278244E5329000995DD /* Main.storyboard */; };
-		00E6B27C244E532B000995DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E6B27B244E532B000995DD /* Assets.xcassets */; };
-		00E6B27F244E532B000995DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E6B27D244E532B000995DD /* LaunchScreen.storyboard */; };
-		00E6B287244F3C23000995DD /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6B286244F3C23000995DD /* navigationTableViewController.swift */; };
-		00E6B289244F3C45000995DD /* midiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6B288244F3C45000995DD /* midiaViewController.swift */; };
+		00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3042450FDAE00AF31C4 /* AppDelegate.swift */; };
+		00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */; };
+		00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3082450FDAE00AF31C4 /* FirstViewController.swift */; };
+		00FED30B2450FDAE00AF31C4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED30A2450FDAE00AF31C4 /* SecondViewController.swift */; };
+		00FED30E2450FDAE00AF31C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED30C2450FDAE00AF31C4 /* Main.storyboard */; };
+		00FED3102450FDB300AF31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FED30F2450FDB300AF31C4 /* Assets.xcassets */; };
+		00FED3132450FDB300AF31C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00E6B26F244E5329000995DD /* NutreTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutreTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E6B272244E5329000995DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00E6B274244E5329000995DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00E6B276244E5329000995DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		00E6B279244E5329000995DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		00E6B27B244E532B000995DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		00E6B27E244E532B000995DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		00E6B280244E532B000995DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E6B286244F3C23000995DD /* navigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationTableViewController.swift; sourceTree = "<group>"; };
-		00E6B288244F3C45000995DD /* midiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = midiaViewController.swift; sourceTree = "<group>"; };
+		00FED3012450FDAE00AF31C4 /* NutreTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutreTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00FED3042450FDAE00AF31C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		00FED3082450FDAE00AF31C4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		00FED30A2450FDAE00AF31C4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		00FED30D2450FDAE00AF31C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00FED30F2450FDB300AF31C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00FED3122450FDB300AF31C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00FED3142450FDB300AF31C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E6B26C244E5329000995DD /* Frameworks */ = {
+		00FED2FE2450FDAE00AF31C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,34 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E6B266244E5329000995DD = {
+		00FED2F82450FDAE00AF31C4 = {
 			isa = PBXGroup;
 			children = (
-				00E6B271244E5329000995DD /* NutreTec */,
-				00E6B270244E5329000995DD /* Products */,
+				00FED3032450FDAE00AF31C4 /* NutreTec */,
+				00FED3022450FDAE00AF31C4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		00E6B270244E5329000995DD /* Products */ = {
+		00FED3022450FDAE00AF31C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00E6B26F244E5329000995DD /* NutreTec.app */,
+				00FED3012450FDAE00AF31C4 /* NutreTec.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E6B271244E5329000995DD /* NutreTec */ = {
+		00FED3032450FDAE00AF31C4 /* NutreTec */ = {
 			isa = PBXGroup;
 			children = (
-				00E6B272244E5329000995DD /* AppDelegate.swift */,
-				00E6B274244E5329000995DD /* SceneDelegate.swift */,
-				00E6B276244E5329000995DD /* ViewController.swift */,
-				00E6B278244E5329000995DD /* Main.storyboard */,
-				00E6B288244F3C45000995DD /* midiaViewController.swift */,
-				00E6B286244F3C23000995DD /* navigationTableViewController.swift */,
-				00E6B27B244E532B000995DD /* Assets.xcassets */,
-				00E6B27D244E532B000995DD /* LaunchScreen.storyboard */,
-				00E6B280244E532B000995DD /* Info.plist */,
+				00FED3042450FDAE00AF31C4 /* AppDelegate.swift */,
+				00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */,
+				00FED3082450FDAE00AF31C4 /* FirstViewController.swift */,
+				00FED30A2450FDAE00AF31C4 /* SecondViewController.swift */,
+				00FED30C2450FDAE00AF31C4 /* Main.storyboard */,
+				00FED30F2450FDB300AF31C4 /* Assets.xcassets */,
+				00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */,
+				00FED3142450FDB300AF31C4 /* Info.plist */,
 			);
 			path = NutreTec;
 			sourceTree = "<group>";
@@ -76,13 +73,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E6B26E244E5329000995DD /* NutreTec */ = {
+		00FED3002450FDAE00AF31C4 /* NutreTec */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E6B283244E532B000995DD /* Build configuration list for PBXNativeTarget "NutreTec" */;
+			buildConfigurationList = 00FED3172450FDB300AF31C4 /* Build configuration list for PBXNativeTarget "NutreTec" */;
 			buildPhases = (
-				00E6B26B244E5329000995DD /* Sources */,
-				00E6B26C244E5329000995DD /* Frameworks */,
-				00E6B26D244E5329000995DD /* Resources */,
+				00FED2FD2450FDAE00AF31C4 /* Sources */,
+				00FED2FE2450FDAE00AF31C4 /* Frameworks */,
+				00FED2FF2450FDAE00AF31C4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,25 +87,25 @@
 			);
 			name = NutreTec;
 			productName = NutreTec;
-			productReference = 00E6B26F244E5329000995DD /* NutreTec.app */;
+			productReference = 00FED3012450FDAE00AF31C4 /* NutreTec.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		00E6B267244E5329000995DD /* Project object */ = {
+		00FED2F92450FDAE00AF31C4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = disp_moviles;
 				TargetAttributes = {
-					00E6B26E244E5329000995DD = {
+					00FED3002450FDAE00AF31C4 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 00E6B26A244E5329000995DD /* Build configuration list for PBXProject "NutreTec" */;
+			buildConfigurationList = 00FED2FC2450FDAE00AF31C4 /* Build configuration list for PBXProject "NutreTec" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 00E6B266244E5329000995DD;
-			productRefGroup = 00E6B270244E5329000995DD /* Products */;
+			mainGroup = 00FED2F82450FDAE00AF31C4;
+			productRefGroup = 00FED3022450FDAE00AF31C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00E6B26E244E5329000995DD /* NutreTec */,
+				00FED3002450FDAE00AF31C4 /* NutreTec */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E6B26D244E5329000995DD /* Resources */ = {
+		00FED2FF2450FDAE00AF31C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E6B27F244E532B000995DD /* LaunchScreen.storyboard in Resources */,
-				00E6B27C244E532B000995DD /* Assets.xcassets in Resources */,
-				00E6B27A244E5329000995DD /* Main.storyboard in Resources */,
+				00FED3132450FDB300AF31C4 /* LaunchScreen.storyboard in Resources */,
+				00FED3102450FDB300AF31C4 /* Assets.xcassets in Resources */,
+				00FED30E2450FDAE00AF31C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E6B26B244E5329000995DD /* Sources */ = {
+		00FED2FD2450FDAE00AF31C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E6B277244E5329000995DD /* ViewController.swift in Sources */,
-				00E6B287244F3C23000995DD /* navigationTableViewController.swift in Sources */,
-				00E6B289244F3C45000995DD /* midiaViewController.swift in Sources */,
-				00E6B273244E5329000995DD /* AppDelegate.swift in Sources */,
-				00E6B275244E5329000995DD /* SceneDelegate.swift in Sources */,
+				00FED30B2450FDAE00AF31C4 /* SecondViewController.swift in Sources */,
+				00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */,
+				00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */,
+				00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		00E6B278244E5329000995DD /* Main.storyboard */ = {
+		00FED30C2450FDAE00AF31C4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				00E6B279244E5329000995DD /* Base */,
+				00FED30D2450FDAE00AF31C4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		00E6B27D244E532B000995DD /* LaunchScreen.storyboard */ = {
+		00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				00E6B27E244E532B000995DD /* Base */,
+				00FED3122450FDB300AF31C4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		00E6B281244E532B000995DD /* Debug */ = {
+		00FED3152450FDB300AF31C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		00E6B282244E532B000995DD /* Release */ = {
+		00FED3162450FDB300AF31C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,7 +284,7 @@
 			};
 			name = Release;
 		};
-		00E6B284244E532B000995DD /* Debug */ = {
+		00FED3182450FDB300AF31C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -305,7 +301,7 @@
 			};
 			name = Debug;
 		};
-		00E6B285244E532B000995DD /* Release */ = {
+		00FED3192450FDB300AF31C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -325,25 +321,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E6B26A244E5329000995DD /* Build configuration list for PBXProject "NutreTec" */ = {
+		00FED2FC2450FDAE00AF31C4 /* Build configuration list for PBXProject "NutreTec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00E6B281244E532B000995DD /* Debug */,
-				00E6B282244E532B000995DD /* Release */,
+				00FED3152450FDB300AF31C4 /* Debug */,
+				00FED3162450FDB300AF31C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00E6B283244E532B000995DD /* Build configuration list for PBXNativeTarget "NutreTec" */ = {
+		00FED3172450FDB300AF31C4 /* Build configuration list for PBXNativeTarget "NutreTec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00E6B284244E532B000995DD /* Debug */,
-				00E6B285244E532B000995DD /* Release */,
+				00FED3182450FDB300AF31C4 /* Debug */,
+				00FED3192450FDB300AF31C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 00E6B267244E5329000995DD /* Project object */;
+	rootObject = 00FED2F92450FDAE00AF31C4 /* Project object */;
 }

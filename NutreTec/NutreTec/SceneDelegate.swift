@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  NutreTec
 //
-//  Created by Oscar Francisco Lopez Escobar on 20/04/20.
+//  Created by Oscar Francisco Lopez Escobar on 22/04/20.
 //  Copyright © 2020 disp_moviles. All rights reserved.
 //
 
