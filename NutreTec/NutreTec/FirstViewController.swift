@@ -42,32 +42,81 @@ class FirstViewController: UIViewController {
     }
 
     func uno(n : Int){
-        if fca == 1 && Int(lblCarne.text!)! > 0 {
-            lblCarne.text = String(n +  Int(lblCarne.text!)!)
+        if fca == 1 {
+            if n == -1 && Int(lblCarne.text!)! == 0  {
+                
+            }else{
+                lblCarne.text = String(n +  Int(lblCarne.text!)!)
+            }
+            
         }
         if fv == 1 {
-            lblVegetales.text = String(n +  Int(lblVegetales.text!)!)
+            if n == -1 && Int(lblVegetales.text!)! == 0  {
+                
+            }else{
+                lblVegetales.text = String(n +  Int(lblVegetales.text!)!)
+                
+            }
+            
         }
         if flegu == 1 {
+            if n == -1 && Int(lblVegetales.text!)! == 0  {
+                
+            }else{
+                lblVegetales.text = String(n +  Int(lblVegetales.text!)!)
+                
+            }
             lblLeguminosas.text = String(n +  Int(lblLeguminosas.text!)!)
         }
         if faz == 1 {
-            lblAzucar.text = String(n +  Int(lblAzucar.text!)!)
+            if n == -1 && Int(lblAzucar.text!)! == 0  {
+                
+            }else{
+                lblAzucar.text = String(n +  Int(lblAzucar.text!)!)
+                
+            }
         }
         if fce == 1 {
-            lblCereales.text = String(n +  Int(lblCereales.text!)!)
+            if n == -1 && Int(lblCereales.text!)! == 0  {
+                
+            }else{
+                lblCereales.text = String(n +  Int(lblCereales.text!)!)
+                
+            }
         }
         if fg == 1 {
-            lblGrasas.text = String(n +  Int(lblGrasas.text!)!)
+            if n == -1 && Int(lblGrasas.text!)! == 0  {
+                
+            }else{
+                lblGrasas.text = String(n +  Int(lblGrasas.text!)!)
+                
+            }
         }
         if ff == 1 {
-            lblFrutas.text = String(n +  Int(lblFrutas.text!)!)
+            if n == -1 && Int(lblFrutas.text!)! == 0  {
+                
+            }else{
+                lblFrutas.text = String(n +  Int(lblFrutas.text!)!)
+                
+            }
         }
         if fag == 1 {
-            lblAgua.text = String(n +  Int(lblAgua.text!)!)
+            if n == -1 && Int(lblAgua.text!)! == 0  {
+                
+            }else{
+                lblAgua.text = String(n +  Int(lblAgua.text!)!)
+                
+            }
+                
         }
         if fleche == 1 {
-            lblLeche.text = String(n +  Int(lblLeche.text!)!)
+            if n == -1 && Int(lblLeche.text!)! == 0  {
+                
+            }else{
+                lblLeche.text = String(n +  Int(lblLeche.text!)!)
+                
+            }
+
         }
     }
     
