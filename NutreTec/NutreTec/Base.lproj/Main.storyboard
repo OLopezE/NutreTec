@@ -38,6 +38,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="99" height="102"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="carne"/>
+                                                <connections>
+                                                    <action selector="Carne:" destination="9pv-A4-QxB" eventType="touchUpInside" id="UWR-3b-LuI"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aba-5C-0WM">
                                                 <rect key="frame" x="8" y="81" width="46" height="21"/>
@@ -78,6 +81,9 @@
                                                 <rect key="frame" x="8" y="0.0" width="84" height="83"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="alimentos-saludables"/>
+                                                <connections>
+                                                    <action selector="Vegetales:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7F6-rX-q3Y"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -104,6 +110,9 @@
                                                 <rect key="frame" x="8" y="0.0" width="83" height="84"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="chicharos"/>
+                                                <connections>
+                                                    <action selector="leguminosas:" destination="9pv-A4-QxB" eventType="touchUpInside" id="wsE-me-917"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -130,6 +139,9 @@
                                                 <rect key="frame" x="8" y="0.0" width="79" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="caramelo"/>
+                                                <connections>
+                                                    <action selector="Azucar:" destination="9pv-A4-QxB" eventType="touchUpInside" id="q3a-96-nbe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -156,6 +168,9 @@
                                                 <rect key="frame" x="8" y="8" width="75" height="73"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="cereales"/>
+                                                <connections>
+                                                    <action selector="cereales:" destination="9pv-A4-QxB" eventType="touchUpInside" id="d5D-P4-ES4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -182,6 +197,9 @@
                                                 <rect key="frame" x="8" y="8" width="74" height="73"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="manzana"/>
+                                                <connections>
+                                                    <action selector="fruta:" destination="9pv-A4-QxB" eventType="touchUpInside" id="e0S-Ih-aZx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -194,6 +212,9 @@
                                                 <rect key="frame" x="0.0" y="-8" width="106" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-avocado-64"/>
+                                                <connections>
+                                                    <action selector="grasas:" destination="9pv-A4-QxB" eventType="touchUpInside" id="DhP-Ii-tWj"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grasas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHU-e6-NVe">
                                                 <rect key="frame" x="8" y="81" width="54" height="21"/>
@@ -220,6 +241,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-milk-80"/>
+                                                <connections>
+                                                    <action selector="leche:" destination="9pv-A4-QxB" eventType="touchUpInside" id="9rv-VV-srG"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6N6-ao-ERW">
                                                 <rect key="frame" x="8" y="81" width="47" height="21"/>
@@ -246,6 +270,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="93"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-water-glass-512"/>
+                                                <connections>
+                                                    <action selector="agua:" destination="9pv-A4-QxB" eventType="touchUpInside" id="4DD-gj-JdC"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHV-EN-7Kh">
                                                 <rect key="frame" x="8" y="81" width="40" height="21"/>
@@ -273,11 +300,17 @@
                                         <rect key="frame" x="236" y="668" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="icons8-plus-128"/>
+                                        <connections>
+                                            <action selector="mas:" destination="9pv-A4-QxB" eventType="touchUpInside" id="QA0-qJ-7D1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXp-jN-JB6">
                                         <rect key="frame" x="122" y="668" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="icons8-minus-64"/>
+                                        <connections>
+                                            <action selector="menos:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ctW-7H-djZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97192762305699487" green="0.97192762305699487" blue="0.97192762305699487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
