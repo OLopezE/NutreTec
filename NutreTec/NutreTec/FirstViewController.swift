@@ -11,6 +11,8 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var fecha: UILabel!
+    var misDias = [dias]()
+    
     var date = Date()
     
     @IBOutlet weak var lblCarne: UILabel!
@@ -39,35 +41,149 @@ class FirstViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         obtenDia()
+        buscaDia()
+        
+    }
+    
+    func buscaDia(){
+        for n in misDias {
+            if n.dia == fecha.text!{
+                lblLeche.text = String(n.leche)
+                lblAgua.text = String(n.leche)
+                lblFrutas.text = String(n.leche)
+                lblGrasas.text = String(n.leche)
+                lblCereales.text = String(n.leche)
+                lblAzucar.text = String(n.leche)
+                lblCarne.text = String(n.leche)
+                lblVegetales.text = String(n.leche)
+                lblLeguminosas.text = String(n.leche)
+            }else{
+                var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
+                misDias.append(esteDia)
+                
+                
+            }
+        }
     }
 
-    func uno(n : Int){
-        if fca == 1{
-            lblCarne.text = String(n +  Int(lblCarne.text!)!)
+    func uno(n : Int) {
+        if fca == 1 {
+            if n == -1 && Int(lblCarne.text!)! == 0  {
+                
+            }else{
+                lblCarne.text = String(n +  Int(lblCarne.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.carne += n
+                    }
+                }
+            }
         }
         if fv == 1 {
-            lblVegetales.text = String(n +  Int(lblVegetales.text!)!)
+            if n == -1 && Int(lblVegetales.text!)! == 0  {
+                
+            }else{
+                lblVegetales.text = String(n +  Int(lblVegetales.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.vegetal += n
+                    }
+                }
+                
+            }
+            
         }
         if flegu == 1 {
-            lblLeguminosas.text = String(n +  Int(lblLeguminosas.text!)!)
+            if n == -1 && Int(lblLeguminosas.text!)! == 0  {
+                
+            }else{
+                lblLeguminosas.text = String(n +  Int(lblLeguminosas.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.leguminosa += n
+                    }
+                }
+                
+            }
         }
         if faz == 1 {
-            lblAzucar.text = String(n +  Int(lblAzucar.text!)!)
+            if n == -1 && Int(lblAzucar.text!)! == 0  {
+                
+            }else{
+                lblAzucar.text = String(n +  Int(lblAzucar.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.azucar += n
+                    }
+                }
+            }
         }
         if fce == 1 {
-            lblCereales.text = String(n +  Int(lblCereales.text!)!)
+            if n == -1 && Int(lblCereales.text!)! == 0  {
+                
+            }else{
+                lblCereales.text = String(n +  Int(lblCereales.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.cereales += n
+                    }
+                }
+                
+            }
         }
         if fg == 1 {
-            lblGrasas.text = String(n +  Int(lblGrasas.text!)!)
+            if n == -1 && Int(lblGrasas.text!)! == 0  {
+                
+            }else{
+                lblGrasas.text = String(n +  Int(lblGrasas.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.grasa += n
+                    }
+                }
+                
+            }
         }
         if ff == 1 {
-            lblFrutas.text = String(n +  Int(lblFrutas.text!)!)
+            if n == -1 && Int(lblFrutas.text!)! == 0  {
+                
+            }else{
+                lblFrutas.text = String(n +  Int(lblFrutas.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.fruta += n
+                    }
+                }
+                
+            }
         }
         if fag == 1 {
-            lblAgua.text = String(n +  Int(lblAgua.text!)!)
+            if n == -1 && Int(lblAgua.text!)! == 0  {
+                
+            }else{
+                lblAgua.text = String(n +  Int(lblAgua.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.agua += n
+                    }
+                }
+                
+            }
+                
         }
         if fleche == 1 {
-            lblLeche.text = String(n +  Int(lblLeche.text!)!)
+            if n == -1 && Int(lblLeche.text!)! == 0  {
+                
+            }else{
+                lblLeche.text = String(n +  Int(lblLeche.text!)!)
+                for f in misDias {
+                    if f.dia == fecha.text!{
+                        f.leche += n
+                    }
+                }
+                
+            }
+
         }
     }
     
@@ -192,11 +308,13 @@ class FirstViewController: UIViewController {
     @IBAction func diaMas(_ sender: Any) {
         date = date.addingTimeInterval(86400)
         obtenDia()
+        buscaDia()
     }
     
     @IBAction func diaMenos(_ sender: Any) {
         date = date.addingTimeInterval(-86400)
         obtenDia()
+        buscaDia()
     }
     func obtenDia(){
         let dia: DateFormatter = DateFormatter()

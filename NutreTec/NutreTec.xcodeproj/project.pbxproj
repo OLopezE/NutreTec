@@ -15,6 +15,7 @@
 		00FED3102450FDB300AF31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FED30F2450FDB300AF31C4 /* Assets.xcassets */; };
 		00FED3132450FDB300AF31C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */; };
 		773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AB8282451516F0025101D /* SemaforoViewController.swift */; };
+		00FED31B24515AD900AF31C4 /* dias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED31A24515AD900AF31C4 /* dias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		00FED3122450FDB300AF31C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FED3142450FDB300AF31C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		773AB8282451516F0025101D /* SemaforoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforoViewController.swift; sourceTree = "<group>"; };
+		00FED31A24515AD900AF31C4 /* dias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dias.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				00FED3042450FDAE00AF31C4 /* AppDelegate.swift */,
 				00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */,
 				00FED3082450FDAE00AF31C4 /* FirstViewController.swift */,
+				00FED31A24515AD900AF31C4 /* dias.swift */,
 				00FED30A2450FDAE00AF31C4 /* MiPlanViewController.swift */,
 				00FED30C2450FDAE00AF31C4 /* Main.storyboard */,
 				773AB8282451516F0025101D /* SemaforoViewController.swift */,
@@ -148,6 +152,7 @@
 				00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */,
 				00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */,
 				773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */,
+				00FED31B24515AD900AF31C4 /* dias.swift in Sources */,
 				00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
