@@ -66,7 +66,7 @@ class FirstViewController: UIViewController {
         }
     }
 
-    func uno(n : Int){
+    func uno(n : Int) {
         if fca == 1 {
             if n == -1 && Int(lblCarne.text!)! == 0  {
                 
@@ -78,7 +78,6 @@ class FirstViewController: UIViewController {
                     }
                 }
             }
-            
         }
         if fv == 1 {
             if n == -1 && Int(lblVegetales.text!)! == 0  {
