@@ -42,7 +42,7 @@ class FirstViewController: UIViewController {
     }
 
     func uno(n : Int){
-        if fca == 1 && Int(lblCarne.text!)! > 0 {
+        if fca == 1{
             lblCarne.text = String(n +  Int(lblCarne.text!)!)
         }
         if fv == 1 {
