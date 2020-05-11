@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */; };
+		00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */; };
+		00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */; };
 		00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3042450FDAE00AF31C4 /* AppDelegate.swift */; };
 		00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */; };
 		00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3082450FDAE00AF31C4 /* FirstViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationTableViewController.swift; sourceTree = "<group>"; };
+		00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteViewController.swift; sourceTree = "<group>"; };
+		00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteExplicadoViewController.swift; sourceTree = "<group>"; };
 		00FED3012450FDAE00AF31C4 /* NutreTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutreTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FED3042450FDAE00AF31C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				00FED31A24515AD900AF31C4 /* dias.swift */,
 				00FED30A2450FDAE00AF31C4 /* MiPlanViewController.swift */,
 				00FED30C2450FDAE00AF31C4 /* Main.storyboard */,
+				00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */,
+				00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */,
 				00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */,
 				773AB8282451516F0025101D /* SemaforoViewController.swift */,
 				00FED30F2450FDB300AF31C4 /* Assets.xcassets */,
@@ -153,7 +159,9 @@
 				00FED30B2450FDAE00AF31C4 /* MiPlanViewController.swift in Sources */,
 				00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */,
 				00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */,
+				00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */,
 				773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */,
+				00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */,
 				00FED31B24515AD900AF31C4 /* dias.swift in Sources */,
 				00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */,
 				00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */,

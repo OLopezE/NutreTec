@@ -804,7 +804,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlb-wo-Icu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2368" y="-390"/>
+            <point key="canvasLocation" x="3377" y="-390"/>
         </scene>
         <!--Semaforo-->
         <scene sceneID="ANq-CS-UEx">
@@ -1041,38 +1041,11 @@
         <!--Equivalente-->
         <scene sceneID="r8C-qC-dD1">
             <objects>
-                <viewController id="W3U-lA-J7T" sceneMemberID="viewController">
+                <viewController id="W3U-lA-J7T" customClass="EquivalenteViewController" customModule="NutreTec" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bOH-x1-qM1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-gk-N5C">
-                                <rect key="frame" x="20" y="160" width="374" height="634"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7qR-nD-Lie">
-                                        <rect key="frame" x="12" y="18" width="342" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMn-cr-FYR">
-                                        <rect key="frame" x="12" y="121" width="342" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="de9-Ub-bdH">
-                                        <rect key="frame" x="12" y="224" width="342" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N0T-Wp-lix">
-                                        <rect key="frame" x="12" y="327" width="342" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-TE-ohF">
                                 <rect key="frame" x="20" y="44" width="374" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1087,15 +1060,250 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6MN-qR-vkR">
+                                <rect key="frame" x="20" y="174" width="374" height="620"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-gk-N5C">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="886"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7qR-nD-Lie">
+                                                <rect key="frame" x="12" y="18" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA6-mP-iH9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <state key="normal" title="Vegetales">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="v" id="DT1-aW-lpR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.5742843178679421" green="0.96620899438858032" blue="0.63360494331648298" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-hO-BNQ">
+                                                <rect key="frame" x="12" y="121" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOy-2z-lgb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <state key="normal" title="Carnes">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="car" id="8cK-ap-vuV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.62174987674753979" green="0.54235905009998953" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVw-Sm-gBI">
+                                                <rect key="frame" x="12" y="224" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-zu-cUd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <state key="normal" title="Leguminosas">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="leg" id="9ck-M3-W7I"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.62269592201815127" green="0.63362231164029614" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHx-4R-dgO">
+                                                <rect key="frame" x="12" y="533" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3O-B0-jw8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <state key="normal" title="Cereales">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="cer" id="nNa-GZ-BVP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.9331282383419689" green="0.89380249246450727" blue="0.48694517353561412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I23-BU-hgL">
+                                                <rect key="frame" x="12" y="327" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-jK-Ahg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <state key="normal" title="Lacteos">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="lac" id="hYG-Wg-Z67"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.6409819377658923" green="0.84503628555651733" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkb-PD-Wno">
+                                                <rect key="frame" x="12" y="430" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-vy-Ka3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <color key="tintColor" red="1" green="0.75264007799999999" blue="0.87953170839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Frutas">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="f" id="KAv-90-iba"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.91980725526809692" green="0.43774568881319181" blue="0.55983075055317555" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOe-gL-0H2">
+                                                <rect key="frame" x="16" y="739" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxf-Sz-FFa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <state key="normal" title="Grasas">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="gr" id="nrn-5v-0Nm"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Cp-1K-NiH">
+                                                <rect key="frame" x="16" y="636" width="342" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-tT-PX7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                        <state key="normal" title="Azúcares">
+                                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="az" id="bos-XE-wSr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.74798134397346006" green="0.7472833682307356" blue="0.85703639076163729" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vOM-jF-ShO"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="X4P-vc-WmF"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.9609375" green="0.9609375" blue="0.9609375" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="GJx-54-8cg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Equivalente" image="personalhotspot" catalog="system" id="ezP-FN-Dvi"/>
+                    <connections>
+                        <outlet property="scrollView" destination="6MN-qR-vkR" id="7vq-jb-775"/>
+                        <outlet property="vistaComida" destination="fEr-gk-N5C" id="Tz3-Gr-sa6"/>
+                        <outlet property="vwAzucar" destination="4Cp-1K-NiH" id="yAF-Ss-5dx"/>
+                        <outlet property="vwCarnes" destination="pQ4-hO-BNQ" id="0oA-YT-FSw"/>
+                        <outlet property="vwCereales" destination="YHx-4R-dgO" id="TKU-q5-3VZ"/>
+                        <outlet property="vwFrutas" destination="Wkb-PD-Wno" id="M0Y-Do-CiQ"/>
+                        <outlet property="vwGrasa" destination="hOe-gL-0H2" id="Vm4-IQ-9pY"/>
+                        <outlet property="vwLacteos" destination="I23-BU-hgL" id="H7e-3X-jnp"/>
+                        <outlet property="vwLeguminosas" destination="LVw-Sm-gBI" id="uxN-IP-Ojs"/>
+                        <outlet property="vwVegetales" destination="7qR-nD-Lie" id="bZJ-d3-OOq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPj-BP-GV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1560.8695652173915" y="-390.40178571428572"/>
+        </scene>
+        <!--Equivalente Explicado View Controller-->
+        <scene sceneID="GUQ-Ly-oMi">
+            <objects>
+                <viewController id="jbo-WE-tJ6" customClass="EquivalenteExplicadoViewController" customModule="NutreTec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CtE-jH-OEs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NgU-0g-yx5">
+                                <rect key="frame" x="20" y="160" width="374" height="634"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WRN-bt-BwO">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="444"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XYg-ao-M6H">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XYg-ao-M6H" id="M4L-z4-vvq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="NgU-0g-yx5" id="SHj-ZY-sDe"/>
+                                            <outlet property="delegate" destination="NgU-0g-yx5" id="U4H-OR-M3j"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.6862345950704225" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBP-TI-iUr">
+                                <rect key="frame" x="20" y="44" width="374" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxb-ak-e6b">
+                                        <rect key="frame" x="8" y="54" width="314" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.69396456866197187" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95850874352331605" green="0.95850874352331605" blue="0.95850874352331605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="aBB-Hf-V5F"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pjB-BC-Ifu"/>
+                    <connections>
+                        <outlet property="lblTitulo" destination="Pxb-ak-e6b" id="KLJ-UZ-48R"/>
+                        <outlet property="vwTabla" destination="NgU-0g-yx5" id="fmc-6m-rLq"/>
+                        <outlet property="vwTitulo" destination="wBP-TI-iUr" id="gMa-Wd-ER4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8SZ-4M-kQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2437.68115942029" y="-390.40178571428572"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1142,4 +1350,7 @@
         <image name="sunset.fill" catalog="system" width="64" height="48"/>
         <image name="yellow" width="880" height="920"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nrn-5v-0Nm"/>
+    </inferredMetricsTieBreakers>
 </document>
