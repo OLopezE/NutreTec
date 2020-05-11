@@ -8,32 +8,11 @@
 
 import UIKit
 
-
-
 class EquivalenciasViewController: UIViewController {
-    
-    
 
-    @IBOutlet weak var vwVerdura: UIView!
-    @IBOutlet weak var vwCarne: UIView!
-    @IBOutlet weak var vwLeguminosas: UIView!
-    @IBOutlet weak var vwLeche: UIView!
-    @IBOutlet weak var vwFruta: UIView!
-    @IBOutlet weak var vwCereales: UIView!
-    @IBOutlet weak var vwGrasas: UIView!
-    @IBOutlet weak var vwAzucar: UIView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        vwVerdura.layer.cornerRadius = 10
-        vwCarne.layer.cornerRadius = 10
-        vwFruta.layer.cornerRadius = 10
-        vwLeche.layer.cornerRadius = 10
-        vwAzucar.layer.cornerRadius = 10
-        vwGrasas.layer.cornerRadius = 10
-        vwCereales.layer.cornerRadius = 10
-        vwLeguminosas.layer.cornerRadius = 10
+
         // Do any additional setup after loading the view.
     }
     
