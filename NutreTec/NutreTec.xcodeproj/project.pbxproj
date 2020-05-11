@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */; };
 		00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3042450FDAE00AF31C4 /* AppDelegate.swift */; };
 		00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */; };
 		00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3082450FDAE00AF31C4 /* FirstViewController.swift */; };
@@ -16,11 +15,12 @@
 		00FED3102450FDB300AF31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FED30F2450FDB300AF31C4 /* Assets.xcassets */; };
 		00FED3132450FDB300AF31C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */; };
 		00FED31B24515AD900AF31C4 /* dias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED31A24515AD900AF31C4 /* dias.swift */; };
+		7713C71824690628003C0E9E /* EquivalenciasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713C71724690628003C0E9E /* EquivalenciasViewController.swift */; };
+		7713C71A246922A6003C0E9E /* EquivalenciasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713C719246922A6003C0E9E /* EquivalenciasTableViewController.swift */; };
 		773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AB8282451516F0025101D /* SemaforoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationTableViewController.swift; sourceTree = "<group>"; };
 		00FED3012450FDAE00AF31C4 /* NutreTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutreTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FED3042450FDAE00AF31C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +31,8 @@
 		00FED3122450FDB300AF31C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FED3142450FDB300AF31C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00FED31A24515AD900AF31C4 /* dias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dias.swift; sourceTree = "<group>"; };
+		7713C71724690628003C0E9E /* EquivalenciasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenciasViewController.swift; sourceTree = "<group>"; };
+		7713C719246922A6003C0E9E /* EquivalenciasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenciasTableViewController.swift; sourceTree = "<group>"; };
 		773AB8282451516F0025101D /* SemaforoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +72,8 @@
 				00FED31A24515AD900AF31C4 /* dias.swift */,
 				00FED30A2450FDAE00AF31C4 /* MiPlanViewController.swift */,
 				00FED30C2450FDAE00AF31C4 /* Main.storyboard */,
-				00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */,
+				7713C719246922A6003C0E9E /* EquivalenciasTableViewController.swift */,
+				7713C71724690628003C0E9E /* EquivalenciasViewController.swift */,
 				773AB8282451516F0025101D /* SemaforoViewController.swift */,
 				00FED30F2450FDB300AF31C4 /* Assets.xcassets */,
 				00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */,
@@ -155,8 +158,9 @@
 				00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */,
 				773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */,
 				00FED31B24515AD900AF31C4 /* dias.swift in Sources */,
-				00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */,
 				00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */,
+				7713C71A246922A6003C0E9E /* EquivalenciasTableViewController.swift in Sources */,
+				7713C71824690628003C0E9E /* EquivalenciasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
