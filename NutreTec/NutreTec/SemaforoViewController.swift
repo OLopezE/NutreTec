@@ -12,187 +12,190 @@ class SemaforoViewController: UIViewController {
     
     @IBOutlet weak var moverRojo: UIButton!
     @IBOutlet weak var btRojo: UIButton!
-    @IBOutlet weak var salirRojo: UIButton!
-    @IBOutlet weak var entraRojo: UIButton!
-    @IBOutlet weak var btrojoSal: UIButton!
-    @IBOutlet weak var btrojoGrasasS: UIButton!
-    @IBOutlet weak var btrojoGrasas: UIButton!
-    @IBOutlet weak var btrojoAzucar: UIButton!
     @IBOutlet weak var lbAlto: UILabel!
-    @IBOutlet weak var lbRojoNum: UILabel!
-    @IBOutlet weak var lbRojoMayor: UILabel!
-    @IBOutlet weak var lbRojo: UILabel!
-    @IBOutlet weak var lbSaturadaR: UILabel!
     var RojoCentro : CGPoint!
     var rojoSale : CGPoint!
-    var rojoAzucar : Bool = false
-    var rojoGrasa : Bool = false
-    var rojoGrasaS : Bool = false
-    var rojoSal : Bool = false
-    var contRojo = 0
     
     @IBOutlet weak var moverAmarillo: UIButton!
     @IBOutlet weak var btAmarillo: UIButton!
-    @IBOutlet weak var salirAmarillo: UIButton!
-    @IBOutlet weak var entraAmarillo: UIButton!
+
     @IBOutlet weak var lbRegular: UILabel!
-    @IBOutlet weak var lbSalAmarillo: UILabel!
-    @IBOutlet weak var lbGrasasAmarillo: UILabel!
-    @IBOutlet weak var lbGrasasSAmarillo: UILabel!
-    @IBOutlet weak var lbAzucarAmarillo: UILabel!
     var AmarilloCentro : CGPoint!
     var AmarilloSale : CGPoint!
-    var amarilloAzucar : Bool = false
-    var amarilloGrasa : Bool = false
-    var amarilloGrasaS : Bool = false
-    var amarilloSal : Bool = false
 
     @IBOutlet weak var moverVerde: UIButton!
     @IBOutlet weak var btVerde: UIButton!
-    @IBOutlet weak var salirVerde: UIButton!
-    @IBOutlet weak var entraVerde: UIButton!
     @IBOutlet weak var lbBajo: UILabel!
-    @IBOutlet weak var lbVerdeMenor: UILabel!
-    @IBOutlet weak var lbVerdeNum: UILabel!
+    
+    @IBOutlet weak var lbEs: UILabel!
+    
+    @IBOutlet weak var lbAzucar: UILabel!
+    @IBOutlet weak var lbAzucar1: UILabel!
+    @IBOutlet weak var lbAzucar2: UILabel!
+    @IBOutlet weak var lbGrasa: UILabel!
+    @IBOutlet weak var lbGrasa1: UILabel!
+    @IBOutlet weak var lbGrasa2: UILabel!
+    @IBOutlet weak var lbGrasaS: UILabel!
+    @IBOutlet weak var lbGrasaS0: UILabel!
+    @IBOutlet weak var lbGrasaS1: UILabel!
+    @IBOutlet weak var lbGrasaS2: UILabel!
+    @IBOutlet weak var lbSal: UILabel!
+    @IBOutlet weak var lbSal1: UILabel!
+    @IBOutlet weak var lbSal2: UILabel!
+    
+    
     var VerdeCentro : CGPoint!
     var verdeSale : CGPoint!
-    var verdeAzucar : Bool = false
-    var verdeGrasa : Bool = false
-    var verdeGrasaS : Bool = false
-    var verdeSal : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         RojoCentro = btRojo.center
-        rojoSale = entraRojo.center
         AmarilloCentro = btAmarillo.center
-        AmarilloSale = entraAmarillo.center
         VerdeCentro = btVerde.center
-        verdeSale = entraVerde.center
-        lbRojoNum.isHidden = true
-        lbRojoMayor.isHidden = true
-        lbAzucarAmarillo.isHidden = true
-        lbGrasasAmarillo.isHidden = true
-        lbGrasasSAmarillo.isHidden = true
-        lbSalAmarillo.isHidden = true
-        lbVerdeNum.isHidden = true
-        lbVerdeMenor.isHidden = true
-        lbSaturadaR.isHidden = true
+        lbEs.isHidden = true
+        lbAzucar.isHidden = true
+        lbAzucar1.isHidden = true
+        lbAzucar2.isHidden = true
+        lbGrasa.isHidden = true
+        lbGrasa1.isHidden = true
+        lbGrasa2.isHidden = true
+        lbGrasaS.isHidden = true
+        lbGrasaS0.isHidden = true
+        lbGrasaS1.isHidden = true
+        lbGrasaS2.isHidden = true
+        lbSal.isHidden = true
+        lbSal1.isHidden = true
+        lbSal2.isHidden = true
+        
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func clickRojo(_ sender: Any) {
-        if btRojo.center == RojoCentro{
+       if btRojo.center == RojoCentro{
             lbAlto.isHidden = true
-            entraRojo.alpha = 1
-            UIView.animate(withDuration: 0.3, animations:
-                { self.btRojo.center = self.moverRojo.center
-                    self.entraRojo.center = self.salirRojo.center})
-        } else{
-                lbAlto.isHidden = false
-                lbRojoMayor.isHidden = true
-                lbRojoNum.isHidden = true
-                UIView.animate(withDuration: 0.3, animations:
-                    { self.btRojo.center = self.RojoCentro
-                        self.entraRojo.center = self.rojoSale}, completion: {(finished: Bool) in
-                            self.entraRojo.alpha = 0}
-                            )
-            }
+            UIView.animate(withDuration: 0.3, animations:{ self.btRojo.center = self.moverRojo.center},completion:
+            {(finished: Bool) in
+                let color1 = UIColor(red: 0.9, green: 0, blue: 0.1, alpha: 0.7)
+                self.view.backgroundColor = color1
+                self.btVerde.isHidden = true
+                self.lbBajo.isHidden = true
+                self.lbRegular.isHidden = true
+                self.btAmarillo.isHidden = true
+                ///labels
+                self.lbEs.text = "ALTO"
+                self.lbAzucar1.text = ">"
+                self.lbAzucar2.text = "15g"
+                self.lbGrasa1.text = ">"
+                self.lbGrasa2.text = "20g"
+                self.lbGrasaS1.text = ">"
+                self.lbGrasaS2.text = "5g"
+                self.lbSal1.text = ">"
+                self.lbSal2.text = "1.5g"
+                ///labels
+                self.lbEs.isHidden = false
+                self.lbAzucar.isHidden = false
+                self.lbAzucar1.isHidden = false
+                self.lbAzucar2.isHidden = false
+                self.lbGrasa.isHidden = false
+                self.lbGrasa1.isHidden = false
+                self.lbGrasa2.isHidden = false
+                self.lbGrasaS.isHidden = false
+                self.lbGrasaS0.isHidden = false
+                self.lbGrasaS1.isHidden = false
+                self.lbGrasaS2.isHidden = false
+                self.lbSal.isHidden = false
+                self.lbSal1.isHidden = false
+                self.lbSal2.isHidden = false
+            })} else{
+            UIView.animate(withDuration: 0.3, animations:{ self.btRojo.center = self.RojoCentro},completion:
+            {(finished: Bool) in
+                self.lbAlto.isHidden = false
+                self.btVerde.isHidden = false
+                self.lbBajo.isHidden = false
+                self.lbRegular.isHidden = false
+                self.btAmarillo.isHidden = false
+                self.view.backgroundColor = UIColor.white})
+                ///labels
+                self.lbEs.isHidden = true
+                self.lbAzucar.isHidden = true
+                self.lbAzucar1.isHidden = true
+                self.lbAzucar2.isHidden = true
+                self.lbGrasa.isHidden = true
+                self.lbGrasa1.isHidden = true
+                self.lbGrasa2.isHidden = true
+                self.lbGrasaS.isHidden = true
+                self.lbGrasaS0.isHidden = true
+                self.lbGrasaS1.isHidden = true
+                self.lbGrasaS2.isHidden = true
+                self.lbSal.isHidden = true
+                self.lbSal1.isHidden = true
+                self.lbSal2.isHidden = true
+            
+        }
     }
 
-    @IBAction func clickInfoRojo(_ sender: Any) {
-        
-        if contRojo == 0{
-            lbRojo.text = "Grasas"
-            btrojoAzucar.alpha = 1
-            UIView.animate(withDuration: 0.3, animations:
-                {self.btrojoAzucar.center = self.RojoCentro}, completion:
-                {(finished: Bool) in
-                    self.lbRojoMayor.isHidden = false
-                    self.lbRojoNum.isHidden = false
-            }
-            )
-        }else if contRojo == 1{
-            lbSaturadaR.isHidden = false
-            lbRojoMayor.isHidden = true
-            lbRojoNum.isHidden = true
-            lbRojoNum.text = "20g"
-            btrojoGrasas.alpha = 1
-            UIView.animate(withDuration: 0.3, animations:
-                {self.btrojoGrasas.center = self.RojoCentro
-                    self.btrojoAzucar.center = self.btRojo.center
-            }, completion:
-                {(finished: Bool) in
-                    self.lbRojoMayor.isHidden = false
-                    self.lbRojoNum.isHidden = false
-            }
-            )
-            
-        }else if contRojo == 2{
-            lbRojo.text = "Sal"
-            lbSaturadaR.isHidden = true
-            lbRojoMayor.isHidden = true
-            lbRojoNum.isHidden = true
-            lbRojoNum.text = "5g"
-            btrojoGrasasS.alpha = 1
-            UIView.animate(withDuration: 0.3, animations:
-                {self.btrojoGrasasS.center = self.RojoCentro
-                    self.btrojoGrasas.center = self.btRojo.center
-            }, completion:
-                {(finished: Bool) in
-                    self.lbRojoMayor.isHidden = false
-                    self.lbRojoNum.isHidden = false
-            }
-            )
-        }else{
-            
-            lbRojoMayor.isHidden = true
-            lbRojoNum.isHidden = true
-            lbRojoNum.text = "1.5g"
-            btrojoSal.alpha = 1
-            UIView.animate(withDuration: 0.3, animations:
-                {self.btrojoSal.center = self.RojoCentro
-                    self.btrojoGrasasS.center = self.btRojo.center
-            }, completion:
-                {(finished: Bool) in
-                    self.lbRojoMayor.isHidden = false
-                    self.lbRojoNum.isHidden = false
-            }
-            )
-            entraRojo.alpha = 0
-        }
-        if contRojo < 3{
-            contRojo+=1
-        }
-        
-    }
     
     @IBAction func clickAmarillo(_ sender: Any) {
         if btAmarillo.center == AmarilloCentro{
             lbRegular.isHidden = true
-            UIView.animate(withDuration: 0.3, animations:{ self.btAmarillo.center = self.moverAmarillo.center
-                self.entraAmarillo.alpha = 1
-                self.entraAmarillo.center = self.AmarilloCentro
-            },completion:
-                {(finished: Bool) in
-                    self.lbSalAmarillo.isHidden = false
-                    self.lbGrasasAmarillo.isHidden = false
-                    self.lbGrasasSAmarillo.isHidden = false
-                    self.lbAzucarAmarillo.isHidden = false
-            })}
-        else{
-            self.lbSalAmarillo.isHidden = true
-            self.lbGrasasAmarillo.isHidden = true
-            self.lbGrasasSAmarillo.isHidden = true
-            self.lbAzucarAmarillo.isHidden = true
-            lbRegular.isHidden = false
-            UIView.animate(withDuration: 0.3, animations:{ self.btAmarillo.center = self.AmarilloCentro
-                self.entraAmarillo.center = self.AmarilloSale
-            },completion:
+            UIView.animate(withDuration: 0.3, animations:{ self.btAmarillo.center = self.moverAmarillo.center},completion:
             {(finished: Bool) in
-                self.entraAmarillo.alpha = 0 })
-                
+                self.view.backgroundColor = UIColor.yellow
+                self.btVerde.isHidden = true
+                self.lbBajo.isHidden = true
+                self.lbAlto.isHidden = true
+                self.btRojo.isHidden = true
+                ///labels
+                self.lbEs.text = "REGULAR"
+                self.lbAzucar1.text = "5g-"
+                self.lbAzucar2.text = "15g"
+                self.lbGrasa1.text = "3g-"
+                self.lbGrasa2.text = "20g"
+                self.lbGrasaS1.text = "1.5g-"
+                self.lbGrasaS2.text = "5g"
+                self.lbSal1.text = "0.3g-"
+                self.lbSal2.text = "1.5g"
+                ///labels
+                self.lbEs.isHidden = false
+                self.lbAzucar.isHidden = false
+                self.lbAzucar1.isHidden = false
+                self.lbAzucar2.isHidden = false
+                self.lbGrasa.isHidden = false
+                self.lbGrasa1.isHidden = false
+                self.lbGrasa2.isHidden = false
+                self.lbGrasaS.isHidden = false
+                self.lbGrasaS0.isHidden = false
+                self.lbGrasaS1.isHidden = false
+                self.lbGrasaS2.isHidden = false
+                self.lbSal.isHidden = false
+                self.lbSal1.isHidden = false
+                self.lbSal2.isHidden = false
+            })} else{
+            UIView.animate(withDuration: 0.3, animations:{ self.btAmarillo.center = self.AmarilloCentro},completion:
+            {(finished: Bool) in
+                self.lbRegular.isHidden = false
+                self.btVerde.isHidden = false
+                self.lbBajo.isHidden = false
+                self.lbAlto.isHidden = false
+                self.btRojo.isHidden = false
+                self.view.backgroundColor = UIColor.white})
+                ///labels
+                self.lbEs.isHidden = true
+                self.lbAzucar.isHidden = true
+                self.lbAzucar1.isHidden = true
+                self.lbAzucar2.isHidden = true
+                self.lbGrasa.isHidden = true
+                self.lbGrasa1.isHidden = true
+                self.lbGrasa2.isHidden = true
+                self.lbGrasaS.isHidden = true
+                self.lbGrasaS0.isHidden = true
+                self.lbGrasaS1.isHidden = true
+                self.lbGrasaS2.isHidden = true
+                self.lbSal.isHidden = true
+                self.lbSal1.isHidden = true
+                self.lbSal2.isHidden = true
+            
         }
     }
     
@@ -208,6 +211,31 @@ class SemaforoViewController: UIViewController {
                 self.lbRegular.isHidden = true
                 self.lbAlto.isHidden = true
                 self.btRojo.isHidden = true
+                ///labels
+                self.lbEs.text = "BAJO"
+                self.lbAzucar1.text = "5g"
+                self.lbAzucar2.text = "o <"
+                self.lbGrasa1.text = "3g"
+                self.lbGrasa2.text = "o <"
+                self.lbGrasaS1.text = "1.5g"
+                self.lbGrasaS2.text = "o <"
+                self.lbSal1.text = "0.3g"
+                self.lbSal2.text = "o <"
+                ///labels
+                self.lbEs.isHidden = false
+                self.lbAzucar.isHidden = false
+                self.lbAzucar1.isHidden = false
+                self.lbAzucar2.isHidden = false
+                self.lbGrasa.isHidden = false
+                self.lbGrasa1.isHidden = false
+                self.lbGrasa2.isHidden = false
+                self.lbGrasaS.isHidden = false
+                self.lbGrasaS0.isHidden = false
+                self.lbGrasaS1.isHidden = false
+                self.lbGrasaS2.isHidden = false
+                self.lbSal.isHidden = false
+                self.lbSal1.isHidden = false
+                self.lbSal2.isHidden = false
             })} else{
             UIView.animate(withDuration: 0.3, animations:{ self.btVerde.center = self.VerdeCentro},completion:
             {(finished: Bool) in
@@ -217,6 +245,21 @@ class SemaforoViewController: UIViewController {
                 self.lbAlto.isHidden = false
                 self.btRojo.isHidden = false
                 self.view.backgroundColor = UIColor.white})
+                ///labels
+                self.lbEs.isHidden = true
+                self.lbAzucar.isHidden = true
+                self.lbAzucar1.isHidden = true
+                self.lbAzucar2.isHidden = true
+                self.lbGrasa.isHidden = true
+                self.lbGrasa1.isHidden = true
+                self.lbGrasa2.isHidden = true
+                self.lbGrasaS.isHidden = true
+                self.lbGrasaS0.isHidden = true
+                self.lbGrasaS1.isHidden = true
+                self.lbGrasaS2.isHidden = true
+                self.lbSal.isHidden = true
+                self.lbSal1.isHidden = true
+                self.lbSal2.isHidden = true
             
         }
     }
