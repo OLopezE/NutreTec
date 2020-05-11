@@ -45,7 +45,7 @@ class MiPlanViewController: UIViewController {
         if estaEditando {
             btnEditar.setTitle("Guardar", for: .normal)
         } else {
-            btnEditar.setTitle("Editar", for: .normal)
+            btnEditar.setTitle("Modificar porciones", for: .normal)
         }
         
         for i in 0..<fields.count {
