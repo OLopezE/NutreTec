@@ -599,6 +599,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Mi perfil"/>
+                                        <connections>
+                                            <segue destination="n9X-ts-3fp" kind="show" id="URl-c9-B27"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzR-yw-eRf">
                                         <rect key="frame" x="125" y="78" width="124" height="53"/>
@@ -611,6 +614,18 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Recetario"/>
+                                        <connections>
+                                            <segue destination="o30-GB-fbN" kind="show" id="JEh-Hi-mnh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-iT-nl0">
+                                        <rect key="frame" x="125" y="200" width="124" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Historial"/>
+                                        <connections>
+                                            <segue destination="FjC-0p-8uK" kind="show" id="b7Y-hf-gXR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -630,15 +645,48 @@
             <objects>
                 <viewController id="n9X-ts-3fp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X23-zr-5rV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ADD-Yh-ZeI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LJb-8S-DRE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdV-Ln-wbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="415"/>
+            <point key="canvasLocation" x="1851" y="389"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qhn-jI-nou">
+            <objects>
+                <viewController id="o30-GB-fbN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XQu-0e-HBA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ac8-GF-G6p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P7L-4b-L6f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wF9-IT-X21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2600" y="388"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="I1B-KF-5Ul">
+            <objects>
+                <viewController id="FjC-0p-8uK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZuQ-ST-mwD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Xb8-i7-fnY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D2S-cl-gGu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlb-wo-Icu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3370" y="406"/>
         </scene>
         <!--Semaforo-->
         <scene sceneID="ANq-CS-UEx">
