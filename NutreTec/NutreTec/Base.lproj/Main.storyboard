@@ -80,7 +80,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-wH-EWA">
                                                                 <rect key="frame" x="0.0" y="-8" width="106" height="110"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="icons8-avocado-64"/>
+                                                                <state key="normal" image="grasa"/>
                                                                 <connections>
                                                                     <action selector="grasas:" destination="9pv-A4-QxB" eventType="touchUpInside" id="R0W-4d-FCA"/>
                                                                 </connections>
@@ -138,7 +138,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFz-Ai-7vm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="93"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="icons8-water-glass-512"/>
+                                                                <state key="normal" image="agua"/>
                                                                 <connections>
                                                                     <action selector="agua:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qbA-hj-ckl"/>
                                                                 </connections>
@@ -181,7 +181,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-ES-mcC">
                                                                 <rect key="frame" x="8" y="8" width="74" height="73"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="manzana"/>
+                                                                <state key="normal" image="fruit"/>
                                                                 <connections>
                                                                     <action selector="fruta:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7uz-Ra-aIE"/>
                                                                 </connections>
@@ -283,7 +283,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-aT-MOg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="icons8-milk-80"/>
+                                                                <state key="normal" image="leche"/>
                                                                 <connections>
                                                                     <action selector="leche:" destination="9pv-A4-QxB" eventType="touchUpInside" id="D5c-nr-umu"/>
                                                                 </connections>
@@ -326,7 +326,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBb-D0-uiz">
                                                                 <rect key="frame" x="8" y="0.0" width="84" height="83"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="alimentos-saludables"/>
+                                                                <state key="normal" image="vegetable"/>
                                                                 <connections>
                                                                     <action selector="Vegetales:" destination="9pv-A4-QxB" eventType="touchUpInside" id="kjj-ut-LOv"/>
                                                                 </connections>
@@ -394,6 +394,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Mi día" image="sunset.fill" catalog="system" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="btAgua" destination="iFz-Ai-7vm" id="Fh1-zr-c65"/>
+                        <outlet property="btAzucar" destination="ojN-pi-0iz" id="EXu-Bz-4Ar"/>
+                        <outlet property="btCarne" destination="gs8-5L-cJ9" id="yjV-fG-NEG"/>
+                        <outlet property="btCereal" destination="O7P-VR-UJf" id="DQP-VU-tNv"/>
+                        <outlet property="btFrutas" destination="MpX-ES-mcC" id="edd-gk-326"/>
+                        <outlet property="btGrasa" destination="YG4-wH-EWA" id="Gdv-Ln-klY"/>
+                        <outlet property="btLacteos" destination="ccr-aT-MOg" id="9cG-qe-YEC"/>
+                        <outlet property="btLeguminosas" destination="Fh6-4W-aEH" id="pXN-z6-SBC"/>
+                        <outlet property="btVegetales" destination="gBb-D0-uiz" id="ja6-Xe-VH3"/>
                         <outlet property="fecha" destination="L1V-uu-gbd" id="Uf2-01-pz6"/>
                         <outlet property="lblAgua" destination="zIE-7t-CJC" id="J3b-NM-nXC"/>
                         <outlet property="lblAzucar" destination="JbS-Q4-6Uc" id="hjB-L8-i2s"/>
@@ -929,7 +938,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ALTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-TD-Jr9">
-                                        <rect key="frame" x="0.0" y="29" width="183" height="48"/>
+                                        <rect key="frame" x="0.0" y="29" width="213" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                         <nil key="textColor"/>
@@ -1090,6 +1099,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="agua" width="64" height="64"/>
         <image name="alimentos-saludables" width="128" height="128"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="caramelo" width="128" height="128"/>
@@ -1099,6 +1109,8 @@
         <image name="chevron.right.circle.fill" catalog="system" width="64" height="60"/>
         <image name="chicharos" width="128" height="128"/>
         <image name="doc.on.doc" catalog="system" width="58" height="64"/>
+        <image name="fruit" width="64" height="64"/>
+        <image name="grasa" width="64" height="64"/>
         <image name="green" width="600" height="600"/>
         <image name="icons8-avocado-64" width="64" height="64"/>
         <image name="icons8-milk-80" width="80" height="80"/>
@@ -1106,11 +1118,13 @@
         <image name="icons8-plus-128" width="128" height="128"/>
         <image name="icons8-traffic-light-50" width="25" height="25"/>
         <image name="icons8-water-glass-512" width="512" height="512"/>
+        <image name="leche" width="64" height="64"/>
         <image name="manzana" width="128" height="128"/>
         <image name="personalhotspot" catalog="system" width="64" height="36"/>
         <image name="rectangle.grid.1x2" catalog="system" width="64" height="50"/>
         <image name="red" width="256" height="256"/>
         <image name="sunset.fill" catalog="system" width="64" height="48"/>
+        <image name="vegetable" width="64" height="64"/>
         <image name="yellow" width="880" height="920"/>
     </resources>
 </document>

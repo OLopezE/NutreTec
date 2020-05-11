@@ -205,54 +205,174 @@ class FirstViewController: UIViewController {
         }
     }
     
+    
+    @IBOutlet weak var btCarne: UIButton!
+    @IBOutlet weak var btVegetales: UIButton!
+    @IBOutlet weak var btLeguminosas: UIButton!
+    @IBOutlet weak var btAzucar: UIButton!
+    @IBOutlet weak var btCereal: UIButton!
+    @IBOutlet weak var btFrutas: UIButton!
+    @IBOutlet weak var btGrasa: UIButton!
+    @IBOutlet weak var btLacteos: UIButton!
+    @IBOutlet weak var btAgua: UIButton!
+    
+    var carne = UIImage(named: "carne.png")
+    var vegetales = UIImage(named: "vegetable.png")
+    var leguminosas = UIImage(named: "chicharos.png")
+    var azucar = UIImage(named: "caramelo.png")
+    var cereal = UIImage(named: "cereales.png")
+    var frutas = UIImage(named: "fruit.png")
+    var grasa = UIImage(named: "grasa.png")
+    var lacteos = UIImage(named: "leche.png")
+    var agua = UIImage(named: "agua.png")
+    
     @IBAction func Carne(_ sender: UIButton) {
+        let carnedel = UIImage(named: "carne-2.png")
+        btCarne.setImage(carnedel, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         fca = 1
         
     }
     
     @IBAction func Vegetales(_ sender: UIButton) {
+        let vegetaldel = UIImage(named: "vegetable-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetaldel, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         fv = 1
         
     }
     
     @IBAction func Azucar(_ sender: UIButton) {
+        let azucardel = UIImage(named: "caramelo-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucardel, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         faz = 1
 
     }
     
     @IBAction func leguminosas(_ sender: UIButton) {
+        let del = UIImage(named: "chicharos-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(del, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         flegu = 1
 
     }
     
     @IBAction func cereales(_ sender: Any) {
+        let del = UIImage(named: "cereales-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(del, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         fce = 1
 
     }
     
     @IBAction func fruta(_ sender: Any) {
+        let del = UIImage(named: "fruit-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(del, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         ff = 1
 
     }
     
     @IBAction func leche(_ sender: Any) {
+        let del = UIImage(named: "leche-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(del, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         fleche = 1
     }
     
     @IBAction func grasas(_ sender: UIButton) {
+        let del = UIImage(named: "grasa-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(del, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(agua, for: .normal)
+        
         desAsigna()
         fg = 1
 
     }
     
     @IBAction func agua(_ sender: Any) {
+        let del = UIImage(named: "agua-2.png")
+        btCarne.setImage(carne, for: .normal)
+        btVegetales.setImage(vegetales, for: .normal)
+        btLeguminosas.setImage(leguminosas, for: .normal)
+        btAzucar.setImage(azucar, for: .normal)
+        btCereal.setImage(cereal, for: .normal)
+        btFrutas.setImage(frutas, for: .normal)
+        btGrasa.setImage(grasa, for: .normal)
+        btLacteos.setImage(lacteos, for: .normal)
+        btAgua.setImage(del, for: .normal)
+        
         desAsigna()
         fag = 1
 
@@ -284,5 +404,6 @@ class FirstViewController: UIViewController {
         dia.dateFormat = "MMM dd, yyyy"
         fecha.text = dia.string(from: date)
     }
+    
 }
 
