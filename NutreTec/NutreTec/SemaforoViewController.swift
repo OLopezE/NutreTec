@@ -76,7 +76,7 @@ class SemaforoViewController: UIViewController {
             lbAlto.isHidden = true
             UIView.animate(withDuration: 0.3, animations:{ self.btRojo.center = self.moverRojo.center},completion:
             {(finished: Bool) in
-                let color1 = UIColor(red: 0.9, green: 0, blue: 0.1, alpha: 0.7)
+                let color1 = UIColor(red: 0.8, green: 0, blue: 0.2, alpha: 1)
                 self.view.backgroundColor = color1
                 self.btVerde.isHidden = true
                 self.lbBajo.isHidden = true
