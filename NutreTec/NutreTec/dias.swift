@@ -8,7 +8,7 @@
 
 import UIKit
 
-class dias: NSObject {
+class dias: Codable {
     var carne = 0
     var vegetal = 0
     var leche = 0

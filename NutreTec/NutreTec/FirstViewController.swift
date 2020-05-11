@@ -10,6 +10,12 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    //vistas
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var vistaAlimentos: UIView!
+    
+    
+    
     @IBOutlet weak var fecha: UILabel!
     var misDias = [dias]()
     
@@ -36,13 +42,25 @@ class FirstViewController: UIViewController {
     var fleche = 0
     
     override func viewDidLoad() {
-        self.title = "Mi día"
+        scrollView.contentSize = vistaAlimentos.frame.size
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         obtenDia()
         buscaDia()
         
+    }
+    
+    func desAsigna(){
+        fca = 0
+        fv = 0
+        flegu = 0
+        faz = 0
+        fce = 0
+        fg = 0
+        ff = 0
+        fag = 0
+        fleche = 0
     }
     
     func buscaDia(){
@@ -188,111 +206,56 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func Carne(_ sender: UIButton) {
+        desAsigna()
         fca = 1
-        fv = 0
-        flegu = 0
-        faz = 0
-        fce = 0
-        fg = 0
-        ff = 0
-        fag = 0
-        fleche = 0
+        
     }
     
     @IBAction func Vegetales(_ sender: UIButton) {
-        fca = 0
+        desAsigna()
         fv = 1
-        flegu = 0
-        faz = 0
-        fce = 0
-        fg = 0
-        ff = 0
-        fag = 0
-        fleche = 0
+        
     }
     
     @IBAction func Azucar(_ sender: UIButton) {
-        fca = 0
-        fv = 0
-        flegu = 0
+        desAsigna()
         faz = 1
-        fce = 0
-        fg = 0
-        ff = 0
-        fag = 0
-        fleche = 0
+
     }
     
     @IBAction func leguminosas(_ sender: UIButton) {
-        fca = 0
-        fv = 0
+        desAsigna()
         flegu = 1
-        faz = 0
-        fce = 0
-        fg = 0
-        ff = 0
-        fag = 0
-        fleche = 0
+
     }
     
     @IBAction func cereales(_ sender: Any) {
-        fca = 0
-        fv = 0
-        flegu = 0
-        faz = 0
+        desAsigna()
         fce = 1
-        fg = 0
-        ff = 0
-        fag = 0
-        fleche = 0
+
     }
     
     @IBAction func fruta(_ sender: Any) {
-        fca = 0
-        fv = 0
-        flegu = 0
-        faz = 0
-        fce = 0
-        fg = 0
+        desAsigna()
         ff = 1
-        fag = 0
-        fleche = 0
+
     }
     
     @IBAction func leche(_ sender: Any) {
-        fca = 0
-        fv = 0
-        flegu = 0
-        faz = 0
-        fce = 0
-        fg = 0
-        ff = 0
-        fag = 0
+        desAsigna()
         fleche = 1
     }
     
     @IBAction func grasas(_ sender: UIButton) {
-        fca = 0
-        fv = 0
-        flegu = 0
-        faz = 0
-        fce = 0
+        desAsigna()
         fg = 1
-        ff = 0
-        fag = 0
-        fleche = 0
+
     }
     
     @IBAction func agua(_ sender: Any) {
-        fca = 0
-        fv = 0
-        flegu = 0
-        faz = 0
-        fce = 0
-        fg = 0
-        ff = 0
+        desAsigna()
         fag = 1
-        fleche = 0
+
     }
     
     @IBAction func mas(_ sender: UIButton) {
