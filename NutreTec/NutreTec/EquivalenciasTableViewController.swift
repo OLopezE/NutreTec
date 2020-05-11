@@ -1,14 +1,14 @@
 //
-//  navigationTableViewController.swift
+//  EquivalenciasTableViewController.swift
 //  NutreTec
 //
-//  Created by Oscar Francisco Lopez Escobar on 10/05/20.
+//  Created by samantha lozano martinez on 5/11/20.
 //  Copyright © 2020 disp_moviles. All rights reserved.
 //
 
 import UIKit
 
-class navigationTableViewController: UITableViewController {
+class EquivalenciasTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
