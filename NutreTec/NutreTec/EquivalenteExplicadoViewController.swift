@@ -8,30 +8,34 @@
 
 import UIKit
 
-class EquivalenteExplicadoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
+class EquivalenteExplicadoViewController: UIViewController  {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "idCell")!
-        cell.textLabel?.text = "Hola"
-        return cell
-    }
     
+    @IBOutlet weak var lbldesc2: UILabel!
+    @IBOutlet weak var lbldesc1: UILabel!
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var vwTitulo: UIView!
     @IBOutlet weak var vwTabla: UIView!
     
     var titulo = "Título"
-    //var colorTitulo
-    //var colorTabla : UIColor!
+    var desc = "Una ración es igual a:"
+    var desc2 = ""
+    var colorTitulo : UIColor!
+    var colorTabla : UIColor!
+    var colorLetra = UIColor.white
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lbldesc1.text = desc
+        lbldesc2.text = desc2
         lblTitulo.text = titulo
-        //vwTitulo.backgroundColor = colorTitulo
-        //vwTabla.backgroundColor = colorTitulo
+        lbldesc1.textColor = colorLetra
+        lbldesc2.textColor = colorLetra
+        lblTitulo.textColor = colorLetra
+        vwTabla.layer.cornerRadius = 10
+        vwTitulo.layer.cornerRadius = 10
+        vwTitulo.backgroundColor = colorTitulo
+        vwTabla.backgroundColor = colorTitulo
         // Do any additional setup after loading the view.
     }
     
