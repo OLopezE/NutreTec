@@ -597,25 +597,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lh-cC-Nsg">
-                                <rect key="frame" x="261" y="133" width="127" height="38"/>
-=======
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mi plan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zN1-N8-Z63">
-                                <rect key="frame" x="34" y="44" width="152" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lh-cC-Nsg">
-                                <rect key="frame" x="152" y="123" width="221" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Modificar porciones"/>
-                                <connections>
-                                    <action selector="tapEditar:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4vH-lN-rgr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9796794041450777" green="0.9796794041450777" blue="0.9796794041450777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
@@ -623,7 +604,6 @@
                     <tabBarItem key="tabBarItem" title="Mi plan" image="book.fill" catalog="system" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="FOY-YH-sPr"/>
                     <connections>
-                        <outlet property="btnEditar" destination="6lh-cC-Nsg" id="paH-oR-CBA"/>
                         <outlet property="tfAgua" destination="D5h-7q-7hz" id="Gdp-uI-poQ"/>
                         <outlet property="tfAzucares" destination="bIT-2S-DTc" id="bCD-sF-aKq"/>
                         <outlet property="tfCarnes" destination="z0E-OT-KQW" id="Xbk-Yk-A2C"/>
