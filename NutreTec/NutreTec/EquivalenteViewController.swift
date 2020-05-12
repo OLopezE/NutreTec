@@ -53,14 +53,22 @@ class EquivalenteViewController: UIViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+<<<<<<< HEAD
         let vista = segue.destination as! EquivalenteExplicadoViewController
+=======
+       let vista = segue.destination as! EquivalenteExplicadoViewController
+>>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
         if segue.identifier == "v"{
             
             vista.colorTitulo = vwVegetales.backgroundColor
             vista.titulo = "Vegetales"
             vista.colorTabla = vwVegetales.backgroundColor
+<<<<<<< HEAD
             vista.desc = "Una racion es igual a 1/2 taza"
             vista.desc2 = "(cantidad libre)"
+=======
+            vista.racion = "Una racion es igual a 1/2 taza(cantidad libre)"
+>>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
         }else if segue.identifier == "car"{
             vista.colorTitulo = vwCarnes.backgroundColor
             vista.titulo = "Carnes"
@@ -90,20 +98,37 @@ class EquivalenteViewController: UIViewController {
             vista.colorTitulo = vwLeguminosas.backgroundColor
             vista.titulo = "Leguminosas"
             vista.colorTabla = vwLeguminosas.backgroundColor
+<<<<<<< HEAD
             vista.desc = "Una racion es igual a 1/2 taza"
+=======
+            vista.racion = "Una racion es igual a 1/2 taza"
+>>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
             
         }else if segue.identifier == "lac"{
             vista.colorTitulo = vwLacteos.backgroundColor
             vista.titulo = "Lacteos"
             vista.colorTabla = vwLacteos.backgroundColor
+<<<<<<< HEAD
             vista.desc = "Una racion es igual a 1/2 taza"
             vista.desc2 = "(125ml) de:"
             
         }
+=======
+            vista.racion = "Una racion es igual a 1/2 taza (125ml) de:"
+            
+        }
+
+
+
+>>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
         
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
 
 }

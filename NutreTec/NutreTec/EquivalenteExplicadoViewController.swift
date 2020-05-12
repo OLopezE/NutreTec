@@ -8,7 +8,9 @@
 
 import UIKit
 
-class EquivalenteExplicadoViewController: UIViewController  {
+
+
+class EquivalenteExplicadoViewController: UIViewController{
     
     
     @IBOutlet weak var lbldesc2: UILabel!
@@ -16,6 +18,7 @@ class EquivalenteExplicadoViewController: UIViewController  {
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var vwTitulo: UIView!
     @IBOutlet weak var vwTabla: UIView!
+    @IBOutlet weak var lblRacion: UILabel!
     
     var titulo = "Título"
     var desc = "Una ración es igual a:"
@@ -34,12 +37,8 @@ class EquivalenteExplicadoViewController: UIViewController  {
         lblTitulo.textColor = colorLetra
         vwTabla.layer.cornerRadius = 10
         vwTitulo.layer.cornerRadius = 10
-        vwTitulo.backgroundColor = colorTitulo
-        vwTabla.backgroundColor = colorTitulo
-        // Do any additional setup after loading the view.
-    }
-    
 
+    }
     /*
     // MARK: - Navigation
 
