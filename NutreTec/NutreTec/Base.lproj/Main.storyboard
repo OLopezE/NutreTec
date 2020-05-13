@@ -96,10 +96,6 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     </view>
-<<<<<<< HEAD
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neX-Q2-UnT">
-                                                        <rect key="frame" x="215" y="263" width="155" height="111"/>
-=======
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCp-jJ-deu">
                                                         <rect key="frame" x="28" y="365" width="342" height="111"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -131,7 +127,6 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Po-gF-EHO">
                                                         <rect key="frame" x="28" y="8" width="342" height="111"/>
->>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegetales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6n-B1-EZV">
@@ -304,46 +299,6 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     </view>
-<<<<<<< HEAD
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cool soda studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYF-ck-rcP">
-                                                        <rect key="frame" x="178" y="840" width="126" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yvu-Cd-Fff">
-                                                        <rect key="frame" x="122" y="520" width="155" height="111"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFz-Ai-7vm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="93"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="agua"/>
-                                                                <connections>
-                                                                    <action selector="agua:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qbA-hj-ckl"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iue-e9-KmE">
-                                                                <rect key="frame" x="8" y="81" width="40" height="21"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIE-7t-CJC">
-                                                                <rect key="frame" x="107" y="40" width="45" height="30"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    </view>
-=======
->>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98425356217616577" green="0.98425356217616577" blue="0.98425356217616577" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
@@ -452,17 +407,6 @@
                         <outlet property="lblVegetales" destination="xyj-8f-Mc8" id="vQr-3Z-Dme"/>
                         <outlet property="scrollView" destination="KIc-F1-WQY" id="HqC-jK-hDE"/>
                         <outlet property="vistaAlimentos" destination="c8A-sf-10G" id="9qz-bT-WCY"/>
-<<<<<<< HEAD
-                        <outlet property="vwAgua" destination="Yvu-Cd-Fff" id="hpD-B6-MOW"/>
-                        <outlet property="vwAzucar" destination="37Z-fJ-v0U" id="OoC-1K-IdP"/>
-                        <outlet property="vwCarne" destination="K1b-Kv-YcA" id="tGV-01-eYO"/>
-                        <outlet property="vwCereales" destination="2bC-62-Zbi" id="otg-PS-fH5"/>
-                        <outlet property="vwFrutas" destination="neX-Q2-UnT" id="wzN-qN-Mmf"/>
-                        <outlet property="vwGrasas" destination="r7r-5l-qAb" id="Ymk-n1-F4f"/>
-                        <outlet property="vwLacteos" destination="cCp-jJ-deu" id="2vw-5W-678"/>
-                        <outlet property="vwLeguminosas" destination="B61-Oa-Coa" id="uHS-do-M1N"/>
-                        <outlet property="vwVegetales" destination="7Po-gF-EHO" id="L4q-VE-65Q"/>
-=======
                         <outlet property="vwAgua" destination="Yvu-Cd-Fff" id="7MY-f8-vRp"/>
                         <outlet property="vwAzucar" destination="37Z-fJ-v0U" id="1Li-k2-Qvz"/>
                         <outlet property="vwCarne" destination="K1b-Kv-YcA" id="1NH-lH-Mef"/>
@@ -472,7 +416,6 @@
                         <outlet property="vwLacteos" destination="cCp-jJ-deu" id="1j7-cA-49C"/>
                         <outlet property="vwLeguminosas" destination="B61-Oa-Coa" id="yzp-vy-mei"/>
                         <outlet property="vwVegetales" destination="7Po-gF-EHO" id="jrC-hf-eE7"/>
->>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -1311,26 +1254,11 @@
                                 <rect key="frame" x="20" y="160" width="374" height="634"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-<<<<<<< HEAD
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r56-p8-yxH">
-                                        <rect key="frame" x="27" y="8" width="339" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcu-1W-85J">
-                                        <rect key="frame" x="27" y="37" width="339" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <nil key="textColor"/>
-=======
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Una ración es igual a:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS1-rE-d6H">
                                         <rect key="frame" x="8" y="0.0" width="366" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
->>>>>>> a3d2291127bc0a49ea0c1f3bac6c32a19cb29d74
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1358,8 +1286,6 @@
                     <connections>
                         <outlet property="lblRacion" destination="WS1-rE-d6H" id="gjm-xg-0iy"/>
                         <outlet property="lblTitulo" destination="Pxb-ak-e6b" id="KLJ-UZ-48R"/>
-                        <outlet property="lbldesc1" destination="r56-p8-yxH" id="936-eM-C0b"/>
-                        <outlet property="lbldesc2" destination="hcu-1W-85J" id="3p2-S1-WBn"/>
                         <outlet property="vwTabla" destination="NgU-0g-yx5" id="fmc-6m-rLq"/>
                         <outlet property="vwTitulo" destination="wBP-TI-iUr" id="gMa-Wd-ER4"/>
                     </connections>
