@@ -52,8 +52,8 @@ class FirstViewController: UIViewController {
     var ff = 0
     var fag = 0
     var fleche = 0
-    var colorTmp : UIColor!
-    var colorLetra : UIColor!
+    var colorTmp = UIColor.white
+    var colorLetra = UIColor.black
     
     override func viewDidLoad() {
         scrollView.contentSize = vistaAlimentos.frame.size
@@ -67,8 +67,7 @@ class FirstViewController: UIViewController {
         vwCarne.layer.cornerRadius = 10
         vwVegetales.layer.cornerRadius = 10
         vwGrasas.layer.cornerRadius = 10
-        colorTmp = vwGrasas.backgroundColor
-        colorLetra = lblMidia.textColor
+        lblMidia.textColor = colorLetra
         
         
         
