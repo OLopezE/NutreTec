@@ -705,10 +705,10 @@
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="414.50892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Mi Perfil View Controller-->
         <scene sceneID="VoZ-Bo-HZ9">
             <objects>
-                <viewController id="n9X-ts-3fp" sceneMemberID="viewController">
+                <viewController id="n9X-ts-3fp" customClass="MiPerfilViewController" customModule="NutreTec" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X23-zr-5rV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -716,6 +716,60 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-x7-RMR">
                                 <rect key="frame" x="20" y="136" width="374" height="634"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVl-HA-tiF">
+                                        <rect key="frame" x="39" y="187" width="76" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-r0-eYh">
+                                        <rect key="frame" x="127" y="23.5" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sexo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op3-kV-8xO">
+                                        <rect key="frame" x="39" y="253" width="49" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de nacimiento:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK2-hj-NXR">
+                                        <rect key="frame" x="39" y="316" width="186" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QW3-gS-R7d">
+                                        <rect key="frame" x="127" y="250" width="191" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Masculino"/>
+                                            <segment title="Femenino"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8iy-kx-2Tv">
+                                        <rect key="frame" x="127" y="182" width="191" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="zSG-Vb-9Ae">
+                                        <rect key="frame" x="14" y="348" width="346" height="147"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCj-kq-dle">
+                                        <rect key="frame" x="140" y="546" width="94" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Editar"/>
+                                        <connections>
+                                            <action selector="tapEditarGuardar:" destination="n9X-ts-3fp" eventType="touchUpInside" id="L8c-Zz-n7u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2xM-FJ-hJa">
@@ -737,10 +791,16 @@
                         <viewLayoutGuide key="safeArea" id="ADD-Yh-ZeI"/>
                     </view>
                     <navigationItem key="navigationItem" id="LJb-8S-DRE"/>
+                    <connections>
+                        <outlet property="btnEditarGuardar" destination="dCj-kq-dle" id="ET0-bn-PaR"/>
+                        <outlet property="tfFechaNacimiento" destination="zSG-Vb-9Ae" id="ho7-Ib-vnh"/>
+                        <outlet property="tfNombre" destination="8iy-kx-2Tv" id="zpg-QK-fjk"/>
+                        <outlet property="tfSexo" destination="QW3-gS-R7d" id="g9Q-mw-Rvl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdV-Ln-wbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="388"/>
+            <point key="canvasLocation" x="1847.826086956522" y="387.72321428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Qhn-jI-nou">
@@ -1413,6 +1473,7 @@
         <image name="icons8-traffic-light-50" width="25" height="25"/>
         <image name="leche" width="64" height="64"/>
         <image name="leche-2" width="64" height="64"/>
+        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
         <image name="personalhotspot" catalog="system" width="64" height="36"/>
         <image name="rectangle.grid.1x2" catalog="system" width="64" height="50"/>
         <image name="red" width="256" height="256"/>
