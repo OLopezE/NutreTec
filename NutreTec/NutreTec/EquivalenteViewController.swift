@@ -59,12 +59,12 @@ class EquivalenteViewController: UIViewController {
           let vista = segue.destination as! EquivalenteExplicadoViewController
            if segue.identifier == "v"{
             vista.raciones = ["Acelga", "Alcachofas","Apio", "Berenjena", "Brócoli", "Cebolla", "Cilantro", "Coliflor", "Betabel", "Chile Poblano", "Jugo de tomate", "Champiñones", "Chayote", "Ejotes", "Espinacas", "Flor de calabaza", "Jitomate", "Lechuga", "Nopales", "Calabacita", "Pimiento", "Jugo de verduras", "Ensalada promedio", "Pepino", "Perejil", "Rábano", "Repollo", "Jícama", "Tomate", "Espárragos", "Cebolla", "Zanahoria", "Germen"]
-            vista.cantidad = ["1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza","1/2 taza","1/2 taza"]
+            vista.cantidad = ["1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza", "1/2 taza","1/2 taza","1/2 taza", "1/2 taza"]
                vista.colorTitulo = vwVegetales.backgroundColor
                vista.titulo = "Vegetales"
                vista.colorTabla = vwVegetales.backgroundColor
                vista.desc = "Una racion es igual a:"
-               //vista.colorFondo = UIColor(red: 79/255, green: 128/255, blue: 69/255, alpha: 1)
+               vista.colorFondo = UIColor(red: 0, green: 114/255, blue: 66/255, alpha: 1)
                
 
            }else if segue.identifier == "car"{
@@ -73,31 +73,40 @@ class EquivalenteViewController: UIViewController {
                vista.colorTitulo = vwCarnes.backgroundColor
                vista.titulo = "Carnes"
                vista.colorTabla = vwCarnes.backgroundColor
+            vista.colorFondo = UIColor(red: 138/255, green: 108/255, blue: 216/255, alpha: 1)
                
            }else if segue.identifier == "cer"{
                vista.raciones = ["Cereal sin endulzar", "Arroz cocido", "Amaranto tostado", "Avena cocida"]
+            vista.cantidad = ["hola","segundo", "3", "4"]
                vista.colorTitulo = vwCereales.backgroundColor
                vista.titulo = "Cereales"
                vista.colorTabla = vwCereales.backgroundColor
+            vista.colorFondo = UIColor(red: 198/255, green: 188/255, blue: 68/255, alpha: 1)
                
            }else if segue.identifier == "az"{
                vista.raciones = ["hola", "quetal"]
+            vista.cantidad = ["muy", "bien"]
                vista.colorTitulo = vwAzucar.backgroundColor
                vista.titulo = "Azucar"
                vista.colorTabla = vwAzucar.backgroundColor
+            vista.colorFondo = UIColor(red: 150/255, green: 149/255, blue: 176/255, alpha: 1)
                
            }else if segue.identifier == "gr"{
                vista.colorTitulo = vwGrasa.backgroundColor
                vista.titulo = "Grasas"
                vista.raciones = ["Puerco", "quetal"]
+            vista.cantidad = ["muy", "bien"]
                vista.cantidad = ["30 gr", "60 gr"]
                vista.colorTabla = vwGrasa.backgroundColor
+            vista.colorFondo = UIColor(red: 134/255, green: 136/255, blue: 136/255, alpha: 1)
                
            }else if segue.identifier == "f"{
                vista.raciones = ["hola", "quetal"]
+            vista.cantidad = ["muy", "bien"]
                vista.colorTitulo = vwFrutas.backgroundColor
                vista.titulo = "Frutas"
                vista.colorTabla = vwFrutas.backgroundColor
+            vista.colorFondo = UIColor(red: 223/255, green: 72/255, blue: 118/255, alpha: 1)
                
            }else if segue.identifier == "leg"{
                vista.raciones = ["Lentejas", "Habas", "Garbanzo", "Alubias", "Frijol cocido", "Frijol refrito", "Soya texturizada", "Soya cocida"]
@@ -105,17 +114,18 @@ class EquivalenteViewController: UIViewController {
                vista.colorTitulo = vwLeguminosas.backgroundColor
                vista.titulo = "Leguminosas"
                vista.colorTabla = vwLeguminosas.backgroundColor
-               vista.desc = "Una racion es igual a 1/2 taza"
+               vista.desc = "Una racion es igual a:"
+            vista.colorFondo = UIColor(red: 122/255, green: 124/255, blue: 201/255, alpha: 1)
 
                
            }else if segue.identifier == "lac"{
                vista.raciones = ["Leche de vaca o soya", "Yogurt"]
-            vista.cantidad = ["250 ml o una taza", "250 ml o una taza"]
+               vista.cantidad = ["250 ml o una taza", "250 ml o una taza"]
                vista.colorTitulo = vwLacteos.backgroundColor
                vista.titulo = "Lacteos"
                vista.colorTabla = vwLacteos.backgroundColor
-               vista.desc = "Una racion es igual a 1/2 taza"
-               vista.desc2 = "(125ml) de:"
+               vista.desc = "Una racion es igual a:"
+               vista.colorFondo = UIColor(red: 102/255, green: 178/255, blue: 212/255, alpha: 1)
                
            }
 
