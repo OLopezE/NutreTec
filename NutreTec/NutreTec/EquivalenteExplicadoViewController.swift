@@ -8,31 +8,60 @@
 
 import UIKit
 
-class EquivalenteExplicadoViewController: UIViewController{
+
+
+class EquivalenteExplicadoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return raciones.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celda = tablaInfo.dequeueReusableCell(withIdentifier: "cell")!
+        celda.textLabel?.text = raciones[indexPath.row]
+        celda.detailTextLabel?.text = cantidad[indexPath.row]
+        return celda
+    }
     
     
+    
+    @IBOutlet weak var tablaInfo: UITableView!
+    @IBOutlet weak var lbldesc2: UILabel!
+    @IBOutlet weak var lbldesc1: UILabel!
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var vwTitulo: UIView!
     @IBOutlet weak var vwTabla: UIView!
     @IBOutlet weak var lblRacion: UILabel!
+    @IBOutlet weak var vwFondo: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var titulo = "Título"
-    var colorTitulo :UIColor!
+    var desc = "Una ración es igual a:"
+    var desc2 = ""
+    var colorTitulo : UIColor!
     var colorTabla : UIColor!
-    var racion = "Una ración es igual a:"
+    var colorLetra = UIColor.white
+    var colorFondo = UIColor.white
+    
+    var raciones : [String] = []
+    var cantidad : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.contentSize = tablaInfo.frame.size
+        lbldesc1.text = desc
+        lbldesc2.text = desc2
+        lblTitulo.text = titulo
+        lbldesc1.textColor = colorLetra
+        lbldesc2.textColor = colorLetra
+        lblTitulo.textColor = colorLetra
         vwTabla.layer.cornerRadius = 10
         vwTitulo.layer.cornerRadius = 10
-        lblTitulo.text = titulo
-        lblRacion.text = racion
+        vwTabla.backgroundColor = colorTabla
         vwTitulo.backgroundColor = colorTitulo
-        vwTabla.backgroundColor = colorTitulo
-        // Do any additional setup after loading the view.
-    }
-    
+        vwFondo.backgroundColor = colorFondo
+        tablaInfo.layer.cornerRadius = 10
 
+    }
     /*
     // MARK: - Navigation
 

@@ -42,6 +42,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var lblLeche: UILabel!
     @IBOutlet weak var lblAgua: UILabel!
     
+    @IBOutlet weak var lblMidia: UILabel!
     var fca = 0
     var fv = 0
     var flegu = 0
@@ -51,6 +52,8 @@ class FirstViewController: UIViewController {
     var ff = 0
     var fag = 0
     var fleche = 0
+    var colorTmp : UIColor!
+    var colorLetra : UIColor!
     
     override func viewDidLoad() {
         scrollView.contentSize = vistaAlimentos.frame.size
@@ -64,6 +67,10 @@ class FirstViewController: UIViewController {
         vwCarne.layer.cornerRadius = 10
         vwVegetales.layer.cornerRadius = 10
         vwGrasas.layer.cornerRadius = 10
+        colorTmp = vwGrasas.backgroundColor
+        colorLetra = lblMidia.textColor
+        
+        
         
         // Do any additional setup after loading the view.
         obtenDia()
@@ -91,15 +98,15 @@ class FirstViewController: UIViewController {
         btGrasa.setImage(grasa, for: .normal)
         btLacteos.setImage(lacteos, for: .normal)
         btAgua.setImage(agua, for: .normal)
-        vwAzucar.backgroundColor = UIColor.white
-        vwFrutas.backgroundColor = UIColor.white
-        vwLeguminosas.backgroundColor  = UIColor.white
-        vwLacteos.backgroundColor = UIColor.white
-        vwAgua.backgroundColor = UIColor.white
-        vwCereales.backgroundColor = UIColor.white
-        vwCarne.backgroundColor = UIColor.white
-        vwVegetales.backgroundColor = UIColor.white
-        vwGrasas.backgroundColor = UIColor.white
+        vwAzucar.backgroundColor = colorTmp
+        vwFrutas.backgroundColor = colorTmp
+        vwLeguminosas.backgroundColor  = colorTmp
+        vwLacteos.backgroundColor = colorTmp
+        vwAgua.backgroundColor = colorTmp
+        vwCereales.backgroundColor = colorTmp
+        vwCarne.backgroundColor = colorTmp
+        vwVegetales.backgroundColor = colorTmp
+        vwGrasas.backgroundColor = colorTmp
     }
     
     func buscaDia(){
@@ -280,7 +287,7 @@ class FirstViewController: UIViewController {
         let vegetaldel = UIImage(named: "vegetable-2.png")
         btVegetales.setImage(vegetaldel, for: .normal)
         fv = 1
-        vwVegetales.backgroundColor = UIColor(red: 107/255, green: 250/255, blue: 161/255, alpha: 1)
+        vwVegetales.backgroundColor = UIColor(red: 69/255, green: 162/255, blue: 100/255, alpha: 1)
         
     }
     
