@@ -10,6 +10,7 @@ import UIKit
 
 
 
+
 class EquivalenteExplicadoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return raciones.count
@@ -60,6 +61,7 @@ class EquivalenteExplicadoViewController: UIViewController, UITableViewDelegate,
         vwTitulo.backgroundColor = colorTitulo
         vwFondo.backgroundColor = colorFondo
         tablaInfo.layer.cornerRadius = 10
+
 
     }
     /*

@@ -476,7 +476,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Azucares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-CR-y6U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Azúcares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-CR-y6U">
                                 <rect key="frame" x="91" y="361" width="162" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -552,7 +552,7 @@
                                 <rect key="frame" x="34" y="173" width="49" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alimentos-saludables-2" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-Ta-zmH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vegetable-2" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-Ta-zmH">
                                 <rect key="frame" x="34" y="231" width="49" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -580,7 +580,7 @@
                                 <rect key="frame" x="34" y="586" width="49" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-water-glass-512" translatesAutoresizingMaskIntoConstraints="NO" id="WrB-Bw-J1Y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="agua-2" translatesAutoresizingMaskIntoConstraints="NO" id="WrB-Bw-J1Y">
                                 <rect key="frame" x="34" y="644" width="49" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -598,20 +598,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mi plan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zN1-N8-Z63">
-                                <rect key="frame" x="34" y="44" width="152" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67S-uF-vXt">
+                                <rect key="frame" x="178" y="125" width="195" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lh-cC-Nsg">
-                                <rect key="frame" x="152" y="123" width="221" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Modificar porciones"/>
                                 <connections>
-                                    <action selector="tapEditar:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4vH-lN-rgr"/>
+                                    <action selector="tapEditar:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="b0d-P6-vgZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -621,7 +614,7 @@
                     <tabBarItem key="tabBarItem" title="Mi plan" image="book.fill" catalog="system" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="FOY-YH-sPr"/>
                     <connections>
-                        <outlet property="btnEditar" destination="6lh-cC-Nsg" id="paH-oR-CBA"/>
+                        <outlet property="btnEditar" destination="67S-uF-vXt" id="hLN-tM-i3S"/>
                         <outlet property="tfAgua" destination="D5h-7q-7hz" id="Gdp-uI-poQ"/>
                         <outlet property="tfAzucares" destination="bIT-2S-DTc" id="bCD-sF-aKq"/>
                         <outlet property="tfCarnes" destination="z0E-OT-KQW" id="Xbk-Yk-A2C"/>
@@ -1397,7 +1390,7 @@
     </scenes>
     <resources>
         <image name="agua" width="64" height="64"/>
-        <image name="alimentos-saludables-2" width="128" height="128"/>
+        <image name="agua-2" width="64" height="64"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="caramelo" width="128" height="128"/>
         <image name="caramelo-2" width="128" height="128"/>
@@ -1418,7 +1411,6 @@
         <image name="icons8-minus-64" width="64" height="64"/>
         <image name="icons8-plus-128" width="128" height="128"/>
         <image name="icons8-traffic-light-50" width="25" height="25"/>
-        <image name="icons8-water-glass-512" width="512" height="512"/>
         <image name="leche" width="64" height="64"/>
         <image name="leche-2" width="64" height="64"/>
         <image name="personalhotspot" catalog="system" width="64" height="36"/>
@@ -1426,9 +1418,10 @@
         <image name="red" width="256" height="256"/>
         <image name="sunset.fill" catalog="system" width="64" height="48"/>
         <image name="vegetable" width="64" height="64"/>
+        <image name="vegetable-2" width="64" height="64"/>
         <image name="yellow" width="880" height="920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hYG-Wg-Z67"/>
+        <segue reference="bos-XE-wSr"/>
     </inferredMetricsTieBreakers>
 </document>
