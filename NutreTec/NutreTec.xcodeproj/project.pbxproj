@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,24 @@
 		00FED3132450FDB300AF31C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */; };
 		00FED31B24515AD900AF31C4 /* dias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED31A24515AD900AF31C4 /* dias.swift */; };
 		052ABBA9246D90ED0051CBC8 /* MiPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052ABBA8246D90ED0051CBC8 /* MiPerfilViewController.swift */; };
-		375CD99169C53C30972C246A /* Pods_NutreTec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90A80D37D22B850C8E5A78 /* Pods_NutreTec.framework */; };
+		056D165C2476C73000B57B3F /* Pods_NutreTec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90A80D37D22B850C8E5A78 /* Pods_NutreTec.framework */; };
+		056D165D2476C73000B57B3F /* Pods_NutreTec.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE90A80D37D22B850C8E5A78 /* Pods_NutreTec.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AB8282451516F0025101D /* SemaforoViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		056D165E2476C73000B57B3F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				056D165D2476C73000B57B3F /* Pods_NutreTec.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		008D8532246E36A900FB2A60 /* historialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historialViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375CD99169C53C30972C246A /* Pods_NutreTec.framework in Frameworks */,
+				056D165C2476C73000B57B3F /* Pods_NutreTec.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +130,6 @@
 				87B13E23A8A9B5C7F426BEE3 /* Pods-NutreTec.debug.xcconfig */,
 				2C9BCAF2FD313F242B658AD7 /* Pods-NutreTec.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +145,7 @@
 				00FED2FE2450FDAE00AF31C4 /* Frameworks */,
 				00FED2FF2450FDAE00AF31C4 /* Resources */,
 				8D68756B1D92B34F2800D5E1 /* [CP] Embed Pods Frameworks */,
+				056D165E2476C73000B57B3F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
