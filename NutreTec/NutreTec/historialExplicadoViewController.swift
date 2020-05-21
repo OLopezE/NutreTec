@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Charts
 
 class historialExplicadoViewController: UIViewController {
 
     @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var chartView: LineChartView!
     
     var titulo = ""
     var tamano = 40
@@ -21,8 +23,20 @@ class historialExplicadoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setChartValues()
     }
     
+    func setChartValues(_ count : Int = 20) {
+        let values = (0..<count).map { (i) -> ChartDataEntry in
+            let val = Double(arc4random_uniform(UInt32(count)) + 3)
+            return ChartDataEntry(x: Double(i), y: val)
+        }
+        
+        let set1 = LineChartDataSet(entries: values, label: "Dataset 1")
+        let data = LineChartData(dataSet: set1)
+        
+        self.chartView.data = data
+    }
 
     /*
     // MARK: - Navigation

@@ -1045,6 +1045,11 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q7-fo-fVe" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="8" y="356" width="366" height="297"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1068,12 +1073,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="zLi-SW-u0G"/>
                     <connections>
+                        <outlet property="chartView" destination="6Q7-fo-fVe" id="6IV-ZK-GkS"/>
                         <outlet property="lblTitulo" destination="Cdo-qh-tLm" id="V4X-7Y-QLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oj-OA-RGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4181" y="-390"/>
+            <point key="canvasLocation" x="4179.7101449275369" y="-390.40178571428572"/>
         </scene>
         <!--Semaforo-->
         <scene sceneID="ANq-CS-UEx">
