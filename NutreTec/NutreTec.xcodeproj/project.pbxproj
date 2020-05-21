@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D8532246E36A900FB2A60 /* historialViewController.swift */; };
 		00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */; };
 		00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */; };
 		00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */; };
+		00FA65662472D5E400D8BB67 /* historialExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FA65652472D5E400D8BB67 /* historialExplicadoViewController.swift */; };
 		00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3042450FDAE00AF31C4 /* AppDelegate.swift */; };
 		00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */; };
 		00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3082450FDAE00AF31C4 /* FirstViewController.swift */; };
@@ -23,9 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		008D8532246E36A900FB2A60 /* historialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historialViewController.swift; sourceTree = "<group>"; };
 		00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationTableViewController.swift; sourceTree = "<group>"; };
 		00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteViewController.swift; sourceTree = "<group>"; };
 		00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteExplicadoViewController.swift; sourceTree = "<group>"; };
+		00FA65652472D5E400D8BB67 /* historialExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historialExplicadoViewController.swift; sourceTree = "<group>"; };
 		00FED3012450FDAE00AF31C4 /* NutreTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutreTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FED3042450FDAE00AF31C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				00FED30C2450FDAE00AF31C4 /* Main.storyboard */,
 				052ABBA8246D90ED0051CBC8 /* MiPerfilViewController.swift */,
 				00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */,
+				008D8532246E36A900FB2A60 /* historialViewController.swift */,
+				00FA65652472D5E400D8BB67 /* historialExplicadoViewController.swift */,
 				00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */,
 				00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */,
 				773AB8282451516F0025101D /* SemaforoViewController.swift */,
@@ -159,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FA65662472D5E400D8BB67 /* historialExplicadoViewController.swift in Sources */,
 				052ABBA9246D90ED0051CBC8 /* MiPerfilViewController.swift in Sources */,
+				008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */,
 				00FED30B2450FDAE00AF31C4 /* MiPlanViewController.swift in Sources */,
 				00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */,
 				00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */,

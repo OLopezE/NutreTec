@@ -23,16 +23,6 @@ class EquivalenteViewController: UIViewController {
     @IBOutlet weak var vwVegetales: UIView!
     
     
-    let carnequiv = ["","",""]
-    let vegetalequiv = [""]
-    let lacteosequiv = [""]
-    let frutasequiv = [""]
-    let grasasequiv = [""]
-    let azucarequiv = [""]
-    let leguequiv = [""]
-    let cerealequiv = [""]
-
-    
     override func viewDidLoad() {
         scrollView.contentSize = vistaComida.frame.size
         super.viewDidLoad()
@@ -68,8 +58,8 @@ class EquivalenteViewController: UIViewController {
                
 
            }else if segue.identifier == "car"{
-               vista.raciones = ["Pechuga de pollo", "Pechuga de pavo", "Aguayon de res", "Agujas", "Bistec de bola", "Cuete de res", "Falda de res", "Filete de molida especia", "Roast beef", "Pulpa de res", "Milanesa de res", "Lenguado", "Bacalao", "Atún fresco",  "robalo", "Huachinango", "Trucha", "Merluza", "Jaiba", "Langosta", "Pulpo", "Cangrejo ", "Camarón seco", "Calamar", "Surimi", "Almeja", "Langostinos", "Pollo deshebrado", "Queso cottage o requesón", "Queso fresco(Panela)", "Atún en agua", "Carnes frías (pavo)", "Salchicha (pavo)", "Huevo", "Clara de huevo"]
-            vista.cantidad = ["30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "1/4 taza", "45 gr ó 3 Cucharadas", "40 gr", "1/3 de lata", "2 rebanadas chicas", "1 pieza", "1 pieza", "2 piezas"]
+               vista.raciones = ["Pechuga de pollo/pavo", "Aguayon de res", "Agujas", "Bistec de bola", "Cuete de res", "Falda de res", "Filete de molida especia", "Roast beef", "Pulpa de res", "Milanesa de res", "Lenguado", "Bacalao", "Atún fresco",  "Róbalo", "Huachinango", "Trucha", "Merluza", "Jaiba", "Langosta", "Pulpo", "Cangrejo ", "Camarón seco", "Calamar", "Surimi", "Almeja", "Langostinos", "Pollo deshebrado", "Queso cottage o requesón", "Queso fresco(Panela)", "Atún en agua", "Carnes frías (pavo)", "Salchicha (pavo)", "Huevo", "Clara de huevo"]
+            vista.cantidad = ["30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "30 gr", "1/4 taza", "45 gr ó 3 Cucharadas", "40 gr", "1/3 de lata", "2 rebanadas chicas", "1 pieza", "1 pieza", "2 piezas"]
                vista.colorTitulo = vwCarnes.backgroundColor
                vista.titulo = "Carnes"
                vista.colorTabla = vwCarnes.backgroundColor
