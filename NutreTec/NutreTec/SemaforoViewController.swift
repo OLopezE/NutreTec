@@ -42,6 +42,7 @@ class SemaforoViewController: UIViewController {
     @IBOutlet weak var lbSal: UILabel!
     @IBOutlet weak var lbSal1: UILabel!
     @IBOutlet weak var lbSal2: UILabel!
+    @IBOutlet weak var lbporcada: UILabel!
     
     
     var VerdeCentro : CGPoint!
@@ -55,17 +56,13 @@ class SemaforoViewController: UIViewController {
         lbEs.isHidden = true
         lbAzucar.isHidden = true
         lbAzucar1.isHidden = true
-        lbAzucar2.isHidden = true
         lbGrasa.isHidden = true
         lbGrasa1.isHidden = true
-        lbGrasa2.isHidden = true
         lbGrasaS.isHidden = true
         lbGrasaS0.isHidden = true
         lbGrasaS1.isHidden = true
-        lbGrasaS2.isHidden = true
         lbSal.isHidden = true
         lbSal1.isHidden = true
-        lbSal2.isHidden = true
         
 
         // Do any additional setup after loading the view.
@@ -84,29 +81,21 @@ class SemaforoViewController: UIViewController {
                 self.btAmarillo.isHidden = true
                 ///labels
                 self.lbEs.text = "ALTO"
-                self.lbAzucar1.text = ">"
-                self.lbAzucar2.text = "15g"
-                self.lbGrasa1.text = ">"
-                self.lbGrasa2.text = "20g"
-                self.lbGrasaS1.text = ">"
-                self.lbGrasaS2.text = "5g"
-                self.lbSal1.text = ">"
-                self.lbSal2.text = "1.5g"
+                self.lbAzucar1.text = "  Mayor a 15g"
+                self.lbGrasa1.text = "  Mayor a 20g"
+                self.lbGrasaS1.text = "  Mayor a 5g"
+                self.lbSal1.text = "  Mayor a 1.5g"
                 ///labels
                 self.lbEs.isHidden = false
                 self.lbAzucar.isHidden = false
                 self.lbAzucar1.isHidden = false
-                self.lbAzucar2.isHidden = false
                 self.lbGrasa.isHidden = false
                 self.lbGrasa1.isHidden = false
-                self.lbGrasa2.isHidden = false
                 self.lbGrasaS.isHidden = false
                 self.lbGrasaS0.isHidden = false
                 self.lbGrasaS1.isHidden = false
-                self.lbGrasaS2.isHidden = false
                 self.lbSal.isHidden = false
                 self.lbSal1.isHidden = false
-                self.lbSal2.isHidden = false
             })} else{
             UIView.animate(withDuration: 0.3, animations:{ self.btRojo.center = self.RojoCentro},completion:
             {(finished: Bool) in
@@ -120,18 +109,13 @@ class SemaforoViewController: UIViewController {
                 self.lbEs.isHidden = true
                 self.lbAzucar.isHidden = true
                 self.lbAzucar1.isHidden = true
-                self.lbAzucar2.isHidden = true
                 self.lbGrasa.isHidden = true
                 self.lbGrasa1.isHidden = true
-                self.lbGrasa2.isHidden = true
                 self.lbGrasaS.isHidden = true
                 self.lbGrasaS0.isHidden = true
                 self.lbGrasaS1.isHidden = true
-                self.lbGrasaS2.isHidden = true
                 self.lbSal.isHidden = true
-                self.lbSal1.isHidden = true
-                self.lbSal2.isHidden = true
-            
+                self.lbSal1.isHidden = true            
         }
     }
 
@@ -148,29 +132,21 @@ class SemaforoViewController: UIViewController {
                 self.btRojo.isHidden = true
                 ///labels
                 self.lbEs.text = "REGULAR"
-                self.lbAzucar1.text = "5g-"
-                self.lbAzucar2.text = "15g"
-                self.lbGrasa1.text = "3g-"
-                self.lbGrasa2.text = "20g"
-                self.lbGrasaS1.text = "1.5g-"
-                self.lbGrasaS2.text = "5g"
-                self.lbSal1.text = "0.3g-"
-                self.lbSal2.text = "1.5g"
+                self.lbAzucar1.text = "  5g - 15g"
+                self.lbGrasa1.text = "  3g - 20g"
+                self.lbGrasaS1.text = "  1.5g - 5g"
+                self.lbSal1.text = "  0.3g - 1.5g"
                 ///labels
                 self.lbEs.isHidden = false
                 self.lbAzucar.isHidden = false
                 self.lbAzucar1.isHidden = false
-                self.lbAzucar2.isHidden = false
                 self.lbGrasa.isHidden = false
                 self.lbGrasa1.isHidden = false
-                self.lbGrasa2.isHidden = false
                 self.lbGrasaS.isHidden = false
                 self.lbGrasaS0.isHidden = false
                 self.lbGrasaS1.isHidden = false
-                self.lbGrasaS2.isHidden = false
                 self.lbSal.isHidden = false
                 self.lbSal1.isHidden = false
-                self.lbSal2.isHidden = false
             })} else{
             UIView.animate(withDuration: 0.3, animations:{ self.btAmarillo.center = self.AmarilloCentro},completion:
             {(finished: Bool) in
@@ -184,17 +160,13 @@ class SemaforoViewController: UIViewController {
                 self.lbEs.isHidden = true
                 self.lbAzucar.isHidden = true
                 self.lbAzucar1.isHidden = true
-                self.lbAzucar2.isHidden = true
                 self.lbGrasa.isHidden = true
                 self.lbGrasa1.isHidden = true
-                self.lbGrasa2.isHidden = true
                 self.lbGrasaS.isHidden = true
                 self.lbGrasaS0.isHidden = true
                 self.lbGrasaS1.isHidden = true
-                self.lbGrasaS2.isHidden = true
                 self.lbSal.isHidden = true
                 self.lbSal1.isHidden = true
-                self.lbSal2.isHidden = true
             
         }
     }
@@ -213,29 +185,21 @@ class SemaforoViewController: UIViewController {
                 self.btRojo.isHidden = true
                 ///labels
                 self.lbEs.text = "BAJO"
-                self.lbAzucar1.text = "5g"
-                self.lbAzucar2.text = "o <"
-                self.lbGrasa1.text = "3g"
-                self.lbGrasa2.text = "o <"
-                self.lbGrasaS1.text = "1.5g"
-                self.lbGrasaS2.text = "o <"
-                self.lbSal1.text = "0.3g"
-                self.lbSal2.text = "o <"
+                self.lbAzucar1.text = "  5g o menos"
+                self.lbGrasa1.text = "  3g o menos"
+                self.lbGrasaS1.text = "  1.5g o menos"
+                self.lbSal1.text = "  0.3g o menos"
                 ///labels
                 self.lbEs.isHidden = false
                 self.lbAzucar.isHidden = false
                 self.lbAzucar1.isHidden = false
-                self.lbAzucar2.isHidden = false
                 self.lbGrasa.isHidden = false
                 self.lbGrasa1.isHidden = false
-                self.lbGrasa2.isHidden = false
                 self.lbGrasaS.isHidden = false
                 self.lbGrasaS0.isHidden = false
                 self.lbGrasaS1.isHidden = false
-                self.lbGrasaS2.isHidden = false
                 self.lbSal.isHidden = false
                 self.lbSal1.isHidden = false
-                self.lbSal2.isHidden = false
             })} else{
             UIView.animate(withDuration: 0.3, animations:{ self.btVerde.center = self.VerdeCentro},completion:
             {(finished: Bool) in
@@ -249,17 +213,13 @@ class SemaforoViewController: UIViewController {
                 self.lbEs.isHidden = true
                 self.lbAzucar.isHidden = true
                 self.lbAzucar1.isHidden = true
-                self.lbAzucar2.isHidden = true
                 self.lbGrasa.isHidden = true
                 self.lbGrasa1.isHidden = true
-                self.lbGrasa2.isHidden = true
                 self.lbGrasaS.isHidden = true
                 self.lbGrasaS0.isHidden = true
                 self.lbGrasaS1.isHidden = true
-                self.lbGrasaS2.isHidden = true
                 self.lbSal.isHidden = true
                 self.lbSal1.isHidden = true
-                self.lbSal2.isHidden = true
             
         }
     }
