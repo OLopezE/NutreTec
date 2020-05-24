@@ -88,16 +88,17 @@ class FirstViewController: UIViewController {
         var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
         misDias.append(esteDia)
         lblLeche.text = String(esteDia.leche)
-        lblAgua.text = String(esteDia.leche)
-        lblFrutas.text = String(esteDia.leche)
-        lblGrasas.text = String(esteDia.leche)
-        lblCereales.text = String(esteDia.leche)
-        lblAzucar.text = String(esteDia.leche)
-        lblCarne.text = String(esteDia.leche)
-        lblVegetales.text = String(esteDia.leche)
-        lblLeguminosas.text = String(esteDia.leche)
+        lblAgua.text = String(esteDia.agua)
+        lblFrutas.text = String(esteDia.fruta)
+        lblGrasas.text = String(esteDia.grasa)
+        lblCereales.text = String(esteDia.cereales)
+        lblAzucar.text = String(esteDia.azucar)
+        lblCarne.text = String(esteDia.carne)
+        lblVegetales.text = String(esteDia.vegetal)
+        lblLeguminosas.text = String(esteDia.leguminosa)
     }
     func desAsigna(){
+        //banderas
         fca = 0
         fv = 0
         flegu = 0
@@ -107,6 +108,7 @@ class FirstViewController: UIViewController {
         ff = 0
         fag = 0
         fleche = 0
+        //botones
         btCarne.setImage(carne, for: .normal)
         btVegetales.setImage(vegetales, for: .normal)
         btLeguminosas.setImage(leguminosas, for: .normal)
@@ -116,6 +118,7 @@ class FirstViewController: UIViewController {
         btGrasa.setImage(grasa, for: .normal)
         btLacteos.setImage(lacteos, for: .normal)
         btAgua.setImage(agua, for: .normal)
+        //colores
         vwAzucar.backgroundColor = colorTmp
         vwFrutas.backgroundColor = colorTmp
         vwLeguminosas.backgroundColor  = colorTmp
