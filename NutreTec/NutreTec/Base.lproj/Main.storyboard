@@ -1206,21 +1206,11 @@
                                             <segment title="Semanal"/>
                                         </segments>
                                     </segmentedControl>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A5J-xg-hOE">
-                                        <rect key="frame" x="8" y="8" width="358" height="270"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q7-fo-fVe" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="4" y="0.0" width="366" height="297"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HNZ-FP-4oc">
-                                                <rect key="frame" x="0.0" y="28" width="358" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HNZ-FP-4oc" id="6GF-La-YWT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1244,12 +1234,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="zLi-SW-u0G"/>
                     <connections>
+                        <outlet property="chartView" destination="6Q7-fo-fVe" id="6IV-ZK-GkS"/>
                         <outlet property="lblTitulo" destination="Cdo-qh-tLm" id="V4X-7Y-QLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oj-OA-RGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4181" y="-390"/>
+            <point key="canvasLocation" x="4179.7101449275369" y="-390.40178571428572"/>
         </scene>
         <!--Semaforo-->
         <scene sceneID="ANq-CS-UEx">
