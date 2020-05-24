@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -687,8 +687,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jesus Javier Lozano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xo-CZ-B9W">
-                                        <rect key="frame" x="8" y="114" width="155" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jesus Javier Lozano Martinez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xo-CZ-B9W">
+                                        <rect key="frame" x="8" y="114" width="226" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -705,6 +705,48 @@
                                         <rect key="frame" x="8" y="193" width="111" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon made by iconixar from www.flaticon.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxf-BG-BaS">
+                                        <rect key="frame" x="8" y="252" width="373" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon made by Icongeek26 from www.flaticon.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9y-k0-7Ev">
+                                        <rect key="frame" x="8" y="270" width="343" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon made by photo3idea_studio from www.flaticon.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcA-s7-ZSI">
+                                        <rect key="frame" x="8" y="292" width="366" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon made by Freepik from www.flaticon.com”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN8-0h-O1o">
+                                        <rect key="frame" x="8" y="313" width="343" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon made by Nhor Phai from www.flaticon.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-Ut-vwJ">
+                                        <rect key="frame" x="8" y="330" width="343" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://icons8.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM1-dt-CJG">
+                                        <rect key="frame" x="8" y="350" width="343" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1170,10 +1212,10 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HNZ-FP-4oc">
-                                                <rect key="frame" x="0.0" y="28" width="358" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="358" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HNZ-FP-4oc" id="6GF-La-YWT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -1794,21 +1836,25 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9ck-M3-W7I"/>
+        <segue reference="hAQ-Um-7Jc"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="agua" width="64" height="64"/>
         <image name="agua-2" width="64" height="64"/>
-        <image name="book.fill" catalog="system" width="64" height="50"/>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
         <image name="caramelo" width="128" height="128"/>
         <image name="caramelo-2" width="128" height="128"/>
         <image name="carne" width="128" height="128"/>
         <image name="carne-2" width="64" height="64"/>
         <image name="cereales" width="128" height="128"/>
         <image name="cereales-2" width="128" height="128"/>
-        <image name="chevron.left.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="chevron.right.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chicharos" width="128" height="128"/>
         <image name="chicharos-2" width="128" height="128"/>
-        <image name="doc.on.doc" catalog="system" width="58" height="64"/>
+        <image name="doc.on.doc" catalog="system" width="117" height="128"/>
         <image name="fruit" width="64" height="64"/>
         <image name="fruit-2" width="64" height="64"/>
         <image name="grasa" width="64" height="64"/>
@@ -1819,17 +1865,13 @@
         <image name="icons8-traffic-light-50" width="25" height="25"/>
         <image name="leche" width="64" height="64"/>
         <image name="leche-2" width="64" height="64"/>
-        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="personalhotspot" catalog="system" width="64" height="36"/>
-        <image name="rectangle.grid.1x2" catalog="system" width="64" height="50"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="personalhotspot" catalog="system" width="128" height="75"/>
+        <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
         <image name="red" width="256" height="256"/>
-        <image name="sunset.fill" catalog="system" width="64" height="48"/>
+        <image name="sunset.fill" catalog="system" width="128" height="97"/>
         <image name="vegetable" width="64" height="64"/>
         <image name="vegetable-2" width="64" height="64"/>
         <image name="yellow" width="880" height="920"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="9ck-M3-W7I"/>
-        <segue reference="hAQ-Um-7Jc"/>
-    </inferredMetricsTieBreakers>
 </document>
