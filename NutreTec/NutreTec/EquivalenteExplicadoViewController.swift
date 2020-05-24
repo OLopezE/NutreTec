@@ -26,7 +26,6 @@ class EquivalenteExplicadoViewController: UIViewController, UITableViewDelegate,
     
     
     @IBOutlet weak var tablaInfo: UITableView!
-    @IBOutlet weak var lbldesc2: UILabel!
     @IBOutlet weak var lbldesc1: UILabel!
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var vwTitulo: UIView!
@@ -37,7 +36,6 @@ class EquivalenteExplicadoViewController: UIViewController, UITableViewDelegate,
     
     var titulo = "Título"
     var desc = "Una ración es igual a:"
-    var desc2 = ""
     var colorTitulo : UIColor!
     var colorTabla : UIColor!
     var colorLetra = UIColor.white
@@ -50,10 +48,8 @@ class EquivalenteExplicadoViewController: UIViewController, UITableViewDelegate,
         super.viewDidLoad()
         scrollView.contentSize = tablaInfo.frame.size
         lbldesc1.text = desc
-        lbldesc2.text = desc2
         lblTitulo.text = titulo
         lbldesc1.textColor = colorLetra
-        lbldesc2.textColor = colorLetra
         lblTitulo.textColor = colorLetra
         vwTabla.layer.cornerRadius = 10
         vwTitulo.layer.cornerRadius = 10

@@ -13,6 +13,8 @@ class EquivalenteViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var vistaComida: UIView!
     
+    @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var vwTitulo: UIView!
     @IBOutlet weak var vwAzucar: UIView!
     @IBOutlet weak var vwGrasa: UIView!
     @IBOutlet weak var vwFrutas: UIView!
@@ -34,6 +36,9 @@ class EquivalenteViewController: UIViewController {
         vwLeguminosas.layer.cornerRadius = 10
         vwCarnes.layer.cornerRadius = 10
         vwVegetales.layer.cornerRadius = 10
+        vwTitulo.layer.cornerRadius = 10
+        vwTitulo.backgroundColor = UIColor.white
+        lblTitulo.textColor = UIColor.black
         // Do any additional setup after loading the view.
     }
     
