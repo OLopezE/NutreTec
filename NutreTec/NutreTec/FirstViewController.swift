@@ -17,7 +17,7 @@ class FirstViewController: UIViewController {
     
     
     @IBOutlet weak var fecha: UILabel!
-    var misDias = [dias]()
+    var misDias : [dias]!
     
     var date = Date()
     
@@ -56,6 +56,10 @@ class FirstViewController: UIViewController {
     var colorLetra = UIColor.black
     
     override func viewDidLoad() {
+        
+        misDias = []
+        
+        misDias.append(dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: lblMidia.text!))
         scrollView.contentSize = vistaAlimentos.frame.size
         super.viewDidLoad()
         vwAzucar.layer.cornerRadius = 10
@@ -70,7 +74,9 @@ class FirstViewController: UIViewController {
         lblMidia.textColor = colorLetra
         
         
-        
+        if FileManager.default.fileExists(atPath: dataFileURL().path){
+            obtenerDias()
+        }
         // Do any additional setup after loading the view.
         obtenDia()
         buscaDia()
@@ -78,6 +84,19 @@ class FirstViewController: UIViewController {
     }
     
     
+    func nuevoDia(){
+        var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
+        misDias.append(esteDia)
+        lblLeche.text = String(esteDia.leche)
+        lblAgua.text = String(esteDia.leche)
+        lblFrutas.text = String(esteDia.leche)
+        lblGrasas.text = String(esteDia.leche)
+        lblCereales.text = String(esteDia.leche)
+        lblAzucar.text = String(esteDia.leche)
+        lblCarne.text = String(esteDia.leche)
+        lblVegetales.text = String(esteDia.leche)
+        lblLeguminosas.text = String(esteDia.leche)
+    }
     func desAsigna(){
         fca = 0
         fv = 0
@@ -109,23 +128,25 @@ class FirstViewController: UIViewController {
     }
     
     func buscaDia(){
+        var tmp = 0
         for n in misDias {
+            print(n.dia)
             if n.dia == fecha.text!{
                 lblLeche.text = String(n.leche)
-                lblAgua.text = String(n.leche)
-                lblFrutas.text = String(n.leche)
-                lblGrasas.text = String(n.leche)
-                lblCereales.text = String(n.leche)
-                lblAzucar.text = String(n.leche)
-                lblCarne.text = String(n.leche)
-                lblVegetales.text = String(n.leche)
-                lblLeguminosas.text = String(n.leche)
-            }else{
-                var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
-                misDias.append(esteDia)
-                
-                
+                lblAgua.text = String(n.agua)
+                lblFrutas.text = String(n.fruta)
+                lblGrasas.text = String(n.grasa)
+                lblCereales.text = String(n.cereales)
+                lblAzucar.text = String(n.azucar)
+                lblCarne.text = String(n.carne)
+                lblVegetales.text = String(n.vegetal)
+                lblLeguminosas.text = String(n.leguminosa)
+                tmp = 1
+                break
             }
+        }
+        if tmp == 0 {
+                nuevoDia()
         }
     }
 
@@ -134,10 +155,17 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblCarne.text!)! == 0  {
                 
             }else{
-                lblCarne.text = String(n +  Int(lblCarne.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
+                        print(f.dia)
                         f.carne += n
+                        print(f.carne)
+                        print(f.vegetal)
+                        print(f.azucar)
+                        print(f.leche)
+                        lblCarne.text = String(f.carne)
+                        guardarDias()
+                        break
                     }
                 }
             }
@@ -224,10 +252,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblAgua.text!)! == 0  {
                 
             }else{
-                lblAgua.text = String(n +  Int(lblAgua.text!)!)
+                lblAgua.text = String(250 * n +   Int(lblAgua.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
-                        f.agua += n
+                        f.agua += n * 250
                     }
                 }
                 
@@ -364,20 +392,53 @@ class FirstViewController: UIViewController {
     
     @IBAction func diaMas(_ sender: Any) {
         date = date.addingTimeInterval(86400)
+        guardarDias()
         obtenDia()
         buscaDia()
+        desAsigna()
     }
     
     @IBAction func diaMenos(_ sender: Any) {
         date = date.addingTimeInterval(-86400)
+        guardarDias()
         obtenDia()
         buscaDia()
+        desAsigna()
     }
     func obtenDia(){
         let dia: DateFormatter = DateFormatter()
         dia.dateFormat = "MMM dd, yyyy"
         fecha.text = dia.string(from: date)
     }
+    
+    //MARK: - Codable
+    func dataFileURL () -> URL {
+        let url = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+        let pathArchivo = url.appendingPathComponent("dias.plist")
+        print(pathArchivo.path)
+        return pathArchivo
+    }
+    
+    @IBAction func guardarDias(){
+        do {
+            let data = try PropertyListEncoder().encode(misDias)
+            try data.write(to: dataFileURL())
+        }catch{
+            print("Error al guardar los datos")
+        }
+    }
+    
+    func obtenerDias(){
+        misDias.removeAll()
+        do{
+            let data = try Data.init(contentsOf: dataFileURL())
+            misDias = try PropertyListDecoder().decode([dias].self, from: data)
+        }catch{
+            print("error al cargar los empleados")
+        }
+        obtenDia()
+    }
+    
     
 }
 

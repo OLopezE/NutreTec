@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004F082724790B5A0093FF77 /* midiaExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F082624790B5A0093FF77 /* midiaExplicadoViewController.swift */; };
 		008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D8532246E36A900FB2A60 /* historialViewController.swift */; };
 		00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */; };
 		00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		004F082624790B5A0093FF77 /* midiaExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = midiaExplicadoViewController.swift; sourceTree = "<group>"; };
 		008D8532246E36A900FB2A60 /* historialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historialViewController.swift; sourceTree = "<group>"; };
 		00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationTableViewController.swift; sourceTree = "<group>"; };
 		00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				00FED31A24515AD900AF31C4 /* dias.swift */,
 				00FED30A2450FDAE00AF31C4 /* MiPlanViewController.swift */,
 				00FED30C2450FDAE00AF31C4 /* Main.storyboard */,
+				004F082624790B5A0093FF77 /* midiaExplicadoViewController.swift */,
 				052ABBA8246D90ED0051CBC8 /* MiPerfilViewController.swift */,
 				00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */,
 				008D8532246E36A900FB2A60 /* historialViewController.swift */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FA65662472D5E400D8BB67 /* historialExplicadoViewController.swift in Sources */,
+				004F082724790B5A0093FF77 /* midiaExplicadoViewController.swift in Sources */,
 				052ABBA9246D90ED0051CBC8 /* MiPerfilViewController.swift in Sources */,
 				008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */,
 				00FED30B2450FDAE00AF31C4 /* MiPlanViewController.swift in Sources */,
