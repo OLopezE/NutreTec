@@ -9,6 +9,9 @@
 import UIKit
 
 class SemaforoViewController: UIViewController {
+    @IBOutlet weak var UIScroll: UIScrollView!
+    
+    @IBOutlet weak var ViewSemaforo: UIView!
     
     @IBOutlet weak var moverRojo: UIButton!
     @IBOutlet weak var btRojo: UIButton!
@@ -63,6 +66,7 @@ class SemaforoViewController: UIViewController {
         lbGrasaS1.isHidden = true
         lbSal.isHidden = true
         lbSal1.isHidden = true
+        UIScroll.contentSize = ViewSemaforo.frame.size
         
 
         // Do any additional setup after loading the view.
