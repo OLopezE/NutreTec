@@ -24,8 +24,9 @@ class MiPlanViewController: UIViewController {
     @IBOutlet weak var tfLeche: UITextField!
     @IBOutlet weak var tfAgua: UITextField!
     
-    // Todos los campos de texto.
+    // Todos los campos de texto y su nombre.
     var fields : [UITextField]!
+    var names : [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,14 @@ class MiPlanViewController: UIViewController {
                           tfAzucares, tfCereales, tfFrutas,
                           tfGrasas, tfLeche, tfAgua
                         ]
+        names = [ "carnes", "vegetales", "leguminosas", "azucares", "cereales", "frutas", "grasas", "leche", "agua" ]
+        
+        // Cargar los valores guardados.
+        // Si no hay guardado, se regresa 0.
+        let settings = UserDefaults.standard
+        for i in 0..<fields.count {
+            fields[i].text = "\(settings.integer(forKey: (names[i])))"
+        }
     }
 
     // Cuando se presiona el botón "Editar".
@@ -46,6 +55,24 @@ class MiPlanViewController: UIViewController {
             btnEditar.setTitle("Guardar", for: .normal)
         } else {
             btnEditar.setTitle("Modificar porciones", for: .normal)
+
+            // Se tocó "Guardar".
+            // Guardar los valores.
+            let settings = UserDefaults.standard
+            for i in 0..<fields.count {
+                
+                // Validar que se ingresen números válidos.
+                // Regresar un valor a 0 si no es válido.
+                var val = (fields[i].text! as NSString).integerValue
+                if val <= 0 {
+                    fields[i].text = "0"
+                    val = 0
+                }
+                
+                // Guardar el valor.
+                settings.set(val, forKey: names[i])
+            }
+            
         }
         
         for i in 0..<fields.count {
