@@ -144,20 +144,41 @@ class historialViewController: UIViewController {
         // Establecer un valor a 1 si no es válido.
         peso = (tfPeso.text! as NSString).doubleValue
         if peso <= 0.0 {
-            tfPeso.text = "1"
-            peso = 1.0
+            
+            let alert = UIAlertController(title: "Error", message: "El peso introducido no es válido.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+            tfPeso.text = ""
+            peso = 0.0
+            
+            return
         }
         
         masa = (tfMasa.text! as NSString).doubleValue
         if masa <= 0.0 {
-            tfMasa.text = "1"
-            masa = 1.0
+            
+            let alert = UIAlertController(title: "Error", message: "La masa muscular introducida no es válida.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+            tfMasa.text = ""
+            masa = 0.0
+            
+            return
         }
         
         grasa = (tfGrasa.text! as NSString).doubleValue
-        if grasa <= 0.0 {
-            tfGrasa.text = "1"
-            grasa = 1.0
+        if Double(tfGrasa.text!) == nil || grasa < 0.0 || grasa > 100.0 {
+            
+            let alert = UIAlertController(title: "Error", message: "El porcentaje de grasa introducido no es válido.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+            tfGrasa.text = ""
+            grasa = 0.0
+            
+            return
         }
         
         // Guardar los nuevos valores.
