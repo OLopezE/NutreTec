@@ -21,18 +21,40 @@ class historialViewController: UIViewController {
     @IBOutlet weak var tfGrasa: UITextField!
     
     var date = Date()
-    var peso : Float!
-    var masa : Float!
-    var grasa : Float!
+    var diaString : String!
+    var peso = 0.0
+    var masa = 0.0
+    var grasa = 0.0
     
+    var registroHoy = RegistroProgreso()
+    var misRegistros = [RegistroProgreso]()
     
     override func viewDidLoad() {
         vwPeso.layer.cornerRadius = 10
         vwMasa.layer.cornerRadius = 10
         vwGrasa.layer.cornerRadius = 10
         super.viewDidLoad()
-        obtenDia()
+
+        diaString = obtenDia()
+        lblFecha.text = diaString
+        
         // Do any additional setup after loading the view.
+        
+        misRegistros = []
+        
+        // Cargar registros de progreso (peso, masa muscular, porcentaje de grasa).
+        if FileManager.default.fileExists(atPath: dataFileURL().path){
+            obtenerRegistros()
+        }
+        
+        buscaDia()
+
+        // Si no se encontró un registro de hoy,
+        // estos valores son 0.
+        tfPeso.text = peso == 0 ? "" : "\(peso)"
+        tfMasa.text = masa == 0 ? "" : "\(masa)"
+        tfGrasa.text = grasa == 0 ? "" : "\(grasa)"
+        
     }
     
 
@@ -54,15 +76,99 @@ class historialViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     
-    func obtenDia(){
+    // Regresa la fecha de hoy en el formato especificado.
+    func obtenDia() -> String {
         let dia: DateFormatter = DateFormatter()
         dia.dateFormat = "MMM dd, yyyy"
-        lblFecha.text = dia.string(from: date)
+        return dia.string(from: date)
     }
     
+    // Buscar el registro del día de hoy.
+    // Si existe, guardarlo en registroHoy.
+    // Si no, crear uno nuevo en registroHoy.
+    func buscaDia() {
+        var existe = false
+        for reg in misRegistros {
+            if reg.dia == diaString {
+                peso = reg.peso
+                masa = reg.masaMuscular
+                grasa = reg.porcentajeGrasa
+                registroHoy = reg
+                existe = true
+                break
+            }
+        }
+        
+        // Si no existe, crearlo.
+        if !existe {
+            registroHoy = RegistroProgreso(dia: diaString, peso: 1.0, masaMuscular: 1.0, porcentajeGrasa: 1.0)
+            misRegistros.append(registroHoy)
+        }
+    }
+    
+    //MARK: - Codable
+    
+    func dataFileURL() -> URL {
+        let url = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+        let pathArchivo = url.appendingPathComponent("registrosProgreso.plist")
+        return pathArchivo
+    }
+    
+    // Guardar misRegistros en el archivo.
+    @IBAction func guardarRegistros(){
+        do {
+            let data = try PropertyListEncoder().encode(misRegistros)
+            try data.write(to: dataFileURL())
+        } catch {
+            print("Error al guardar los datos")
+        }
+    }
+    
+    // Cargar los registros del archivo y guardarlos en misRegistros.
+    func obtenerRegistros() {
+        misRegistros.removeAll()
+        do {
+            let data = try Data.init(contentsOf: dataFileURL())
+            misRegistros = try PropertyListDecoder().decode([RegistroProgreso].self, from: data)
+        } catch {
+            print("Error al cargar los datos")
+        }
+    }
+    
+    // Botón guardar.
     @IBAction func guardar(_ sender: UIButton) {
         
+        // Ya se cargó o creó el registro de hoy en registroHoy.
+        
+        // Validar que se ingresen números válidos.
+        // Establecer un valor a 1 si no es válido.
+        peso = (tfPeso.text! as NSString).doubleValue
+        if peso <= 0.0 {
+            tfPeso.text = "1"
+            peso = 1.0
+        }
+        
+        masa = (tfMasa.text! as NSString).doubleValue
+        if masa <= 0.0 {
+            tfMasa.text = "1"
+            masa = 1.0
+        }
+        
+        grasa = (tfGrasa.text! as NSString).doubleValue
+        if grasa <= 0.0 {
+            tfGrasa.text = "1"
+            grasa = 1.0
+        }
+        
+        // Guardar los nuevos valores.
+        //registroHoy = RegistroProgreso(dia: diaString, peso: peso, masaMuscular: masa, porcentajeGrasa: grasa)
+        registroHoy.peso = peso
+        registroHoy.masaMuscular = masa
+        registroHoy.porcentajeGrasa = grasa
+        
+        // Guardar el archivo de registros.
+        guardarRegistros()
+        
     }
-    
     
 }
