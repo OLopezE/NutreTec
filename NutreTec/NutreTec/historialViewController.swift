@@ -66,10 +66,13 @@ class historialViewController: UIViewController {
         let vista = segue.destination as! historialExplicadoViewController
         if segue.identifier == "peso"{
             vista.titulo = "Peso"
+            vista.tipo = "peso"
         }else if segue.identifier == "masa"{
             vista.titulo = "Masa muscular"
+            vista.tipo = "masa"
         }else{
             vista.titulo = "Porcentaje de Grasa"
+            vista.tipo = "grasa"
             vista.tamano = 30
         }
         // Get the new view controller using segue.destination.

@@ -1205,6 +1205,9 @@
                                             <segment title="Mensual"/>
                                             <segment title="Semanal"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmentedCambiado:" destination="Bzg-Qu-g9L" eventType="valueChanged" id="uta-VZ-oKg"/>
+                                        </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q7-fo-fVe" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="4" y="0.0" width="366" height="297"/>
