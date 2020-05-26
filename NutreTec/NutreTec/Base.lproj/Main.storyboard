@@ -791,74 +791,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLs-hG-Pm5">
-                                <rect key="frame" x="20" y="44" width="374" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLs-hG-Pm5">
+                                <rect key="frame" x="20" y="44" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navegación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxr-L1-O1G">
                                         <rect key="frame" x="8" y="54" width="247" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.80951321796782172" green="0.95447122209321544" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="VVi-51-xfF"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtz-Gq-zzO">
-                                <rect key="frame" x="20" y="200" width="374" height="594"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtz-Gq-zzO">
+                                <rect key="frame" x="20" y="172" width="374" height="631"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6I-h5-FD2">
-                                        <rect key="frame" x="125" y="17" width="124" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Mi perfil"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6I-h5-FD2">
+                                        <rect key="frame" x="20" y="10" width="334" height="50"/>
+                                        <color key="backgroundColor" red="0.52311248919999997" green="0.42809142900000002" blue="0.8202331853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="60K-Qu-GJi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Mi perfil">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="n9X-ts-3fp" kind="show" id="URl-c9-B27"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzR-yw-eRf">
-                                        <rect key="frame" x="125" y="78" width="124" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Semáforo"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzR-yw-eRf">
+                                        <rect key="frame" x="20" y="68" width="334" height="50"/>
+                                        <color key="backgroundColor" red="0.52311248919999997" green="0.42809142900000002" blue="0.8202331853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MjO-ro-Rnu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Semáforo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="mOO-1V-RUw" kind="show" id="dI7-Xc-g7L"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0t-0u-N3l">
-                                        <rect key="frame" x="125" y="139" width="124" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Recetario"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0t-0u-N3l">
+                                        <rect key="frame" x="20" y="126" width="334" height="50"/>
+                                        <color key="backgroundColor" red="0.52311248919999997" green="0.42809142900000002" blue="0.8202331853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0fW-qE-QLU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Recetario">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="o30-GB-fbN" kind="show" id="JEh-Hi-mnh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bw-tg-NZu">
-                                        <rect key="frame" x="116" y="200" width="143" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Mi plan"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bw-tg-NZu">
+                                        <rect key="frame" x="20" y="184" width="334" height="50"/>
+                                        <color key="backgroundColor" red="0.52311248919999997" green="0.42809142900000002" blue="0.8202331853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MLa-yI-65S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Mi plan">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="8rJ-Kc-sve" kind="show" id="nTa-po-skO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Np-3U-8wW">
-                                        <rect key="frame" x="116" y="251" width="143" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Créditos"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Np-3U-8wW">
+                                        <rect key="frame" x="20" y="242" width="334" height="50"/>
+                                        <color key="backgroundColor" red="0.52311248919999997" green="0.42809142900000002" blue="0.8202331853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="n5b-Vy-zzl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Créditos">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="n3K-uB-vWg" kind="show" id="9BR-iy-sKs"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="5Bw-tg-NZu" firstAttribute="leading" secondItem="rtz-Gq-zzO" secondAttribute="leading" constant="20" id="48L-5v-gtg"/>
+                                    <constraint firstAttribute="trailing" secondItem="kzR-yw-eRf" secondAttribute="trailing" constant="20" id="6Ct-AE-Jst"/>
+                                    <constraint firstItem="5Bw-tg-NZu" firstAttribute="top" secondItem="S0t-0u-N3l" secondAttribute="bottom" constant="8" id="8Yq-PP-XEU"/>
+                                    <constraint firstItem="S0t-0u-N3l" firstAttribute="top" secondItem="kzR-yw-eRf" secondAttribute="bottom" constant="8" id="9bZ-Nn-vSC"/>
+                                    <constraint firstItem="kzR-yw-eRf" firstAttribute="leading" secondItem="rtz-Gq-zzO" secondAttribute="leading" constant="20" id="CPX-Gg-gXa"/>
+                                    <constraint firstItem="2Np-3U-8wW" firstAttribute="top" secondItem="5Bw-tg-NZu" secondAttribute="bottom" constant="8" id="gGP-a8-Bof"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Bw-tg-NZu" secondAttribute="trailing" constant="20" id="hvk-Oa-jbY"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Np-3U-8wW" secondAttribute="trailing" constant="20" id="ibi-fC-Pyu"/>
+                                    <constraint firstAttribute="trailing" secondItem="V6I-h5-FD2" secondAttribute="trailing" constant="20" id="pH3-Cb-vDE"/>
+                                    <constraint firstItem="V6I-h5-FD2" firstAttribute="leading" secondItem="rtz-Gq-zzO" secondAttribute="leading" constant="20" id="rUu-Ax-A9O"/>
+                                    <constraint firstItem="V6I-h5-FD2" firstAttribute="top" secondItem="rtz-Gq-zzO" secondAttribute="top" constant="10" id="slk-9h-1BH"/>
+                                    <constraint firstItem="kzR-yw-eRf" firstAttribute="top" secondItem="V6I-h5-FD2" secondAttribute="bottom" constant="8" id="t3T-Er-9Df"/>
+                                    <constraint firstItem="2Np-3U-8wW" firstAttribute="leading" secondItem="rtz-Gq-zzO" secondAttribute="leading" constant="20" id="tWU-rT-qyj"/>
+                                    <constraint firstAttribute="trailing" secondItem="S0t-0u-N3l" secondAttribute="trailing" constant="20" id="ule-iq-1Fw"/>
+                                    <constraint firstItem="S0t-0u-N3l" firstAttribute="leading" secondItem="rtz-Gq-zzO" secondAttribute="leading" constant="20" id="wwO-Nm-kG3"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94567681347150256" green="0.94567681347150256" blue="0.94567681347150256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rtz-Gq-zzO" firstAttribute="top" secondItem="xLs-hG-Pm5" secondAttribute="bottom" constant="8" id="9sA-9I-1lh"/>
+                            <constraint firstItem="A3f-ix-8RG" firstAttribute="trailing" secondItem="xLs-hG-Pm5" secondAttribute="trailing" constant="20" id="EI3-lQ-6kL"/>
+                            <constraint firstItem="xLs-hG-Pm5" firstAttribute="leading" secondItem="A3f-ix-8RG" secondAttribute="leading" constant="20" id="HdQ-E0-sAL"/>
+                            <constraint firstItem="A3f-ix-8RG" firstAttribute="trailing" secondItem="rtz-Gq-zzO" secondAttribute="trailing" constant="20" id="Kfd-Hv-51v"/>
+                            <constraint firstItem="xLs-hG-Pm5" firstAttribute="top" secondItem="A3f-ix-8RG" secondAttribute="top" id="hXu-ea-POp"/>
+                            <constraint firstItem="A3f-ix-8RG" firstAttribute="bottom" secondItem="rtz-Gq-zzO" secondAttribute="bottom" constant="10" id="z9F-LW-qjM"/>
+                            <constraint firstItem="rtz-Gq-zzO" firstAttribute="leading" secondItem="A3f-ix-8RG" secondAttribute="leading" constant="20" id="zvQ-GF-PcL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="A3f-ix-8RG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Navegación" image="rectangle.grid.1x2" catalog="system" id="RBD-14-1CQ"/>
@@ -1487,204 +1539,177 @@
                                     <constraint firstAttribute="height" constant="100" id="qYJ-tK-PCb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlr-VV-iDV">
-                                <rect key="frame" x="20" y="164" width="374" height="639"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-gk-N5C">
+                                <rect key="frame" x="20" y="154" width="374" height="641"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6MN-qR-vkR">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="620"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-gk-N5C">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="886"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7qR-nD-Lie">
-                                                        <rect key="frame" x="12" y="18" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA6-mP-iH9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <state key="normal" title="Vegetales">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="v" id="DT1-aW-lpR"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.36939756148061209" green="0.6266061230964467" blue="0.41293439573555302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-hO-BNQ">
-                                                        <rect key="frame" x="12" y="121" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOy-2z-lgb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <state key="normal" title="Carnes">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="car" id="8cK-ap-vuV"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.62174987674753979" green="0.54235905009998953" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVw-Sm-gBI">
-                                                        <rect key="frame" x="12" y="224" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-zu-cUd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <state key="normal" title="Leguminosas">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="leg" id="9ck-M3-W7I"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.62269592201815127" green="0.63362231164029614" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHx-4R-dgO">
-                                                        <rect key="frame" x="12" y="533" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3O-B0-jw8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <state key="normal" title="Cereales">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="cer" id="nNa-GZ-BVP"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.9331282383419689" green="0.89380249246450727" blue="0.48694517353561412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I23-BU-hgL">
-                                                        <rect key="frame" x="12" y="327" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-jK-Ahg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <state key="normal" title="Lacteos">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="lac" id="hYG-Wg-Z67"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.6409819377658923" green="0.84503628555651733" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkb-PD-Wno">
-                                                        <rect key="frame" x="12" y="430" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-vy-Ka3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <color key="tintColor" red="1" green="0.75264007799999999" blue="0.87953170839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <state key="normal" title="Frutas">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="f" id="KAv-90-iba"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.91980725526809692" green="0.43774568881319181" blue="0.55983075055317555" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOe-gL-0H2">
-                                                        <rect key="frame" x="16" y="739" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxf-Sz-FFa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <state key="normal" title="Grasas">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="gr" id="nrn-5v-0Nm"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.67259546191559227" green="0.67259546191559227" blue="0.67259546191559227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Cp-1K-NiH">
-                                                        <rect key="frame" x="16" y="636" width="342" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-tT-PX7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                                                <state key="normal" title="Azúcares">
-                                                                    <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <segue destination="jbo-WE-tJ6" kind="show" identifier="az" id="bos-XE-wSr"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.74798134397346006" green="0.7472833682307356" blue="0.85703639076163729" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                        </subviews>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="vOM-jF-ShO"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="X4P-vc-WmF"/>
-                                    </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA6-mP-iH9">
+                                        <rect key="frame" x="16" y="10" width="342" height="50"/>
+                                        <color key="backgroundColor" red="0.2715371251" green="0.63790577650000002" blue="0.39211842419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="30p-mr-1Ac"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <state key="normal" title="Vegetales">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="v" id="DT1-aW-lpR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-zu-cUd">
+                                        <rect key="frame" x="16" y="126" width="342" height="50"/>
+                                        <color key="backgroundColor" red="0.62269693609999999" green="0.6279176474" blue="0.9921947122" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="bVe-mq-zf0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <state key="normal" title="Leguminosas">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="leg" id="9ck-M3-W7I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3O-B0-jw8">
+                                        <rect key="frame" x="16" y="300" width="342" height="50"/>
+                                        <color key="backgroundColor" red="0.93914121390000005" green="0.89492481950000002" blue="0.41557025910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3BB-DF-wKt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <state key="normal" title="Cereales">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="cer" id="nNa-GZ-BVP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-jK-Ahg">
+                                        <rect key="frame" x="16" y="242" width="342" height="50"/>
+                                        <color key="backgroundColor" red="0.58409923320000001" green="0.84839087719999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GPH-Q2-tHb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <state key="normal" title="Lacteos">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="lac" id="hYG-Wg-Z67"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-vy-Ka3">
+                                        <rect key="frame" x="16" y="184" width="342" height="50"/>
+                                        <color key="backgroundColor" red="0.98637360330000001" green="0.39770889279999999" blue="0.55686759949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Bxo-7m-61V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <color key="tintColor" red="1" green="0.75264007799999999" blue="0.87953170839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Frutas">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="f" id="KAv-90-iba"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-tT-PX7">
+                                        <rect key="frame" x="16" y="358" width="342" height="50"/>
+                                        <color key="backgroundColor" red="0.74978786710000001" green="0.74708700179999998" blue="0.86668169500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Vpe-N1-HhY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <state key="normal" title="Azúcares">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="az" id="bos-XE-wSr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxf-Sz-FFa">
+                                        <rect key="frame" x="16" y="416" width="342" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SCM-zq-ZMl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <state key="normal" title="Grasas">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="gr" id="nrn-5v-0Nm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOy-2z-lgb">
+                                        <rect key="frame" x="16" y="68" width="342" height="50"/>
+                                        <color key="backgroundColor" red="0.64210671190000002" green="0.52636563780000001" blue="0.99612218139999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ome-7m-NPv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                        <state key="normal" title="Carnes">
+                                            <color key="titleColor" red="0.97967940409999998" green="0.97967940409999998" blue="0.97967940409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jbo-WE-tJ6" kind="show" identifier="car" id="8cK-ap-vuV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="6MN-qR-vkR" secondAttribute="bottom" id="BZh-a1-wwS"/>
-                                    <constraint firstItem="6MN-qR-vkR" firstAttribute="top" secondItem="dlr-VV-iDV" secondAttribute="top" id="FZz-Sl-dL3"/>
-                                    <constraint firstItem="6MN-qR-vkR" firstAttribute="leading" secondItem="dlr-VV-iDV" secondAttribute="leading" id="P8b-Ut-d47"/>
-                                    <constraint firstAttribute="trailing" secondItem="6MN-qR-vkR" secondAttribute="trailing" id="sIc-uT-5Jg"/>
+                                    <constraint firstAttribute="trailing" secondItem="jrv-vy-Ka3" secondAttribute="trailing" constant="16" id="0eD-aH-zSv"/>
+                                    <constraint firstAttribute="trailing" secondItem="f3O-B0-jw8" secondAttribute="trailing" constant="16" id="4oE-m8-NyL"/>
+                                    <constraint firstAttribute="trailing" secondItem="hc7-jK-Ahg" secondAttribute="trailing" constant="16" id="9qF-po-XXp"/>
+                                    <constraint firstItem="cJ0-zu-cUd" firstAttribute="top" secondItem="pOy-2z-lgb" secondAttribute="bottom" constant="8" id="A4m-WP-GwR"/>
+                                    <constraint firstItem="cJ0-zu-cUd" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="BL3-RA-ujA"/>
+                                    <constraint firstItem="pOy-2z-lgb" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="M2j-z8-5uc"/>
+                                    <constraint firstAttribute="trailing" secondItem="cA6-mP-iH9" secondAttribute="trailing" constant="16" id="Q2i-NU-LAU"/>
+                                    <constraint firstItem="oxf-Sz-FFa" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="QFb-Yf-3AM"/>
+                                    <constraint firstItem="f3O-B0-jw8" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="R0Z-Ob-M2Y"/>
+                                    <constraint firstItem="cA6-mP-iH9" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="TZ5-6w-kPy"/>
+                                    <constraint firstItem="f3O-B0-jw8" firstAttribute="top" secondItem="hc7-jK-Ahg" secondAttribute="bottom" constant="8" id="Tej-jy-uae"/>
+                                    <constraint firstItem="M9h-tT-PX7" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="XIs-vD-KEF"/>
+                                    <constraint firstItem="jrv-vy-Ka3" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="Ymn-au-UeU"/>
+                                    <constraint firstItem="M9h-tT-PX7" firstAttribute="top" secondItem="f3O-B0-jw8" secondAttribute="bottom" constant="8" id="bLX-Bc-gpo"/>
+                                    <constraint firstItem="hc7-jK-Ahg" firstAttribute="leading" secondItem="fEr-gk-N5C" secondAttribute="leading" constant="16" id="ber-om-SWU"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOy-2z-lgb" secondAttribute="trailing" constant="16" id="fyc-e9-TAJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="M9h-tT-PX7" secondAttribute="trailing" constant="16" id="h91-zp-iT2"/>
+                                    <constraint firstAttribute="trailing" secondItem="cJ0-zu-cUd" secondAttribute="trailing" constant="16" id="i10-74-l9e"/>
+                                    <constraint firstItem="cA6-mP-iH9" firstAttribute="top" secondItem="fEr-gk-N5C" secondAttribute="top" constant="10" id="mIS-xe-xKU"/>
+                                    <constraint firstItem="jrv-vy-Ka3" firstAttribute="top" secondItem="cJ0-zu-cUd" secondAttribute="bottom" constant="8" id="t7d-vU-5gg"/>
+                                    <constraint firstItem="pOy-2z-lgb" firstAttribute="top" secondItem="cA6-mP-iH9" secondAttribute="bottom" constant="8" id="uFk-aU-sXZ"/>
+                                    <constraint firstItem="hc7-jK-Ahg" firstAttribute="top" secondItem="jrv-vy-Ka3" secondAttribute="bottom" constant="8" id="vY2-Fe-vfo"/>
+                                    <constraint firstAttribute="trailing" secondItem="oxf-Sz-FFa" secondAttribute="trailing" constant="16" id="xEj-iL-ZBQ"/>
+                                    <constraint firstItem="oxf-Sz-FFa" firstAttribute="top" secondItem="M9h-tT-PX7" secondAttribute="bottom" constant="8" id="zr7-Ha-xRD"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.9609375" green="0.9609375" blue="0.9609375" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ACH-TE-ohF" firstAttribute="top" secondItem="GJx-54-8cg" secondAttribute="top" id="7AC-Ec-JD3"/>
-                            <constraint firstItem="dlr-VV-iDV" firstAttribute="top" secondItem="ACH-TE-ohF" secondAttribute="bottom" constant="20" id="EEF-iC-usa"/>
                             <constraint firstItem="ACH-TE-ohF" firstAttribute="leading" secondItem="GJx-54-8cg" secondAttribute="leading" constant="20" id="F1Q-dC-zvc"/>
+                            <constraint firstItem="GJx-54-8cg" firstAttribute="trailing" secondItem="fEr-gk-N5C" secondAttribute="trailing" constant="20" id="I7m-1P-PB9"/>
+                            <constraint firstItem="GJx-54-8cg" firstAttribute="bottom" secondItem="fEr-gk-N5C" secondAttribute="bottom" constant="18" id="IiK-ZJ-WWM"/>
                             <constraint firstItem="GJx-54-8cg" firstAttribute="trailing" secondItem="ACH-TE-ohF" secondAttribute="trailing" constant="20" id="VJD-bu-vcL"/>
-                            <constraint firstItem="GJx-54-8cg" firstAttribute="trailing" secondItem="dlr-VV-iDV" secondAttribute="trailing" constant="20" id="YOI-bL-1DJ"/>
-                            <constraint firstItem="dlr-VV-iDV" firstAttribute="leading" secondItem="GJx-54-8cg" secondAttribute="leading" constant="20" id="gHC-JY-o48"/>
-                            <constraint firstItem="GJx-54-8cg" firstAttribute="bottom" secondItem="dlr-VV-iDV" secondAttribute="bottom" constant="10" id="n5g-aH-Zae"/>
+                            <constraint firstItem="fEr-gk-N5C" firstAttribute="leading" secondItem="GJx-54-8cg" secondAttribute="leading" constant="20" id="jBa-TI-Ymw"/>
+                            <constraint firstItem="fEr-gk-N5C" firstAttribute="top" secondItem="ACH-TE-ohF" secondAttribute="bottom" constant="10" id="jka-fp-NLG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GJx-54-8cg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Equivalente" image="personalhotspot" catalog="system" id="ezP-FN-Dvi"/>
                     <connections>
+                        <outlet property="bttnAzucar" destination="M9h-tT-PX7" id="qMH-UI-5A1"/>
+                        <outlet property="bttnCarnes" destination="pOy-2z-lgb" id="DOG-af-SaD"/>
+                        <outlet property="bttnCereales" destination="f3O-B0-jw8" id="pGk-Uo-3Ro"/>
+                        <outlet property="bttnFrutas" destination="jrv-vy-Ka3" id="wIJ-cn-JuM"/>
+                        <outlet property="bttnGrasa" destination="oxf-Sz-FFa" id="AzJ-2u-Kd1"/>
+                        <outlet property="bttnLacteos" destination="hc7-jK-Ahg" id="4Bc-Qr-oMa"/>
+                        <outlet property="bttnLeguminosas" destination="cJ0-zu-cUd" id="YNi-JZ-0N0"/>
+                        <outlet property="bttnVegetales" destination="cA6-mP-iH9" id="PaG-LU-fkR"/>
                         <outlet property="lblTitulo" destination="sQP-lM-ke6" id="D4r-XG-By6"/>
-                        <outlet property="scrollView" destination="6MN-qR-vkR" id="7vq-jb-775"/>
                         <outlet property="vistaComida" destination="fEr-gk-N5C" id="Tz3-Gr-sa6"/>
-                        <outlet property="vwAzucar" destination="4Cp-1K-NiH" id="yAF-Ss-5dx"/>
-                        <outlet property="vwCarnes" destination="pQ4-hO-BNQ" id="0oA-YT-FSw"/>
-                        <outlet property="vwCereales" destination="YHx-4R-dgO" id="TKU-q5-3VZ"/>
-                        <outlet property="vwFrutas" destination="Wkb-PD-Wno" id="M0Y-Do-CiQ"/>
-                        <outlet property="vwGrasa" destination="hOe-gL-0H2" id="Vm4-IQ-9pY"/>
-                        <outlet property="vwLacteos" destination="I23-BU-hgL" id="H7e-3X-jnp"/>
-                        <outlet property="vwLeguminosas" destination="LVw-Sm-gBI" id="uxN-IP-Ojs"/>
                         <outlet property="vwTitulo" destination="ACH-TE-ohF" id="DFC-hy-X4s"/>
-                        <outlet property="vwVegetales" destination="7qR-nD-Lie" id="bZJ-d3-OOq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPj-BP-GV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
