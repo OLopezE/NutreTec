@@ -11,7 +11,6 @@ import UIKit
 class FirstViewController: UIViewController {
 
     //vistas
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var vistaAlimentos: UIView!
     
     
@@ -60,7 +59,6 @@ class FirstViewController: UIViewController {
         misDias = []
         
         misDias.append(dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: lblMidia.text!))
-        scrollView.contentSize = vistaAlimentos.frame.size
         super.viewDidLoad()
         vwAzucar.layer.cornerRadius = 10
         vwFrutas.layer.cornerRadius = 10
@@ -83,19 +81,12 @@ class FirstViewController: UIViewController {
         
     }
     
-    
+   
     func nuevoDia(){
         var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
         misDias.append(esteDia)
-        lblLeche.text = String(esteDia.leche)
-        lblAgua.text = String(esteDia.agua)
-        lblFrutas.text = String(esteDia.fruta)
-        lblGrasas.text = String(esteDia.grasa)
-        lblCereales.text = String(esteDia.cereales)
-        lblAzucar.text = String(esteDia.azucar)
-        lblCarne.text = String(esteDia.carne)
-        lblVegetales.text = String(esteDia.vegetal)
-        lblLeguminosas.text = String(esteDia.leguminosa)
+        buscaDia()
+        
     }
     func desAsigna(){
         //banderas
@@ -162,11 +153,7 @@ class FirstViewController: UIViewController {
                     if f.dia == fecha.text!{
                         print(f.dia)
                         f.carne += n
-                        print(f.carne)
-                        print(f.vegetal)
-                        print(f.azucar)
-                        print(f.leche)
-                        lblCarne.text = String(f.carne)
+                        buscaDia()
                         guardarDias()
                         break
                     }
@@ -177,10 +164,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblVegetales.text!)! == 0  {
                 
             }else{
-                lblVegetales.text = String(n +  Int(lblVegetales.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.vegetal += n
+                        buscaDia()
                     }
                 }
                 
@@ -191,10 +178,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblLeguminosas.text!)! == 0  {
                 
             }else{
-                lblLeguminosas.text = String(n +  Int(lblLeguminosas.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.leguminosa += n
+                        buscaDia()
                     }
                 }
                 
@@ -204,10 +191,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblAzucar.text!)! == 0  {
                 
             }else{
-                lblAzucar.text = String(n +  Int(lblAzucar.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.azucar += n
+                        buscaDia()
                     }
                 }
             }
@@ -216,10 +203,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblCereales.text!)! == 0  {
                 
             }else{
-                lblCereales.text = String(n +  Int(lblCereales.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.cereales += n
+                        buscaDia()
                     }
                 }
                 
@@ -229,10 +216,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblGrasas.text!)! == 0  {
                 
             }else{
-                lblGrasas.text = String(n +  Int(lblGrasas.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.grasa += n
+                        buscaDia()
                     }
                 }
                 
@@ -242,10 +229,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblFrutas.text!)! == 0  {
                 
             }else{
-                lblFrutas.text = String(n +  Int(lblFrutas.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.fruta += n
+                        buscaDia()
                     }
                 }
                 
@@ -255,10 +242,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblAgua.text!)! == 0  {
                 
             }else{
-                lblAgua.text = String(250 * n +   Int(lblAgua.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.agua += n * 250
+                        buscaDia()
                     }
                 }
                 
@@ -269,10 +256,10 @@ class FirstViewController: UIViewController {
             if n == -1 && Int(lblLeche.text!)! == 0  {
                 
             }else{
-                lblLeche.text = String(n +  Int(lblLeche.text!)!)
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.leche += n
+                        buscaDia()
                     }
                 }
                 
