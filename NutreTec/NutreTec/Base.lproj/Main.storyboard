@@ -1407,6 +1407,7 @@
                     <tabBarItem key="tabBarItem" title="Historial" image="doc.on.doc" catalog="system" id="jGz-P3-uku"/>
                     <navigationItem key="navigationItem" id="D2S-cl-gGu"/>
                     <connections>
+                        <outlet property="bttnGeneral" destination="xhk-vO-3Oo" id="k0b-Hi-rEH"/>
                         <outlet property="lblFecha" destination="2SM-8W-4X0" id="0Mb-M9-EpT"/>
                         <outlet property="tfGrasa" destination="FPa-bl-JMR" id="86g-E3-cG8"/>
                         <outlet property="tfMasa" destination="cSN-kO-Ple" id="TOZ-VN-nqg"/>
@@ -1428,21 +1429,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5FB-lU-fsL">
-                                <rect key="frame" x="20" y="136" width="374" height="661"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FB-lU-fsL">
+                                <rect key="frame" x="20" y="120" width="374" height="678"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q7-fo-fVe" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="4" y="0.0" width="366" height="297"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q7-fo-fVe" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="4" y="0.0" width="366" height="300"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="3Mh-l7-ihz"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6Q7-fo-fVe" secondAttribute="trailing" constant="4" id="Jwk-Fc-66J"/>
+                                    <constraint firstItem="6Q7-fo-fVe" firstAttribute="top" secondItem="5FB-lU-fsL" secondAttribute="top" id="TkW-F9-sHH"/>
+                                    <constraint firstItem="6Q7-fo-fVe" firstAttribute="leading" secondItem="5FB-lU-fsL" secondAttribute="leading" constant="4" id="ijT-jf-LIB"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQb-3X-1ne">
-                                <rect key="frame" x="20" y="20" width="374" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQb-3X-1ne">
+                                <rect key="frame" x="20" y="10" width="374" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-qh-tLm">
                                         <rect key="frame" x="8" y="54" width="358" height="48"/>
@@ -1453,9 +1459,21 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="eZr-9x-9h2"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92457170050761417" green="0.92457170050761417" blue="0.92457170050761417" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="gCc-rZ-sal" firstAttribute="bottom" secondItem="5FB-lU-fsL" secondAttribute="bottom" constant="10" id="IyA-ks-LM0"/>
+                            <constraint firstItem="OQb-3X-1ne" firstAttribute="top" secondItem="gCc-rZ-sal" secondAttribute="top" constant="10" id="Kgr-iM-S6h"/>
+                            <constraint firstItem="5FB-lU-fsL" firstAttribute="leading" secondItem="gCc-rZ-sal" secondAttribute="leading" constant="20" id="NgH-Yq-Dhj"/>
+                            <constraint firstItem="5FB-lU-fsL" firstAttribute="top" secondItem="OQb-3X-1ne" secondAttribute="bottom" constant="10" id="YRr-gT-dRI"/>
+                            <constraint firstItem="gCc-rZ-sal" firstAttribute="trailing" secondItem="OQb-3X-1ne" secondAttribute="trailing" constant="20" id="bA6-hL-9Ej"/>
+                            <constraint firstItem="gCc-rZ-sal" firstAttribute="trailing" secondItem="5FB-lU-fsL" secondAttribute="trailing" constant="20" id="fao-SK-3JY"/>
+                            <constraint firstItem="OQb-3X-1ne" firstAttribute="leading" secondItem="gCc-rZ-sal" secondAttribute="leading" constant="20" id="jik-af-4Yc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gCc-rZ-sal"/>
                     </view>
                     <navigationItem key="navigationItem" id="zLi-SW-u0G"/>

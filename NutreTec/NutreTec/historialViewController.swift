@@ -14,6 +14,8 @@ class historialViewController: UIViewController {
     @IBOutlet weak var vwPeso: UIView!
     @IBOutlet weak var vwMasa: UIView!
     @IBOutlet weak var vwGrasa: UIView!
+    @IBOutlet weak var bttnGeneral: UIButton!
+    
     
     @IBOutlet weak var lblFecha: UILabel!
     @IBOutlet weak var tfPeso: UITextField!
@@ -33,6 +35,7 @@ class historialViewController: UIViewController {
         vwPeso.layer.cornerRadius = 10
         vwMasa.layer.cornerRadius = 10
         vwGrasa.layer.cornerRadius = 10
+        bttnGeneral.layer.cornerRadius = 10
         super.viewDidLoad()
 
         diaString = obtenDia()
