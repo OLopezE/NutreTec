@@ -54,6 +54,17 @@ class FirstViewController: UIViewController {
     var colorTmp = UIColor.white
     var colorLetra = UIColor.black
     
+    var metaCarne = UserDefaults.standard.integer(forKey: "carnes")
+    var metaVegetales = UserDefaults.standard.integer(forKey: "vegetales")
+    var metaAzucar = UserDefaults.standard.integer(forKey: "azucares")
+    var metaLeguminosas = UserDefaults.standard.integer(forKey: "leguminosas")
+    var metaFrutas = UserDefaults.standard.integer(forKey: "frutas")
+    var metaCereales = UserDefaults.standard.integer(forKey: "cereales")
+    var metaGrasas = UserDefaults.standard.integer(forKey: "grasas")
+    var metaAgua = UserDefaults.standard.integer(forKey: "agua")
+    var metaLacteo = UserDefaults.standard.integer(forKey: "leche")
+    
+    
     override func viewDidLoad() {
         
         misDias = []
@@ -126,15 +137,15 @@ class FirstViewController: UIViewController {
         for n in misDias {
             print(n.dia)
             if n.dia == fecha.text!{
-                lblLeche.text = String(n.leche)
+                lblLeche.text = String(n.leche) + "/" + String(metaLacteo)
                 lblAgua.text = String(n.agua)
-                lblFrutas.text = String(n.fruta)
-                lblGrasas.text = String(n.grasa)
-                lblCereales.text = String(n.cereales)
-                lblAzucar.text = String(n.azucar)
-                lblCarne.text = String(n.carne)
-                lblVegetales.text = String(n.vegetal)
-                lblLeguminosas.text = String(n.leguminosa)
+                lblFrutas.text = String(n.fruta) + "/" + String(metaFrutas)
+                lblGrasas.text = String(n.grasa) + "/" + String(metaGrasas)
+                lblCereales.text = String(n.cereales) + "/" + String(metaCereales)
+                lblAzucar.text = String(n.azucar) + "/" + String(metaAzucar)
+                lblCarne.text = String(n.carne) + "/" + String(metaCarne)
+                lblVegetales.text = String(n.vegetal) + "/" + String(metaVegetales)
+                lblLeguminosas.text = String(n.leguminosa) + "/" + String(metaLeguminosas)
                 tmp = 1
                 break
             }
