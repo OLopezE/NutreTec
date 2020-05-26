@@ -438,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.92753623188412" y="-375"/>
+            <point key="canvasLocation" x="877" y="-390"/>
         </scene>
         <!--Mi plan-->
         <scene sceneID="wg7-f3-ORb">
@@ -831,11 +831,11 @@
                                             <constraint firstAttribute="height" constant="50" id="MjO-ro-Rnu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <state key="normal" title="Semáforo">
+                                        <state key="normal" title="Mi plan">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mOO-1V-RUw" kind="show" id="dI7-Xc-g7L"/>
+                                            <segue destination="8rJ-Kc-sve" kind="show" id="YRT-0z-B6B"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0t-0u-N3l">
@@ -845,7 +845,7 @@
                                             <constraint firstAttribute="height" constant="50" id="0fW-qE-QLU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <state key="normal" title="Recetario">
+                                        <state key="normal" title="Recetarios">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -859,11 +859,11 @@
                                             <constraint firstAttribute="height" constant="50" id="MLa-yI-65S"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <state key="normal" title="Mi plan">
+                                        <state key="normal" title="Semáforo Nutricional">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8rJ-Kc-sve" kind="show" id="nTa-po-skO"/>
+                                            <segue destination="mOO-1V-RUw" kind="show" id="rvO-Nf-iBq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Np-3U-8wW">
@@ -1027,38 +1027,103 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JI3-k4-T0N">
                                 <rect key="frame" x="20" y="126" width="374" height="662"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9f-D1-Gyq">
-                                        <rect key="frame" x="17" y="37" width="302" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9f-D1-Gyq">
+                                        <rect key="frame" x="10" y="10" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.66622506389417413" green="0.90173821142892185" blue="0.9921947122" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="nWv-L4-90k"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                        <state key="normal" title="Desayunos, comidas y cenas"/>
+                                        <state key="normal" title="Desayunos, comidas y cenas">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="comidas:" destination="o30-GB-fbN" eventType="touchUpInside" id="cJx-SM-rFd"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsI-Da-GSi">
-                                        <rect key="frame" x="17" y="155" width="88" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsI-Da-GSi">
+                                        <rect key="frame" x="10" y="130" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.96105647208121825" green="0.69241422549871923" blue="0.32700742301768204" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UdN-tM-v5i"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <state key="normal" title="Antojos"/>
+                                        <state key="normal" title="Antojos">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="antojos:" destination="o30-GB-fbN" eventType="touchUpInside" id="a9U-cu-hjl"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3t-lH-Nqv">
-                                        <rect key="frame" x="17" y="218" width="108" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3t-lH-Nqv">
+                                        <rect key="frame" x="10" y="190" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.99817937609999996" green="0.55679523939999997" blue="0.58430719379999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hnN-do-Abs"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                        <state key="normal" title="Smoothies"/>
+                                        <state key="normal" title="Smoothies">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="smoothies:" destination="o30-GB-fbN" eventType="touchUpInside" id="DEG-Rm-8zL"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIQ-W1-Ius">
-                                        <rect key="frame" x="17" y="103" width="276" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIQ-W1-Ius">
+                                        <rect key="frame" x="10" y="70" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.18896955509999999" green="0.44065006579999999" blue="0.27526324260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Jib-6O-iiv"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Ensaladas"/>
+                                        <color key="tintColor" red="0.18896955509999999" green="0.44065006579999999" blue="0.27526324260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Ensaladas">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ensaladas:" destination="o30-GB-fbN" eventType="touchUpInside" id="xS2-v7-lhT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuM-K4-e3v">
+                                        <rect key="frame" x="10" y="250" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.65876104106563271" green="0.8202331853" blue="0.58157833475304177" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KXI-K2-mOu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="tintColor" red="0.52311248919999997" green="0.42809142900000002" blue="0.8202331853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Vegetarianos">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Vegetariano:" destination="o30-GB-fbN" eventType="touchUpInside" id="voh-7P-S07"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eIQ-W1-Ius" firstAttribute="top" secondItem="d9f-D1-Gyq" secondAttribute="bottom" constant="10" id="0gZ-Kd-OCJ"/>
+                                    <constraint firstItem="HuM-K4-e3v" firstAttribute="top" secondItem="R3t-lH-Nqv" secondAttribute="bottom" constant="10" id="2q8-2N-MgL"/>
+                                    <constraint firstItem="R3t-lH-Nqv" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="Bmc-MG-ce9"/>
+                                    <constraint firstItem="HuM-K4-e3v" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="C9Q-aj-979"/>
+                                    <constraint firstItem="R3t-lH-Nqv" firstAttribute="top" secondItem="RsI-Da-GSi" secondAttribute="bottom" constant="10" id="FL0-Zb-CfI"/>
+                                    <constraint firstAttribute="trailing" secondItem="d9f-D1-Gyq" secondAttribute="trailing" constant="10" id="Khx-jy-vre"/>
+                                    <constraint firstAttribute="trailing" secondItem="R3t-lH-Nqv" secondAttribute="trailing" constant="10" id="PWu-1e-r2I"/>
+                                    <constraint firstItem="d9f-D1-Gyq" firstAttribute="top" secondItem="JI3-k4-T0N" secondAttribute="top" constant="10" id="Tga-TY-kNq"/>
+                                    <constraint firstItem="RsI-Da-GSi" firstAttribute="top" secondItem="eIQ-W1-Ius" secondAttribute="bottom" constant="10" id="b4d-HM-1Yw"/>
+                                    <constraint firstAttribute="trailing" secondItem="HuM-K4-e3v" secondAttribute="trailing" constant="10" id="ed9-wb-aqS"/>
+                                    <constraint firstItem="RsI-Da-GSi" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="gP1-Iy-mF6"/>
+                                    <constraint firstAttribute="trailing" secondItem="RsI-Da-GSi" secondAttribute="trailing" constant="10" id="uzN-iB-dOP"/>
+                                    <constraint firstItem="eIQ-W1-Ius" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="v3W-Sj-bnJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="eIQ-W1-Ius" secondAttribute="trailing" constant="10" id="wwI-eM-bj2"/>
+                                    <constraint firstItem="d9f-D1-Gyq" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="zQa-av-dKC"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uq2-9k-YYU">
                                 <rect key="frame" x="20" y="10" width="374" height="108"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recetario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTd-5P-ghu">
-                                        <rect key="frame" x="8" y="54" width="200" height="54"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recetarios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTd-5P-ghu">
+                                        <rect key="frame" x="8" y="54" width="224" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                         <nil key="textColor"/>
@@ -1082,6 +1147,13 @@
                         <viewLayoutGuide key="safeArea" id="Ac8-GF-G6p"/>
                     </view>
                     <navigationItem key="navigationItem" id="P7L-4b-L6f"/>
+                    <connections>
+                        <outlet property="bttnAntojos" destination="RsI-Da-GSi" id="pLw-PC-2ol"/>
+                        <outlet property="bttnDesayunos" destination="d9f-D1-Gyq" id="mmh-Kc-0e7"/>
+                        <outlet property="bttnEnsaladas" destination="eIQ-W1-Ius" id="Neu-so-K1o"/>
+                        <outlet property="bttnSmoothies" destination="R3t-lH-Nqv" id="xU3-lL-Gck"/>
+                        <outlet property="bttnVegetarianos" destination="HuM-K4-e3v" id="8xz-0i-zt2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wF9-IT-X21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1270,14 +1342,6 @@
                                 <rect key="frame" x="20" y="136" width="374" height="661"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QOC-gh-lMC">
-                                        <rect key="frame" x="122" y="298" width="131" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="Mensual"/>
-                                            <segment title="Semanal"/>
-                                        </segments>
-                                    </segmentedControl>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q7-fo-fVe" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="4" y="0.0" width="366" height="297"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1525,8 +1589,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-TE-ohF">
                                 <rect key="frame" x="20" y="44" width="374" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equivalente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQP-lM-ke6">
-                                        <rect key="frame" x="8" y="44" width="244" height="54"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equivalentes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQP-lM-ke6">
+                                        <rect key="frame" x="8" y="44" width="267" height="54"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
