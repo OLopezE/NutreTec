@@ -70,13 +70,16 @@ class historialViewController: UIViewController {
         if segue.identifier == "peso"{
             vista.titulo = "Peso"
             vista.tipo = "peso"
-        }else if segue.identifier == "masa"{
+        } else if segue.identifier == "masa" {
             vista.titulo = "Masa muscular"
             vista.tipo = "masa"
-        }else{
+        } else if segue.identifier == "grasa" {
             vista.titulo = "Porcentaje de Grasa"
             vista.tipo = "grasa"
             vista.tamano = 30
+        } else if segue.identifier == "general" {
+            vista.titulo = "General"
+            vista.tipo = "general"
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
