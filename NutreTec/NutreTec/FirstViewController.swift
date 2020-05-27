@@ -29,6 +29,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var vwAzucar: UIView!
     @IBOutlet weak var vwAgua: UIView!
     @IBOutlet weak var vwFrutas: UIView!
+    @IBOutlet weak var bttnNutretec: UIButton!
+    @IBOutlet weak var elPana: UIImageView!
     
     
     @IBOutlet weak var lblCarne: UILabel!
@@ -53,6 +55,18 @@ class FirstViewController: UIViewController {
     var fleche = 0
     var colorTmp = UIColor.white
     var colorLetra = UIColor.black
+    var mike = 0
+    
+    var metaCarne = UserDefaults.standard.integer(forKey: "carnes")
+    var metaVegetales = UserDefaults.standard.integer(forKey: "vegetales")
+    var metaAzucar = UserDefaults.standard.integer(forKey: "azucares")
+    var metaLeguminosas = UserDefaults.standard.integer(forKey: "leguminosas")
+    var metaFrutas = UserDefaults.standard.integer(forKey: "frutas")
+    var metaCereales = UserDefaults.standard.integer(forKey: "cereales")
+    var metaGrasas = UserDefaults.standard.integer(forKey: "grasas")
+    var metaAgua = UserDefaults.standard.integer(forKey: "agua")
+    var metaLacteo = UserDefaults.standard.integer(forKey: "leche")
+    
     
     override func viewDidLoad() {
         
@@ -69,7 +83,9 @@ class FirstViewController: UIViewController {
         vwCarne.layer.cornerRadius = 10
         vwVegetales.layer.cornerRadius = 10
         vwGrasas.layer.cornerRadius = 10
+        bttnNutretec.layer.cornerRadius = 10
         lblMidia.textColor = colorLetra
+        
         
         
         if FileManager.default.fileExists(atPath: dataFileURL().path){
@@ -82,6 +98,30 @@ class FirstViewController: UIViewController {
     }
     
    
+    override func  viewDidAppear(_ animated: Bool) {
+        metaCarne = UserDefaults.standard.integer(forKey: "carnes")
+        metaVegetales = UserDefaults.standard.integer(forKey: "vegetales")
+        metaAzucar = UserDefaults.standard.integer(forKey: "azucares")
+        metaLeguminosas = UserDefaults.standard.integer(forKey: "leguminosas")
+        metaFrutas = UserDefaults.standard.integer(forKey: "frutas")
+        metaCereales = UserDefaults.standard.integer(forKey: "cereales")
+        metaGrasas = UserDefaults.standard.integer(forKey: "grasas")
+        metaAgua = UserDefaults.standard.integer(forKey: "agua")
+        metaLacteo = UserDefaults.standard.integer(forKey: "leche")
+        buscaDia()
+    }
+    
+    @IBAction func panaMike(_ sender: UIButton) {
+        mike += 1
+        if mike == 10{
+            elPana.isHidden = false
+            mike = 0
+        }else{
+            elPana.isHidden = true
+            
+        }
+    }
+    
     func nuevoDia(){
         var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
         misDias.append(esteDia)
@@ -126,15 +166,15 @@ class FirstViewController: UIViewController {
         for n in misDias {
             print(n.dia)
             if n.dia == fecha.text!{
-                lblLeche.text = String(n.leche)
+                lblLeche.text = String(n.leche) + "/" + String(metaLacteo)
                 lblAgua.text = String(n.agua)
-                lblFrutas.text = String(n.fruta)
-                lblGrasas.text = String(n.grasa)
-                lblCereales.text = String(n.cereales)
-                lblAzucar.text = String(n.azucar)
-                lblCarne.text = String(n.carne)
-                lblVegetales.text = String(n.vegetal)
-                lblLeguminosas.text = String(n.leguminosa)
+                lblFrutas.text = String(n.fruta) + "/" + String(metaFrutas)
+                lblGrasas.text = String(n.grasa) + "/" + String(metaGrasas)
+                lblCereales.text = String(n.cereales) + "/" + String(metaCereales)
+                lblAzucar.text = String(n.azucar) + "/" + String(metaAzucar)
+                lblCarne.text = String(n.carne) + "/" + String(metaCarne)
+                lblVegetales.text = String(n.vegetal) + "/" + String(metaVegetales)
+                lblLeguminosas.text = String(n.leguminosa) + "/" + String(metaLeguminosas)
                 tmp = 1
                 break
             }
