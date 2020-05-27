@@ -27,7 +27,7 @@ class creditosViewController: UIViewController {
         let vista = segue.destination as! creditosExplicadoViewController
         if segue.identifier == "oscar"{
             vista.nombre = "Oscar Francisco López Escobar"
-            vista.info = "Correo: oscarfco1998@gmail.com Celular: (614)5138752"
+            vista.info = "Correo: oscarfco1998@gmail.com"
             vista.aprendi = "Aquellos que no entienden el verdadero dolor no pueden entender la verdadera paz"
             vista.imagen = UIImage(named: "logoakatsuki")
             vista.colorPrincipal = UIColor(red: 50/255, green: 50/255, blue: 50/255, alpha: 1)
