@@ -64,9 +64,10 @@ class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
         
         let dayDateFormatter = DateFormatter()
         dayDateFormatter.dateFormat = "dd"
+        
+// DEBUGGING
 // Llenar de datos
 for z in 1..<21 {
-    //let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(86400 * z))), peso: Double.random(in: 50...100), masaMuscular: Double.random(in: 1...15), porcentajeGrasa: Double.random(in: 1...30))
     let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(86400 * z))), peso: Double(z * 2), masaMuscular: Double(z * 3), porcentajeGrasa: Double(z * 4))
     misRegistros.append(reg)
 }
@@ -76,7 +77,6 @@ for reg in misRegistros {
     print("\(z): \(reg.dia) - \(reg.peso), \(reg.masaMuscular), \(reg.porcentajeGrasa)")
     z += 1
 }
-
 //
 
         // Generar máximo 5 puntos y empezar a buscar desde
@@ -141,9 +141,6 @@ for reg in misRegistros {
                 break
             }
             
-//            let tempDate = dateFormatter.date(from: misRegistros[j].dia)
-            // let tempDay = Double(dayDateFormatter.string(from: tempDate!))!
-            
             if tipo == "peso" {
                 entry = ChartDataEntry(x: Double(i), y: misRegistros[j].peso)
             } else if tipo == "masa" {
@@ -207,19 +204,7 @@ for reg in misRegistros {
     }
     
     func setChartValues(tipo : String) {
-        
-        /*
-        
-        let values = (0..<count).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(UInt32(count)) + 3)
-            return ChartDataEntry(x: Double(i), y: val)
-        }
-        
-        let set1 = LineChartDataSet(entries: values, label: titulo)
-        let data = LineChartData(dataSet: set1)
- 
-         */
-        
+
         let data = LineChartData()
         self.chartView.xAxis.granularity = 1.0
         
