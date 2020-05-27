@@ -29,6 +29,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var vwAzucar: UIView!
     @IBOutlet weak var vwAgua: UIView!
     @IBOutlet weak var vwFrutas: UIView!
+    @IBOutlet weak var bttnNutretec: UIButton!
+    @IBOutlet weak var elPana: UIImageView!
     
     
     @IBOutlet weak var lblCarne: UILabel!
@@ -53,6 +55,7 @@ class FirstViewController: UIViewController {
     var fleche = 0
     var colorTmp = UIColor.white
     var colorLetra = UIColor.black
+    var mike = 0
     
     var metaCarne = UserDefaults.standard.integer(forKey: "carnes")
     var metaVegetales = UserDefaults.standard.integer(forKey: "vegetales")
@@ -80,6 +83,7 @@ class FirstViewController: UIViewController {
         vwCarne.layer.cornerRadius = 10
         vwVegetales.layer.cornerRadius = 10
         vwGrasas.layer.cornerRadius = 10
+        bttnNutretec.layer.cornerRadius = 10
         lblMidia.textColor = colorLetra
         
         
@@ -106,6 +110,16 @@ class FirstViewController: UIViewController {
         metaLacteo = UserDefaults.standard.integer(forKey: "leche")
         buscaDia()
     }
+    
+    @IBAction func panaMike(_ sender: UIButton) {
+        mike += 1
+        if mike == 10{
+            elPana.isHidden = false
+        }else{
+            elPana.isHidden = true
+        }
+    }
+    
     func nuevoDia(){
         var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
         misDias.append(esteDia)
