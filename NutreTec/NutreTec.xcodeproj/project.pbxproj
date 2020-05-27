@@ -10,6 +10,8 @@
 		004F082724790B5A0093FF77 /* midiaExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F082624790B5A0093FF77 /* midiaExplicadoViewController.swift */; };
 		004F0829247A56290093FF77 /* recetarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F0828247A56290093FF77 /* recetarioViewController.swift */; };
 		008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D8532246E36A900FB2A60 /* historialViewController.swift */; };
+		00AC4522247F029300B24BA6 /* creditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4521247F029300B24BA6 /* creditosViewController.swift */; };
+		00AC4524247F03C100B24BA6 /* creditosExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4523247F03C100B24BA6 /* creditosExplicadoViewController.swift */; };
 		00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */; };
 		00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */; };
 		00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */; };
@@ -47,6 +49,8 @@
 		004F082624790B5A0093FF77 /* midiaExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = midiaExplicadoViewController.swift; sourceTree = "<group>"; };
 		004F0828247A56290093FF77 /* recetarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recetarioViewController.swift; sourceTree = "<group>"; };
 		008D8532246E36A900FB2A60 /* historialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historialViewController.swift; sourceTree = "<group>"; };
+		00AC4521247F029300B24BA6 /* creditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditosViewController.swift; sourceTree = "<group>"; };
+		00AC4523247F03C100B24BA6 /* creditosExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditosExplicadoViewController.swift; sourceTree = "<group>"; };
 		00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationTableViewController.swift; sourceTree = "<group>"; };
 		00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteViewController.swift; sourceTree = "<group>"; };
 		00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteExplicadoViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				00FED31A24515AD900AF31C4 /* dias.swift */,
 				00FED30A2450FDAE00AF31C4 /* MiPlanViewController.swift */,
 				00FED30C2450FDAE00AF31C4 /* Main.storyboard */,
+				00AC4523247F03C100B24BA6 /* creditosExplicadoViewController.swift */,
+				00AC4521247F029300B24BA6 /* creditosViewController.swift */,
 				004F0828247A56290093FF77 /* recetarioViewController.swift */,
 				004F082624790B5A0093FF77 /* midiaExplicadoViewController.swift */,
 				052ABBA8246D90ED0051CBC8 /* MiPerfilViewController.swift */,
@@ -261,10 +267,12 @@
 				00FA65662472D5E400D8BB67 /* historialExplicadoViewController.swift in Sources */,
 				004F082724790B5A0093FF77 /* midiaExplicadoViewController.swift in Sources */,
 				052ABBA9246D90ED0051CBC8 /* MiPerfilViewController.swift in Sources */,
+				00AC4522247F029300B24BA6 /* creditosViewController.swift in Sources */,
 				004F0829247A56290093FF77 /* recetarioViewController.swift in Sources */,
 				008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */,
 				00FED30B2450FDAE00AF31C4 /* MiPlanViewController.swift in Sources */,
 				00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */,
+				00AC4524247F03C100B24BA6 /* creditosExplicadoViewController.swift in Sources */,
 				00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */,
 				00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */,
 				056D1663247B53E900B57B3F /* RegistroProgreso.swift in Sources */,
