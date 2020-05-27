@@ -21,16 +21,15 @@ class historialExplicadoViewController: UIViewController {
     var tipo = ""
     var diaString = ""
     var misRegistros = [RegistroProgreso]()
-    // La cantidad de datos disponibles desde hace un mes.
-    var numPuntosMes = 0
-    // La cantidad de datos disponibles desde hace una semana.
-    var numPuntosSem = 0
     // Los valores para la gráfica.
     var valores = [ChartDataEntry]()
     // valores2 y valores3 se usan si se deben graficar todas las métricas.
     // (tipo == "general")
     var valores2 = [ChartDataEntry]()
     var valores3 = [ChartDataEntry]()
+    
+    @IBOutlet weak var btnIzquierda: UIButton!
+    @IBOutlet weak var btnDerecha: UIButton!
     
     override func viewDidLoad() {
         lblTitulo.text = titulo
@@ -61,10 +60,43 @@ class historialExplicadoViewController: UIViewController {
         
         let dayDateFormatter = DateFormatter()
         dayDateFormatter.dateFormat = "dd"
-        // Para contar un máximo de 5 registros
-        var i = 5
-        // El índice en el arreglo de registros
-        var j = misRegistros.count - 1
+
+        // Generar máximo 5 puntos y empezar a buscar desde
+        // el último elemento del arreglo misRegistros.
+        var (jIzq, jDer) = generarSetsYGrafica(i: 5, j: misRegistros.count - 1)
+    }
+    
+    // Generar los arreglos (valores, valores2, valores3) con los
+    // puntos que se graficarán.
+    // Generar la gráfica.
+    // Parámetros:
+    //  i: la cantidad máxima de puntos que se generarán
+    //  j: el índice inicial para buscar en el arreglos misRegistros
+    //     de manera descendente (por defecto este valor es
+    //     misRegistros.count - 1).
+    // Regresa los últimos índices a la izquierda y derecha.
+    func generarSetsYGrafica(i : Int, j : Int) -> (Int, Int) {
+        
+        let jInicial = j
+        
+        var i = i
+        var j = j
+        
+        // Habilitar/deshabilitar botones
+        // cuando no hay más datos en
+        // alguna dirección.
+        if j - i <= 0 {
+            btnIzquierda.isEnabled = false
+        } else {
+            btnIzquierda.isEnabled = true
+        }
+        
+        if jInicial == misRegistros.count - 1 {
+            btnDerecha.isEnabled = false
+        } else {
+            btnDerecha.isEnabled = true
+        }
+        
         while i > 0 {
             
             var entry = ChartDataEntry()
@@ -74,7 +106,7 @@ class historialExplicadoViewController: UIViewController {
                 break
             }
             
-            let tempDate = dateFormatter.date(from: misRegistros[j].dia)
+//            let tempDate = dateFormatter.date(from: misRegistros[j].dia)
             // let tempDay = Double(dayDateFormatter.string(from: tempDate!))!
             
             if tipo == "peso" {
@@ -110,6 +142,8 @@ class historialExplicadoViewController: UIViewController {
         
         // Crear la gráfica.
         setChartValues(tipo: tipo)
+        
+        return (j + 1, jInicial)
     }
     
     func setChartValues(tipo : String) {
@@ -191,6 +225,13 @@ class historialExplicadoViewController: UIViewController {
         }
         
         return nil
+    }
+    
+    @IBAction func tapIzquierda(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func tapDerecha(_ sender: Any) {
     }
     
     /*
