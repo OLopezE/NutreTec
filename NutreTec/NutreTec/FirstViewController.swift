@@ -7,9 +7,76 @@
 //
 
 import UIKit
+import Charts
 
 class FirstViewController: UIViewController {
-
+    //MARK:-PIE CHARTS PARTE 1
+    //Verduras
+    @IBOutlet weak var pieChartVerdura: PieChartView!
+    var VegetalesData = PieChartDataEntry(value: 0)
+    var VegetalesMaxData = PieChartDataEntry(value: 0)
+    var VegetalesDataEntries = [PieChartDataEntry]()
+    var maxvegetales = -1.0
+    var maxV = -1.0
+    
+    //Proteina
+    @IBOutlet weak var pieChartProteina: PieChartView!
+    var ProteinaData = PieChartDataEntry(value: 0)
+    var ProteinaMaxData = PieChartDataEntry(value: 0)
+    var ProteinaDataEntries = [PieChartDataEntry]()
+    var maxproteina = -1.0
+    var maxP = -1.0
+    
+    //Azucar
+    @IBOutlet weak var pieChartAzucar: PieChartView!
+    var AzucarData = PieChartDataEntry(value: 0)
+    var AzucarMaxData = PieChartDataEntry(value: 0)
+    var AzucarDataEntries = [PieChartDataEntry]()
+    var maxazucar = -1.0
+    var maxA = -1.0
+    
+    //Lacteos
+    @IBOutlet weak var pieChartLacteos: PieChartView!
+    var LacteosData = PieChartDataEntry(value: 0)
+    var LacteosMaxData = PieChartDataEntry(value: 0)
+    var LacteosDataEntries = [PieChartDataEntry]()
+    var maxlacteos = -1.0
+    var maxL = -1.0
+    
+    //Fruta
+    @IBOutlet weak var pieChartFrutas: PieChartView!
+    var FrutaData = PieChartDataEntry(value: 0)
+    var FrutaMaxData = PieChartDataEntry(value: 0)
+    var FrutaDataEntries = [PieChartDataEntry]()
+    var maxfruta = -1.0
+    var maxF = -1.0
+    
+    //Leguminosas
+    @IBOutlet weak var pieChartLeguminosas: PieChartView!
+    var LeguminosasData = PieChartDataEntry(value: 0)
+    var LeguminosasMaxData = PieChartDataEntry(value: 0)
+    var LeguminosasDataEntries = [PieChartDataEntry]()
+    var maxleguminosas = -1.0
+    var maxLe = -1.0
+    
+    //Grasas
+    @IBOutlet weak var pieChartGrasas: PieChartView!
+    var GrasasData = PieChartDataEntry(value: 0)
+    var GrasasMaxData = PieChartDataEntry(value: 0)
+    var GrasasDataEntries = [PieChartDataEntry]()
+    var maxgrasas = -1.0
+    var maxG = -1.0
+    
+    //Cereal
+    @IBOutlet weak var pieChartCereales: PieChartView!
+    var CerealData = PieChartDataEntry(value: 0)
+    var CerealMaxData = PieChartDataEntry(value: 0)
+    var CerealDataEntries = [PieChartDataEntry]()
+    var maxcereal = -1.0
+    var maxC = -1.0
+    
+    
+    
     //vistas
     @IBOutlet weak var vistaAlimentos: UIView!
     
@@ -95,6 +162,7 @@ class FirstViewController: UIViewController {
         obtenDia()
         buscaDia()
         
+        
     }
     
    
@@ -164,16 +232,122 @@ class FirstViewController: UIViewController {
         for n in misDias {
             print(n.dia)
             if n.dia == fecha.text!{
-                lblLeche.text = String(n.leche) + "/" + String(metaLacteo)
+                lblLeche.text = String(n.leche)
                 lblAgua.text = String(n.agua)
-                lblFrutas.text = String(n.fruta) + "/" + String(metaFrutas)
-                lblGrasas.text = String(n.grasa) + "/" + String(metaGrasas)
-                lblCereales.text = String(n.cereales) + "/" + String(metaCereales)
-                lblAzucar.text = String(n.azucar) + "/" + String(metaAzucar)
-                lblCarne.text = String(n.carne) + "/" + String(metaCarne)
-                lblVegetales.text = String(n.vegetal) + "/" + String(metaVegetales)
-                lblLeguminosas.text = String(n.leguminosa) + "/" + String(metaLeguminosas)
+                lblFrutas.text = String(n.fruta)
+                lblGrasas.text = String(n.grasa)
+                lblCereales.text = String(n.cereales)
+                lblAzucar.text = String(n.azucar)
+                lblCarne.text = String(n.carne)
+                lblVegetales.text = String(n.vegetal)
+                lblLeguminosas.text = String(n.leguminosa)
                 tmp = 1
+                //MARK:-PIE CHARTS PARTE 2
+                //Vegetal
+                maxV = Double(metaVegetales)
+                maxvegetales = maxV - Double(n.vegetal)
+                if maxvegetales < 0{
+                    maxvegetales = 0
+                }
+                if maxvegetales > maxV{
+                    maxvegetales = Double(metaVegetales)
+                }
+                VegetalesData.value = Double(n.vegetal)
+                VegetalesMaxData.value = maxvegetales
+                VegetalesDataEntries = [VegetalesMaxData,VegetalesData]
+                //Proteina
+                maxP = Double(metaCarne)
+                maxproteina = maxP - Double(n.carne)
+                if maxproteina < 0{
+                    maxproteina = 0
+                }
+                if maxproteina > maxP{
+                    maxproteina = Double(metaCarne)
+                }
+                ProteinaData.value = Double(n.carne)
+                ProteinaMaxData.value = maxproteina
+                ProteinaDataEntries = [ProteinaMaxData,ProteinaData]
+                
+                //Azucar
+                maxA = Double(metaAzucar)
+                maxazucar = maxA - Double(n.azucar)
+                               if maxazucar < 0{
+                                   maxazucar = 0
+                               }
+                if maxazucar > maxA{
+                    maxazucar = Double(metaAzucar)
+                }
+                AzucarData.value = Double(n.azucar)
+                AzucarMaxData.value = maxazucar
+                AzucarDataEntries = [AzucarMaxData,AzucarData]
+                
+                //Lacteos
+                maxL = Double(metaLacteo)
+                maxlacteos = maxL - Double(n.leche)
+                if maxlacteos < 0{
+                    maxlacteos = 0
+                }
+                if maxlacteos > maxL{
+                    maxlacteos = Double(metaLacteo)
+                }
+                LacteosData.value = Double(n.leche)
+                LacteosMaxData.value = maxlacteos
+                LacteosDataEntries = [LacteosMaxData,LacteosData]
+                
+                //Fruta
+                maxF = Double(metaFrutas)
+                maxfruta = maxF - Double(n.fruta)
+                if maxfruta < 0{
+                    maxfruta = 0
+                }
+                if maxfruta > maxF{
+                    maxfruta = Double(metaFrutas)
+                }
+                FrutaData.value = Double(n.fruta)
+                FrutaMaxData.value = maxfruta
+                FrutaDataEntries = [FrutaMaxData,FrutaData]
+                
+                //Leguminosas
+                maxLe = Double(metaLeguminosas)
+                maxleguminosas = maxLe - Double(n.leguminosa)
+                if maxleguminosas < 0{
+                    maxleguminosas = 0
+                }
+                if maxleguminosas > maxLe{
+                    maxleguminosas = Double(metaLeguminosas)
+                }
+                LeguminosasData.value = Double(n.leguminosa)
+                LeguminosasMaxData.value = maxleguminosas
+                LeguminosasDataEntries = [LeguminosasMaxData,LeguminosasData]
+                
+                //Grasas
+                maxG = Double(metaGrasas)
+                maxgrasas = maxG - Double(n.grasa)
+                if maxgrasas < 0{
+                    maxgrasas = 0
+                }
+                if maxgrasas == -1 || maxgrasas > maxG{
+                    maxgrasas = Double(metaGrasas)
+                }
+                GrasasData.value = Double(n.grasa)
+                GrasasMaxData.value = maxgrasas
+                GrasasDataEntries = [GrasasMaxData,GrasasData]
+                
+                //Cereal
+                maxC = Double(metaCereales)
+                maxcereal = maxC - Double(n.cereales)
+                if maxcereal < 0{
+                    maxcereal = 0
+                }
+                if maxcereal == -1 || maxcereal > maxC{
+                    maxcereal = Double(metaCereales)
+                }
+                CerealData.value = Double(n.cereales)
+                CerealMaxData.value = maxcereal
+                CerealDataEntries = [CerealMaxData,CerealData]
+                
+                updateChart()
+                
                 break
             }
         }
@@ -181,7 +355,98 @@ class FirstViewController: UIViewController {
                 nuevoDia()
         }
     }
-
+    
+    func updateChart(){
+        //Vegetal
+        let vegetalesDataSet = PieChartDataSet(entries: VegetalesDataEntries, label: nil)
+        vegetalesDataSet.selectionShift = 0
+        vegetalesDataSet.drawValuesEnabled = false
+        let vegetalChartData = PieChartData(dataSet: vegetalesDataSet)
+        let colorsveg = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        vegetalesDataSet.colors = colorsveg
+        pieChartVerdura.data = vegetalChartData
+        pieChartVerdura.holeRadiusPercent = 0.8
+        pieChartVerdura.legend.enabled = false
+        
+        //Proteina
+        let proteinaDataSet = PieChartDataSet(entries: ProteinaDataEntries, label: nil)
+        proteinaDataSet.selectionShift = 0
+        proteinaDataSet.drawValuesEnabled = false
+        let proteinaChartData = PieChartData(dataSet: proteinaDataSet)
+        let coloresprot = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        proteinaDataSet.colors = coloresprot
+        pieChartProteina.data = proteinaChartData
+        pieChartProteina.holeRadiusPercent = 0.8
+        pieChartProteina.legend.enabled = false
+        
+        //Azucar
+        let azucarDataSet = PieChartDataSet(entries: AzucarDataEntries, label: nil)
+        azucarDataSet.selectionShift = 0
+        azucarDataSet.drawValuesEnabled = false
+        let AzucarChartData = PieChartData(dataSet: azucarDataSet)
+        let colorsAz = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        azucarDataSet.colors = colorsAz
+        pieChartAzucar.data = AzucarChartData
+        pieChartAzucar.holeRadiusPercent = 0.8
+        pieChartAzucar.legend.enabled = false
+        
+        //Lacteos
+        let lacteosDataSet = PieChartDataSet(entries: LacteosDataEntries, label: nil)
+        lacteosDataSet.selectionShift = 0
+        lacteosDataSet.drawValuesEnabled = false
+        let LacteosChartData = PieChartData(dataSet: lacteosDataSet)
+        let colorslac = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        lacteosDataSet.colors = colorslac
+        pieChartLacteos.data = LacteosChartData
+        pieChartLacteos.holeRadiusPercent = 0.8
+        pieChartLacteos.legend.enabled = false
+        
+        //Fruta
+        let frutaDataSet = PieChartDataSet(entries: FrutaDataEntries, label: nil)
+        frutaDataSet.selectionShift = 0
+        frutaDataSet.drawValuesEnabled = false
+        let FrutaChartData = PieChartData(dataSet: frutaDataSet)
+        let colorsfrut = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        frutaDataSet.colors = colorsfrut
+        pieChartFrutas.data = FrutaChartData
+        pieChartFrutas.holeRadiusPercent = 0.8
+        pieChartFrutas.legend.enabled = false
+        
+        //Leguminosas
+        let leguminosasDataSet = PieChartDataSet(entries: LeguminosasDataEntries, label: nil)
+        leguminosasDataSet.selectionShift = 0
+        leguminosasDataSet.drawValuesEnabled = false
+        let LeguminosasChartData = PieChartData(dataSet: leguminosasDataSet)
+        let colorsleg = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        leguminosasDataSet.colors = colorsleg
+        pieChartLeguminosas.data = LeguminosasChartData
+        pieChartLeguminosas.holeRadiusPercent = 0.8
+        pieChartLeguminosas.legend.enabled = false
+        
+        //Grasas
+        let grasasDataSet = PieChartDataSet(entries: GrasasDataEntries, label: nil)
+        grasasDataSet.selectionShift = 0
+        grasasDataSet.drawValuesEnabled = false
+        let GrasasChartData = PieChartData(dataSet: grasasDataSet)
+        let colorsgras = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        grasasDataSet.colors = colorsgras
+        pieChartGrasas.data = GrasasChartData
+        pieChartGrasas.holeRadiusPercent = 0.8
+        pieChartGrasas.legend.enabled = false
+        
+        //Cereal
+        let cerealDataSet = PieChartDataSet(entries: CerealDataEntries, label: nil)
+        cerealDataSet.selectionShift = 0
+        cerealDataSet.drawValuesEnabled = false
+        let CerealChartData = PieChartData(dataSet: cerealDataSet)
+        let colorscer = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        cerealDataSet.colors = colorscer
+        pieChartCereales.data = CerealChartData
+        pieChartCereales.holeRadiusPercent = 0.8
+        pieChartCereales.legend.enabled = false
+        
+    }
+    
     func uno(n : Int) {
         if fca == 1 {
             if n == -1 && Int(lblCarne.text!)! == 0  {
@@ -191,6 +456,16 @@ class FirstViewController: UIViewController {
                     if f.dia == fecha.text!{
                         print(f.dia)
                         f.carne += n
+                        if n == 1 {
+                            if 0 < maxproteina{
+                                maxproteina -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.carne < Int(maxP){
+                                maxproteina += 1
+                            }
+                        }
                         buscaDia()
                         guardarDias()
                         break
@@ -205,6 +480,16 @@ class FirstViewController: UIViewController {
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.vegetal += n
+                        if n == 1 {
+                            if 0 < maxvegetales{
+                                maxvegetales -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.vegetal < Int(maxV){
+                                maxvegetales += 1
+                            }
+                        }
                         buscaDia()
                     }
                 }
@@ -219,6 +504,16 @@ class FirstViewController: UIViewController {
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.leguminosa += n
+                        if n == 1 {
+                            if 0 < maxleguminosas{
+                                maxleguminosas -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.leguminosa < Int(maxLe){
+                                maxleguminosas += 1
+                            }
+                        }
                         buscaDia()
                     }
                 }
@@ -232,6 +527,16 @@ class FirstViewController: UIViewController {
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.azucar += n
+                        if n == 1 {
+                            if 0 < maxazucar{
+                                maxazucar -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.azucar < Int(maxA){
+                                maxazucar += 1
+                            }
+                        }
                         buscaDia()
                     }
                 }
@@ -244,6 +549,16 @@ class FirstViewController: UIViewController {
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.cereales += n
+                        if n == 1 {
+                            if 0 < maxcereal{
+                                maxcereal -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.cereales < Int(maxC){
+                                maxcereal += 1
+                            }
+                        }
                         buscaDia()
                     }
                 }
@@ -257,6 +572,16 @@ class FirstViewController: UIViewController {
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.grasa += n
+                        if n == 1 {
+                            if 0 < maxgrasas{
+                                maxgrasas -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.grasa < Int(maxG){
+                                maxgrasas += 1
+                            }
+                        }
                         buscaDia()
                     }
                 }
@@ -270,6 +595,16 @@ class FirstViewController: UIViewController {
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.fruta += n
+                        if n == 1 {
+                            if 0 < maxfruta{
+                                maxfruta -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.fruta < Int(maxF){
+                                maxfruta += 1
+                            }
+                        }
                         buscaDia()
                     }
                 }
@@ -297,6 +632,16 @@ class FirstViewController: UIViewController {
                 for f in misDias {
                     if f.dia == fecha.text!{
                         f.leche += n
+                        if n == 1 {
+                            if 0 < maxlacteos{
+                                maxlacteos -= 1
+                            }
+                        }
+                        if n == -1{
+                            if f.leche < Int(maxL){
+                                maxlacteos += 1
+                            }
+                        }
                         buscaDia()
                     }
                 }

@@ -70,6 +70,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B61-Oa-Coa">
                                         <rect key="frame" x="205.5" y="8" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0s-ew-2mk" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="86" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leguminosas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myf-A8-N76">
                                                 <rect key="frame" x="0.0" y="50" width="182.5" height="30"/>
                                                 <constraints>
@@ -117,6 +122,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-Kv-YcA">
                                         <rect key="frame" x="10" y="96" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SvE-46-Fhj" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="86" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-5L-cJ9">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
@@ -163,6 +173,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCp-jJ-deu">
                                         <rect key="frame" x="10" y="184" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3y7-AV-zpu" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="86" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-aT-MOg">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
@@ -209,6 +224,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Po-gF-EHO">
                                         <rect key="frame" x="10" y="8" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAM-4f-EVl" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="86" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetales" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6n-B1-EZV">
                                                 <rect key="frame" x="0.0" y="50" width="182.5" height="30"/>
                                                 <constraints>
@@ -255,6 +275,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-fJ-v0U">
                                         <rect key="frame" x="10" y="272" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAx-pO-IFl" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="86" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojN-pi-0iz">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
@@ -301,6 +326,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bC-62-Zbi">
                                         <rect key="frame" x="205.5" y="184" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-a1-gT5" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="86" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7P-VR-UJf">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
@@ -351,6 +381,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neX-Q2-UnT">
                                         <rect key="frame" x="205.5" y="96" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-jw-yCx" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="86" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-ES-mcC">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
@@ -486,6 +521,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7r-5l-qAb">
                                         <rect key="frame" x="205.5" y="272" width="182.5" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u8p-H0-l1d" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="87" y="-1" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-wH-EWA">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
@@ -605,6 +645,14 @@
                         <outlet property="lblLeguminosas" destination="BsF-rm-PfL" id="oWu-7N-WSO"/>
                         <outlet property="lblMidia" destination="Ukd-TR-J4S" id="lMF-xG-EYt"/>
                         <outlet property="lblVegetales" destination="xyj-8f-Mc8" id="vQr-3Z-Dme"/>
+                        <outlet property="pieChartAzucar" destination="mAx-pO-IFl" id="CkR-C3-jPA"/>
+                        <outlet property="pieChartCereales" destination="ZGI-a1-gT5" id="aNc-Wz-obI"/>
+                        <outlet property="pieChartFrutas" destination="ZLf-jw-yCx" id="0i1-Xb-Nif"/>
+                        <outlet property="pieChartGrasas" destination="u8p-H0-l1d" id="iqW-Sf-mjr"/>
+                        <outlet property="pieChartLacteos" destination="3y7-AV-zpu" id="Fgx-GE-97t"/>
+                        <outlet property="pieChartLeguminosas" destination="T0s-ew-2mk" id="9RD-CZ-rA1"/>
+                        <outlet property="pieChartProteina" destination="SvE-46-Fhj" id="10f-2t-YjR"/>
+                        <outlet property="pieChartVerdura" destination="AAM-4f-EVl" id="Ndo-te-H9B"/>
                         <outlet property="vistaAlimentos" destination="c8A-sf-10G" id="9qz-bT-WCY"/>
                         <outlet property="vwAgua" destination="Yvu-Cd-Fff" id="7MY-f8-vRp"/>
                         <outlet property="vwAzucar" destination="37Z-fJ-v0U" id="1Li-k2-Qvz"/>
