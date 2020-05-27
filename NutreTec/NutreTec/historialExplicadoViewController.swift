@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class historialExplicadoViewController: UIViewController {
+class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
 
     @IBOutlet weak var lblTitulo: UILabel!
     // La vista de la gráfica de puntos.
@@ -27,6 +27,8 @@ class historialExplicadoViewController: UIViewController {
     // (tipo == "general")
     var valores2 = [ChartDataEntry]()
     var valores3 = [ChartDataEntry]()
+    // Arreglo de strings con fechas para usar en el eje x de la gráfica.
+    var fechas = [String]()
     // Los índices de los datos en los extremos de esta "página".
     var jIzq = -1, jDer = -1
     
@@ -95,7 +97,7 @@ for reg in misRegistros {
         
         let jInicial = j
         
-        var i = i
+        var i = i - 1
         var j = j
         
         // No es válido.
@@ -123,11 +125,14 @@ for reg in misRegistros {
             btnDerecha.isEnabled = true
         }
         
+        // Las fechas para mostrar como etiquetas
+        // de los ejes.
+        fechas.removeAll()
         valores.removeAll()
         valores2.removeAll()
         valores3.removeAll()
         
-        while i > 0 {
+        while i >= 0 {
             
             var entry = ChartDataEntry()
             
@@ -160,6 +165,8 @@ for reg in misRegistros {
                 valores.append(entry)
             }
             
+            fechas.append(misRegistros[j].dia)
+            
             j -= 1
             i -= 1
             
@@ -169,6 +176,29 @@ for reg in misRegistros {
         valores.reverse()
         valores2.reverse()
         valores3.reverse()
+        fechas.reverse()
+        
+        // Si no había 'i' registros...
+        // desplazar los índices.
+        if i >= 0 {
+            var z = 0
+            for reg in valores {
+                reg.x = Double(z)
+                z += 1
+            }
+            
+            z = 0
+            for reg in valores2 {
+                reg.x = Double(z)
+                z += 1
+            }
+            
+            z = 0
+            for reg in valores3 {
+                reg.x = Double(z)
+                z += 1
+            }
+        }
         
         // Crear la gráfica.
         setChartValues(tipo: tipo)
@@ -237,9 +267,26 @@ for reg in misRegistros {
             data.addDataSet(set2)
             data.addDataSet(set3)
         }
-        
+
+        /*
+        self.chartView.xAxis.axisMinimum = -1
+        self.chartView.xAxis.axisMaximum = data.dataSets[0].xMax + 1
+         */
+        self.chartView.xAxis.valueFormatter = self
         self.chartView.data = data
 
+    }
+    
+    // Para poner etiquetas personalizadas al eje x.
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        
+        let val = Int(value)
+        var str = ""
+        
+        if val >= 0 && val < fechas.count {
+            str = fechas[val]
+        }
+        return str
     }
 
     // Busca en misRegistros el día de hoy.
