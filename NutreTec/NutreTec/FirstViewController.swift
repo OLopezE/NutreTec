@@ -83,6 +83,7 @@ class FirstViewController: UIViewController {
         lblMidia.textColor = colorLetra
         
         
+        
         if FileManager.default.fileExists(atPath: dataFileURL().path){
             obtenerDias()
         }
@@ -93,6 +94,18 @@ class FirstViewController: UIViewController {
     }
     
    
+    override func  viewDidAppear(_ animated: Bool) {
+        metaCarne = UserDefaults.standard.integer(forKey: "carnes")
+        metaVegetales = UserDefaults.standard.integer(forKey: "vegetales")
+        metaAzucar = UserDefaults.standard.integer(forKey: "azucares")
+        metaLeguminosas = UserDefaults.standard.integer(forKey: "leguminosas")
+        metaFrutas = UserDefaults.standard.integer(forKey: "frutas")
+        metaCereales = UserDefaults.standard.integer(forKey: "cereales")
+        metaGrasas = UserDefaults.standard.integer(forKey: "grasas")
+        metaAgua = UserDefaults.standard.integer(forKey: "agua")
+        metaLacteo = UserDefaults.standard.integer(forKey: "leche")
+        buscaDia()
+    }
     func nuevoDia(){
         var esteDia = dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: fecha.text!)
         misDias.append(esteDia)
