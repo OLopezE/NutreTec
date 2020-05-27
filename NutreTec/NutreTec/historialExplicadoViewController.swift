@@ -9,9 +9,10 @@
 import UIKit
 import Charts
 
-class historialExplicadoViewController: UIViewController {
+class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
 
     @IBOutlet weak var lblTitulo: UILabel!
+    // La vista de la gráfica de puntos.
     @IBOutlet weak var chartView: LineChartView!
     
     var titulo = ""
@@ -20,14 +21,19 @@ class historialExplicadoViewController: UIViewController {
     var tipo = ""
     var diaString = ""
     var misRegistros = [RegistroProgreso]()
-    // La cantidad de datos disponibles desde hace un mes.
-    var numPuntosMes = 0
-    // La cantidad de datos disponibles desde hace una semana.
-    var numPuntosSem = 0
-    // Los valores para la gráfica de mes.
-    var valoresMes = [ChartDataEntry]()
-    // Los valores para la gráfica de semana.
-    var valoresSem = [ChartDataEntry]()
+    // Los valores para la gráfica.
+    var valores = [ChartDataEntry]()
+    // valores2 y valores3 se usan si se deben graficar todas las métricas.
+    // (tipo == "general")
+    var valores2 = [ChartDataEntry]()
+    var valores3 = [ChartDataEntry]()
+    // Arreglo de strings con fechas para usar en el eje x de la gráfica.
+    var fechas = [String]()
+    // Los índices de los datos en los extremos de esta "página".
+    var jIzq = -1, jDer = -1
+    
+    @IBOutlet weak var btnIzquierda: UIButton!
+    @IBOutlet weak var btnDerecha: UIButton!
     
     override func viewDidLoad() {
         lblTitulo.text = titulo
@@ -58,11 +64,75 @@ class historialExplicadoViewController: UIViewController {
         
         let dayDateFormatter = DateFormatter()
         dayDateFormatter.dateFormat = "dd"
-        // Para contar un máximo de 30 días
-        var i = 30
-        // El índice en el arreglo de registros
-        var j = misRegistros.count - 1
-        while i > 0 {
+        
+// DEBUGGING
+// Llenar de datos
+for z in 1..<21 {
+    let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(86400 * z))), peso: Double(z * 2), masaMuscular: Double(z * 3), porcentajeGrasa: Double(z * 4))
+    misRegistros.append(reg)
+}
+
+var z = 0
+for reg in misRegistros {
+    print("\(z): \(reg.dia) - \(reg.peso), \(reg.masaMuscular), \(reg.porcentajeGrasa)")
+    z += 1
+}
+//
+
+        // Generar máximo 5 puntos y empezar a buscar desde
+        // el último elemento del arreglo misRegistros.
+        (jIzq, jDer) = generarSetsYGrafica(i: 5, j: misRegistros.count - 1)
+    }
+    
+    // Generar los arreglos (valores, valores2, valores3) con los
+    // puntos que se graficarán.
+    // Generar la gráfica.
+    // Parámetros:
+    //  i: la cantidad máxima de puntos que se generarán
+    //  j: el índice inicial para buscar en el arreglos misRegistros
+    //     de manera descendente (por defecto este valor es
+    //     misRegistros.count - 1).
+    // Regresa los últimos índices a la izquierda y derecha.
+    func generarSetsYGrafica(i : Int, j : Int) -> (Int, Int) {
+        
+        let jInicial = j
+        
+        var i = i - 1
+        var j = j
+        
+        // No es válido.
+        // Fuera del rango del arreglo.
+        if jInicial < 0 {
+            return (-1, -1)
+        } else if jInicial > misRegistros.count - 1 {
+            while j > misRegistros.count - 1 {
+                j -= 1
+            }
+        }
+        
+        // Habilitar/deshabilitar botones
+        // cuando no hay más datos en
+        // alguna dirección.
+        if jInicial - i <= 0 {
+            btnIzquierda.isEnabled = false
+        } else {
+            btnIzquierda.isEnabled = true
+        }
+        
+        if jInicial >= misRegistros.count - 1 {
+            btnDerecha.isEnabled = false
+        } else {
+            btnDerecha.isEnabled = true
+        }
+        
+        // Las fechas para mostrar como etiquetas
+        // de los ejes.
+        fechas.removeAll()
+        valores.removeAll()
+        valores2.removeAll()
+        valores3.removeAll()
+        
+        while i >= 0 {
             
             var entry = ChartDataEntry()
             
@@ -71,68 +141,137 @@ class historialExplicadoViewController: UIViewController {
                 break
             }
             
-            let tempDate = dateFormatter.date(from: misRegistros[j].dia)
-            // let tempDay = Double(dayDateFormatter.string(from: tempDate!))!
-            
-            // Mes
-            if date.timeIntervalSince(tempDate!) < 2592000 {
-                if tipo == "peso" {
-                    entry = ChartDataEntry(x: Double(i), y: misRegistros[j].peso)
-                } else if tipo == "masa" {
-                    entry = ChartDataEntry(x: Double(i), y: misRegistros[j].masaMuscular)
-                } else if tipo == "grasa" {
-                    entry = ChartDataEntry(x: Double(i), y: misRegistros[j].porcentajeGrasa)
-                }
-                
-                valoresMes.append(entry)
+            if tipo == "peso" {
+                entry = ChartDataEntry(x: Double(i), y: misRegistros[j].peso)
+            } else if tipo == "masa" {
+                entry = ChartDataEntry(x: Double(i), y: misRegistros[j].masaMuscular)
+            } else if tipo == "grasa" {
+                entry = ChartDataEntry(x: Double(i), y: misRegistros[j].porcentajeGrasa)
             }
             
-            // Semana
-            if date.timeIntervalSince(tempDate!) < 604800 {
-                if tipo == "peso" {
-                    entry = ChartDataEntry(x: Double(i), y: misRegistros[j].peso)
-                } else if tipo == "masa" {
-                    entry = ChartDataEntry(x: Double(i), y: misRegistros[j].masaMuscular)
-                } else if tipo == "grasa" {
-                    entry = ChartDataEntry(x: Double(i), y: misRegistros[j].porcentajeGrasa)
-                }
+            if tipo == "general" {
+                let entryPeso = ChartDataEntry(x: Double(i), y: misRegistros[j].peso)
+                let entryMasa = ChartDataEntry(x: Double(i), y: misRegistros[j].masaMuscular)
+                let entryGrasa = ChartDataEntry(x: Double(i), y: misRegistros[j].porcentajeGrasa)
                 
-                valoresSem.append(entry)
+                valores.append(entryPeso)
+                valores2.append(entryMasa)
+                valores3.append(entryGrasa)
+                
+            } else {
+                valores.append(entry)
             }
+            
+            fechas.append(misRegistros[j].dia)
             
             j -= 1
             i -= 1
             
         }
         
-        // Voltear los arreglos para que estén en orden cronológico.
-        valoresMes.reverse()
-        valoresSem.reverse()
+        // Voltear el arreglo para que esté en orden cronológico.
+        valores.reverse()
+        valores2.reverse()
+        valores3.reverse()
+        fechas.reverse()
         
-        // Crear la gráfica.
-        setChartValues(entriesArray: valoresMes)
-    }
-    
-    func setChartValues(entriesArray : [ChartDataEntry]) {
-        
-        /*
-        
-        let values = (0..<count).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(UInt32(count)) + 3)
-            return ChartDataEntry(x: Double(i), y: val)
+        // Si no había 'i' registros...
+        // desplazar los índices.
+        if i >= 0 {
+            var z = 0
+            for reg in valores {
+                reg.x = Double(z)
+                z += 1
+            }
+            
+            z = 0
+            for reg in valores2 {
+                reg.x = Double(z)
+                z += 1
+            }
+            
+            z = 0
+            for reg in valores3 {
+                reg.x = Double(z)
+                z += 1
+            }
         }
         
-        let set1 = LineChartDataSet(entries: values, label: titulo)
-        let data = LineChartData(dataSet: set1)
- 
+        // Crear la gráfica.
+        setChartValues(tipo: tipo)
+        
+        return (j + 1, (jInicial <= misRegistros.count - 1) ? jInicial : misRegistros.count - 1)
+    }
+    
+    func setChartValues(tipo : String) {
+
+        let data = LineChartData()
+        self.chartView.xAxis.granularity = 1.0
+        
+        if tipo != "general" {
+            
+            let label = tipo == "peso" ? "Peso (kg)" : (tipo == "masa") ? "Masa muscular (kg)" : (tipo == "grasa") ? "Porcentaje de grasa (%)" : ""
+            
+            let set1 = LineChartDataSet(entries: valores, label: label)
+
+            // self.chartView.data = data
+            data.addDataSet(set1)
+        }
+        
+        self.chartView.rightAxis.enabled = false
+
+        if tipo == "peso" {
+            self.chartView.leftAxis.axisMinimum = 0
+            self.chartView.leftAxis.axisMaximum = data.getDataSetByIndex(0).yMax * 2
+        } else if tipo == "masa" {
+            self.chartView.leftAxis.axisMinimum = 0
+            self.chartView.leftAxis.axisMaximum = data.getDataSetByIndex(0).yMax * 2
+        } else if tipo == "grasa" {
+            self.chartView.leftAxis.axisMinimum = 0
+            self.chartView.leftAxis.axisMaximum = 100
+        } else if tipo == "general" {
+            let set1 = LineChartDataSet(entries: valores, label: "Peso (kg)")
+            let set2 = LineChartDataSet(entries: valores2, label: "Masa muscular (kg)")
+            let set3 = LineChartDataSet(entries: valores3, label: "Porcentaje de grasa (%)")
+
+            // Poner las líneas de colores diferentes.
+            var colors1 = [NSUIColor]()
+            var colors2 = [NSUIColor]()
+            for _ in 0..<set1.count {
+                colors1.append(UIColor.red as NSUIColor)
+                colors2.append(UIColor.green as NSUIColor)
+            }
+            
+            set1.colors = [colors1[0]]
+            set1.circleColors = colors1
+            
+            set2.colors = [colors2[0]]
+            set2.circleColors = colors2
+            
+            data.addDataSet(set1)
+            data.addDataSet(set2)
+            data.addDataSet(set3)
+        }
+
+        /*
+        self.chartView.xAxis.axisMinimum = -1
+        self.chartView.xAxis.axisMaximum = data.dataSets[0].xMax + 1
          */
-        
-        chartView.xAxis.granularity = 1.0
-        
-        let set1 = LineChartDataSet(entries: entriesArray, label: titulo)
-        let data = LineChartData(dataSet: set1)
- 
+        self.chartView.xAxis.valueFormatter = self
         self.chartView.data = data
+
+    }
+    
+    // Para poner etiquetas personalizadas al eje x.
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        
+        let val = Int(value)
+        var str = ""
+        
+        if val >= 0 && val < fechas.count {
+            str = fechas[val]
+        }
+        return str
     }
 
     // Busca en misRegistros el día de hoy.
@@ -150,17 +289,14 @@ class historialExplicadoViewController: UIViewController {
         return nil
     }
     
-    // Cuando se cambia el modo del segmented control.
-    @IBAction func segmentedCambiado(_ sender: UISegmentedControl) {
-        
-        if sender.selectedSegmentIndex == 0 {
-            setChartValues(entriesArray: valoresMes)
-        } else if sender.selectedSegmentIndex == 1 {
-            
-            setChartValues(entriesArray: valoresSem)
-        }
-        
+    @IBAction func tapIzquierda(_ sender: UIButton) {
+        (jIzq, jDer) = generarSetsYGrafica(i: 5, j: jIzq - 1)
     }
+    
+    @IBAction func tapDerecha(_ sender: Any) {
+        (jIzq, jDer) = generarSetsYGrafica(i: 5, j: jDer + 5)
+    }
+    
     /*
     // MARK: - Navigation
 

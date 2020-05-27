@@ -1671,6 +1671,35 @@
                                             <constraint firstAttribute="height" constant="300" id="3Mh-l7-ihz"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0t-nJ-IHl">
+                                        <rect key="frame" x="8" y="320" width="66" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="arrowtriangle.left.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapIzquierda:" destination="Bzg-Qu-g9L" eventType="touchUpInside" id="Rn0-Pb-S5G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpi-s9-g1I">
+                                        <rect key="frame" x="300" y="320" width="66" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="arrowtriangle.right.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapDerecha:" destination="Bzg-Qu-g9L" eventType="touchUpInside" id="ouX-Gy-Gu2"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Presiona para avanzar o retroceder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcG-OL-RSZ">
+                                        <rect key="frame" x="82" y="333" width="210" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1710,6 +1739,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="zLi-SW-u0G"/>
                     <connections>
+                        <outlet property="btnDerecha" destination="zpi-s9-g1I" id="W9Y-gX-9LQ"/>
+                        <outlet property="btnIzquierda" destination="u0t-nJ-IHl" id="tHD-WY-kYw"/>
                         <outlet property="chartView" destination="6Q7-fo-fVe" id="6IV-ZK-GkS"/>
                         <outlet property="lblTitulo" destination="Cdo-qh-tLm" id="V4X-7Y-QLC"/>
                     </connections>
@@ -2315,7 +2346,9 @@
     <resources>
         <image name="agua" width="64" height="64"/>
         <image name="agua-2" width="64" height="64"/>
-        <image name="book.fill" catalog="system" width="128" height="100"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="64" height="56"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="64" height="56"/>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="caramelo" width="128" height="128"/>
         <image name="caramelo-2" width="128" height="128"/>
         <image name="carne" width="128" height="128"/>
