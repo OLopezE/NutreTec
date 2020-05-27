@@ -109,10 +109,10 @@ class historialExplicadoViewController: UIViewController {
         valores3.reverse()
         
         // Crear la gráfica.
-        setChartValues(entriesArray: valores, tipo: tipo)
+        setChartValues(tipo: tipo)
     }
     
-    func setChartValues(entriesArray : [ChartDataEntry], tipo : String) {
+    func setChartValues(tipo : String) {
         
         /*
         
@@ -130,7 +130,10 @@ class historialExplicadoViewController: UIViewController {
         self.chartView.xAxis.granularity = 1.0
         
         if tipo != "general" {
-            let set1 = LineChartDataSet(entries: entriesArray, label: titulo)
+            
+            let label = tipo == "peso" ? "Peso (kg)" : (tipo == "masa") ? "Masa muscular (kg)" : (tipo == "grasa") ? "Porcentaje de grasa (%)" : ""
+            
+            let set1 = LineChartDataSet(entries: valores, label: label)
 
             // self.chartView.data = data
             data.addDataSet(set1)
@@ -152,6 +155,7 @@ class historialExplicadoViewController: UIViewController {
             let set2 = LineChartDataSet(entries: valores2, label: "Masa muscular (kg)")
             let set3 = LineChartDataSet(entries: valores3, label: "Porcentaje de grasa (%)")
 
+            // Poner las líneas de colores diferentes.
             var colors1 = [NSUIColor]()
             var colors2 = [NSUIColor]()
             for _ in 0..<set1.count {
