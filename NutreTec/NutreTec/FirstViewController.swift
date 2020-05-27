@@ -115,8 +115,10 @@ class FirstViewController: UIViewController {
         mike += 1
         if mike == 10{
             elPana.isHidden = false
+            mike = 0
         }else{
             elPana.isHidden = true
+            
         }
     }
     
