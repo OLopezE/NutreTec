@@ -27,6 +27,8 @@ class historialExplicadoViewController: UIViewController {
     // (tipo == "general")
     var valores2 = [ChartDataEntry]()
     var valores3 = [ChartDataEntry]()
+    // Los índices de los datos en los extremos de esta "página".
+    var jIzq = -1, jDer = -1
     
     @IBOutlet weak var btnIzquierda: UIButton!
     @IBOutlet weak var btnDerecha: UIButton!
@@ -60,10 +62,24 @@ class historialExplicadoViewController: UIViewController {
         
         let dayDateFormatter = DateFormatter()
         dayDateFormatter.dateFormat = "dd"
+// Llenar de datos
+for z in 1..<21 {
+    //let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(86400 * z))), peso: Double.random(in: 50...100), masaMuscular: Double.random(in: 1...15), porcentajeGrasa: Double.random(in: 1...30))
+    let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(86400 * z))), peso: Double(z * 2), masaMuscular: Double(z * 3), porcentajeGrasa: Double(z * 4))
+    misRegistros.append(reg)
+}
+
+var z = 0
+for reg in misRegistros {
+    print("\(z): \(reg.dia) - \(reg.peso), \(reg.masaMuscular), \(reg.porcentajeGrasa)")
+    z += 1
+}
+
+//
 
         // Generar máximo 5 puntos y empezar a buscar desde
         // el último elemento del arreglo misRegistros.
-        var (jIzq, jDer) = generarSetsYGrafica(i: 5, j: misRegistros.count - 1)
+        (jIzq, jDer) = generarSetsYGrafica(i: 5, j: misRegistros.count - 1)
     }
     
     // Generar los arreglos (valores, valores2, valores3) con los
@@ -82,20 +98,34 @@ class historialExplicadoViewController: UIViewController {
         var i = i
         var j = j
         
+        // No es válido.
+        // Fuera del rango del arreglo.
+        if jInicial < 0 {
+            return (-1, -1)
+        } else if jInicial > misRegistros.count - 1 {
+            while j > misRegistros.count - 1 {
+                j -= 1
+            }
+        }
+        
         // Habilitar/deshabilitar botones
         // cuando no hay más datos en
         // alguna dirección.
-        if j - i <= 0 {
+        if jInicial - i <= 0 {
             btnIzquierda.isEnabled = false
         } else {
             btnIzquierda.isEnabled = true
         }
         
-        if jInicial == misRegistros.count - 1 {
+        if jInicial >= misRegistros.count - 1 {
             btnDerecha.isEnabled = false
         } else {
             btnDerecha.isEnabled = true
         }
+        
+        valores.removeAll()
+        valores2.removeAll()
+        valores3.removeAll()
         
         while i > 0 {
             
@@ -143,7 +173,7 @@ class historialExplicadoViewController: UIViewController {
         // Crear la gráfica.
         setChartValues(tipo: tipo)
         
-        return (j + 1, jInicial)
+        return (j + 1, (jInicial <= misRegistros.count - 1) ? jInicial : misRegistros.count - 1)
     }
     
     func setChartValues(tipo : String) {
@@ -228,10 +258,11 @@ class historialExplicadoViewController: UIViewController {
     }
     
     @IBAction func tapIzquierda(_ sender: UIButton) {
+        (jIzq, jDer) = generarSetsYGrafica(i: 5, j: jIzq - 1)
     }
     
-    
     @IBAction func tapDerecha(_ sender: Any) {
+        (jIzq, jDer) = generarSetsYGrafica(i: 5, j: jDer + 5)
     }
     
     /*
