@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -962,7 +962,11 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.9796794041450777" green="0.9796794041450777" blue="0.9796794041450777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3cH-0g-Pqe" appends="YES" id="qtv-k3-NdL"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mi plan" image="book.fill" catalog="system" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="FOY-YH-sPr"/>
@@ -980,6 +984,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3cH-0g-Pqe">
+                    <connections>
+                        <action selector="hideKeyboardOnTap:" destination="8rJ-Kc-sve" id="O7D-Bv-of6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4131.884057971015" y="387.72321428571428"/>
         </scene>
@@ -1393,7 +1402,7 @@
                                 <rect key="frame" x="20" y="128" width="374" height="660"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVl-HA-tiF">
-                                        <rect key="frame" x="35" y="170" width="76" height="24"/>
+                                        <rect key="frame" x="35" y="175" width="76" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -1405,12 +1414,6 @@
                                             <constraint firstAttribute="width" constant="120" id="nbJ-Jh-ik4"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op3-kV-8xO">
-                                        <rect key="frame" x="35" y="244" width="49" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de nacimiento:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK2-hj-NXR">
                                         <rect key="frame" x="39" y="312" width="186" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1451,10 +1454,16 @@
                                             <action selector="tapEditarGuardar:" destination="n9X-ts-3fp" eventType="touchUpInside" id="L8c-Zz-n7u"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op3-kV-8xO">
+                                        <rect key="frame" x="35" y="244" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Op3-kV-8xO" firstAttribute="top" secondItem="MVl-HA-tiF" secondAttribute="bottom" constant="50" id="3ab-c3-7Hs"/>
+                                    <constraint firstItem="Op3-kV-8xO" firstAttribute="top" secondItem="MVl-HA-tiF" secondAttribute="bottom" constant="45" id="3ab-c3-7Hs"/>
                                     <constraint firstItem="dCj-kq-dle" firstAttribute="top" secondItem="ON8-x7-RMR" secondAttribute="top" id="4uC-9o-ml5"/>
                                     <constraint firstItem="zSG-Vb-9Ae" firstAttribute="leading" secondItem="ON8-x7-RMR" secondAttribute="leading" constant="14" id="9VJ-Jc-aPy"/>
                                     <constraint firstAttribute="trailing" secondItem="QW3-gS-R7d" secondAttribute="trailing" constant="60" id="Cya-px-cPR"/>
@@ -1469,7 +1478,7 @@
                                     <constraint firstAttribute="trailing" secondItem="8iy-kx-2Tv" secondAttribute="trailing" constant="20" id="qVM-QQ-m8H"/>
                                     <constraint firstItem="Op3-kV-8xO" firstAttribute="leading" secondItem="ON8-x7-RMR" secondAttribute="leading" constant="35" id="rSW-bi-PRP"/>
                                     <constraint firstItem="dK2-hj-NXR" firstAttribute="top" secondItem="QW3-gS-R7d" secondAttribute="bottom" constant="40" id="rSn-9F-bTh"/>
-                                    <constraint firstItem="MVl-HA-tiF" firstAttribute="top" secondItem="ON8-x7-RMR" secondAttribute="top" constant="170" id="uhV-5v-wbF"/>
+                                    <constraint firstItem="MVl-HA-tiF" firstAttribute="top" secondItem="ON8-x7-RMR" secondAttribute="top" constant="175" id="uhV-5v-wbF"/>
                                     <constraint firstItem="zSG-Vb-9Ae" firstAttribute="top" secondItem="dK2-hj-NXR" secondAttribute="bottom" constant="12" id="vny-0m-aID"/>
                                     <constraint firstAttribute="trailing" secondItem="dCj-kq-dle" secondAttribute="trailing" constant="10" id="w3D-ci-8wa"/>
                                     <constraint firstItem="dK2-hj-NXR" firstAttribute="leading" secondItem="ON8-x7-RMR" secondAttribute="leading" constant="39" id="zdQ-be-5nc"/>
@@ -1493,6 +1502,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.95132367227979275" green="0.95132367227979275" blue="0.95132367227979275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ADD-Yh-ZeI" firstAttribute="trailing" secondItem="ON8-x7-RMR" secondAttribute="trailing" constant="20" id="Kuv-em-HNu"/>
                             <constraint firstItem="2xM-FJ-hJa" firstAttribute="top" secondItem="ADD-Yh-ZeI" secondAttribute="top" constant="20" id="RXd-vW-cbc"/>
@@ -1503,16 +1513,24 @@
                             <constraint firstItem="ADD-Yh-ZeI" firstAttribute="bottom" secondItem="ON8-x7-RMR" secondAttribute="bottom" constant="20" id="yLC-31-F1r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ADD-Yh-ZeI"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jsn-yX-PRq" appends="YES" id="m3J-8q-aO4"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="LJb-8S-DRE"/>
                     <connections>
                         <outlet property="btnEditarGuardar" destination="dCj-kq-dle" id="ET0-bn-PaR"/>
-                        <outlet property="tfFechaNacimiento" destination="zSG-Vb-9Ae" id="ho7-Ib-vnh"/>
+                        <outlet property="dateFechaNacimiento" destination="zSG-Vb-9Ae" id="ho7-Ib-vnh"/>
+                        <outlet property="segmentedSexo" destination="QW3-gS-R7d" id="g9Q-mw-Rvl"/>
                         <outlet property="tfNombre" destination="8iy-kx-2Tv" id="zpg-QK-fjk"/>
-                        <outlet property="tfSexo" destination="QW3-gS-R7d" id="g9Q-mw-Rvl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdV-Ln-wbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jsn-yX-PRq">
+                    <connections>
+                        <action selector="hideKeyboardOnTap:" destination="n9X-ts-3fp" id="PHH-0i-LyJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1847.826086956522" y="387.72321428571428"/>
         </scene>
@@ -1790,16 +1808,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-9q-OYy">
-                                        <rect key="frame" x="264" y="321" width="100" height="34"/>
-                                        <color key="backgroundColor" red="0.94648239213197971" green="0.94648239213197971" blue="0.94648239213197971" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="Pt2-eT-Msn"/>
-                                        </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSN-kO-Ple">
                                         <rect key="frame" x="266" y="363" width="100" height="34"/>
                                         <color key="backgroundColor" red="0.94648239213197971" green="0.94648239213197971" blue="0.94648239213197971" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1862,6 +1870,16 @@
                                             <action selector="guardar:" destination="FjC-0p-8uK" eventType="touchUpInside" id="qAs-fn-Ci4"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-9q-OYy">
+                                        <rect key="frame" x="266" y="321" width="100" height="34"/>
+                                        <color key="backgroundColor" red="0.94648239213197971" green="0.94648239213197971" blue="0.94648239213197971" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Pt2-eT-Msn"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1874,7 +1892,7 @@
                                     <constraint firstItem="xhk-vO-3Oo" firstAttribute="top" secondItem="R1m-AP-2N7" secondAttribute="bottom" constant="10" id="Ah5-kI-hfP"/>
                                     <constraint firstItem="unM-w9-Fwj" firstAttribute="top" secondItem="xhk-vO-3Oo" secondAttribute="bottom" constant="8" id="BeL-H4-LWh"/>
                                     <constraint firstItem="unM-w9-Fwj" firstAttribute="leading" secondItem="uTH-RA-nTQ" secondAttribute="leading" constant="8" id="C2A-eP-fvn"/>
-                                    <constraint firstAttribute="trailing" secondItem="4wf-9q-OYy" secondAttribute="trailing" constant="10" id="DTt-Bg-IE8"/>
+                                    <constraint firstAttribute="trailing" secondItem="4wf-9q-OYy" secondAttribute="trailing" constant="8" id="DTt-Bg-IE8"/>
                                     <constraint firstAttribute="trailing" secondItem="2zq-oq-Zy7" secondAttribute="trailing" constant="10" id="FY1-BP-acX"/>
                                     <constraint firstAttribute="trailing" secondItem="cSN-kO-Ple" secondAttribute="trailing" constant="8" id="GY4-JH-VY1"/>
                                     <constraint firstItem="R1m-AP-2N7" firstAttribute="top" secondItem="2zq-oq-Zy7" secondAttribute="bottom" constant="10" id="HTm-iX-JfJ"/>
@@ -1917,6 +1935,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97595531088082899" green="0.97595531088082899" blue="0.97595531088082899" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Xb8-i7-fnY" firstAttribute="bottom" secondItem="uTH-RA-nTQ" secondAttribute="bottom" constant="10" id="39e-fi-KoY"/>
                             <constraint firstItem="x1L-Uw-YzS" firstAttribute="leading" secondItem="Xb8-i7-fnY" secondAttribute="leading" constant="20" id="Dsm-da-CAB"/>
@@ -1927,6 +1946,9 @@
                             <constraint firstItem="Xb8-i7-fnY" firstAttribute="trailing" secondItem="uTH-RA-nTQ" secondAttribute="trailing" constant="20" id="oNv-BN-XLQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xb8-i7-fnY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cIc-HF-BuR" appends="YES" id="WCQ-bF-Dll"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Historial" image="doc.on.doc" catalog="system" id="jGz-P3-uku"/>
                     <navigationItem key="navigationItem" id="D2S-cl-gGu"/>
@@ -1942,6 +1964,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlb-wo-Icu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cIc-HF-BuR">
+                    <connections>
+                        <action selector="hideKeyboardOnTap:" destination="FjC-0p-8uK" id="EGb-MS-15c"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3376.811594202899" y="-390.40178571428572"/>
         </scene>
@@ -2643,28 +2670,23 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9ck-M3-W7I"/>
-        <segue reference="2Hg-7D-wcQ"/>
-        <segue reference="BP4-3e-AyX"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="agua" width="64" height="64"/>
         <image name="agua-2" width="64" height="64"/>
-        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
-        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
-        <image name="book.fill" catalog="system" width="128" height="100"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="64" height="56"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="64" height="56"/>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="caramelo" width="128" height="128"/>
         <image name="caramelo-2" width="128" height="128"/>
         <image name="carne" width="128" height="128"/>
         <image name="carne-2" width="64" height="64"/>
         <image name="cereales" width="128" height="128"/>
         <image name="cereales-2" width="128" height="128"/>
-        <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron.left.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="chevron.right.circle.fill" catalog="system" width="64" height="60"/>
         <image name="chicharos" width="128" height="128"/>
         <image name="chicharos-2" width="128" height="128"/>
-        <image name="doc.on.doc" catalog="system" width="117" height="128"/>
+        <image name="doc.on.doc" catalog="system" width="58" height="64"/>
         <image name="fruit" width="64" height="64"/>
         <image name="fruit-2" width="64" height="64"/>
         <image name="grasa" width="64" height="64"/>
@@ -2677,13 +2699,18 @@
         <image name="leche-2" width="64" height="64"/>
         <image name="nutreteclogotransparente" width="1280" height="1280"/>
         <image name="panamiguel" width="512" height="512"/>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="personalhotspot" catalog="system" width="128" height="75"/>
-        <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
+        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="personalhotspot" catalog="system" width="64" height="36"/>
+        <image name="rectangle.grid.1x2" catalog="system" width="64" height="50"/>
         <image name="red" width="256" height="256"/>
-        <image name="sunset.fill" catalog="system" width="128" height="97"/>
+        <image name="sunset.fill" catalog="system" width="64" height="48"/>
         <image name="vegetable" width="64" height="64"/>
         <image name="vegetable-2" width="64" height="64"/>
         <image name="yellow" width="880" height="920"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9ck-M3-W7I"/>
+        <segue reference="2Hg-7D-wcQ"/>
+        <segue reference="BP4-3e-AyX"/>
+    </inferredMetricsTieBreakers>
 </document>

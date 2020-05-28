@@ -56,6 +56,9 @@ class MiPlanViewController: UIViewController {
         } else {
             btnEditar.setTitle("Modificar porciones", for: .normal)
 
+            // Ocultar el teclado.
+            view.endEditing(true)
+            
             // Se tocó "Guardar".
             // Guardar los valores.
             let settings = UserDefaults.standard
@@ -81,6 +84,9 @@ class MiPlanViewController: UIViewController {
         
     }
     
-
+    @IBAction func hideKeyboardOnTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }
 
