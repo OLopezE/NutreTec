@@ -15,6 +15,7 @@ class recetarioViewController: UIViewController {
     @IBOutlet weak var bttnAntojos: UIButton!
     @IBOutlet weak var bttnDesayunos: UIButton!
     @IBOutlet weak var bttnEnsaladas: UIButton!
+    @IBOutlet weak var bttnOtros: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class recetarioViewController: UIViewController {
         bttnEnsaladas.layer.cornerRadius = 10
         bttnSmoothies.layer.cornerRadius = 10
         bttnVegetarianos.layer.cornerRadius = 10
+        bttnOtros.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     
@@ -37,24 +39,27 @@ class recetarioViewController: UIViewController {
     
     
     @IBAction func comidas(_ sender: UIButton) {
-        abreLink(pag: "https://drive.google.com/drive/u/1/folders/0AGsVJGgvGEd9Uk9PVA")
+        abreLink(pag: "https://pdfhost.io/v/MXrUTsn5Y_Desayunos_comidas_y_cenaspdf.pdf")
         
     }
     
-    
     @IBAction func ensaladas(_ sender: UIButton) {
-        abreLink(pag: "https://drive.google.com/drive/u/1/folders/0AGsVJGgvGEd9Uk9PVA")
+        abreLink(pag: "https://pdfhost.io/v/DGoLpm5Tr_Recetario_Ensaladas_pdf.pdf")
     }
     
     @IBAction func antojos(_ sender: UIButton) {
-        abreLink(pag: "https://drive.google.com/drive/u/1/folders/0AGsVJGgvGEd9Uk9PVA")
+        abreLink(pag: "https://pdfhost.io/v/850gTlkxM_Recetario_de_antojospdf.pdf")
     }
     @IBAction func smoothies(_ sender: UIButton) {
-        abreLink(pag: "https://drive.google.com/drive/u/1/folders/0AGsVJGgvGEd9Uk9PVA")
+        abreLink(pag: "https://pdfhost.io/v/cgjcHoi3u_Recetario_Smoothiespdf.pdf")
     }
     
     @IBAction func Vegetariano(_ sender: UIButton) {
-        abreLink(pag: "https://drive.google.com/drive/u/1/folders/0AGsVJGgvGEd9Uk9PVA")
+        abreLink(pag: "https://pdfhost.io/v/KKcnBQRkq_RECETARIO_VEGETARIANO_1pdf.pdf")
+    }
+    
+    @IBAction func otros(_ sender: UIButton) {
+         abreLink(pag: "https://drive.google.com/drive/folders/1PjeubSQ9A75ty9nc7EKjgCNWBH_2m0yI?usp=sharing")
     }
     /*
     // MARK: - Navigation

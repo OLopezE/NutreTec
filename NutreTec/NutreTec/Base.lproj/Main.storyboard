@@ -1142,7 +1142,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHR-Su-5do">
                                         <rect key="frame" x="20" y="120" width="374" height="712"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Completo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmr-of-7yl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Completo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmr-of-7yl">
                                                 <rect key="frame" x="10" y="10" width="354" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
@@ -1241,7 +1241,7 @@
         <!--Navegación-->
         <scene sceneID="hVp-xn-IiI">
             <objects>
-                <viewController id="wNy-4a-Hjr" sceneMemberID="viewController">
+                <viewController id="wNy-4a-Hjr" customClass="navegacionViewController" customModule="NutreTec" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vk3-VH-ToQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1369,6 +1369,13 @@
                         <viewLayoutGuide key="safeArea" id="A3f-ix-8RG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Navegación" image="rectangle.grid.1x2" catalog="system" id="RBD-14-1CQ"/>
+                    <connections>
+                        <outlet property="bttnCreditos" destination="2Np-3U-8wW" id="GOg-M0-xEk"/>
+                        <outlet property="bttnPerfil" destination="V6I-h5-FD2" id="uT4-k1-i10"/>
+                        <outlet property="bttnPlan" destination="kzR-yw-eRf" id="yJN-n5-aOW"/>
+                        <outlet property="bttnRecetarios" destination="S0t-0u-N3l" id="dnV-hn-DJm"/>
+                        <outlet property="bttnSemaforo" destination="5Bw-tg-NZu" id="g5Q-ec-DGL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COl-YF-boy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1522,7 +1529,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9f-D1-Gyq">
                                         <rect key="frame" x="10" y="10" width="354" height="50"/>
-                                        <color key="backgroundColor" red="0.66622506389417413" green="0.90173821142892185" blue="0.9921947122" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.51821875495942848" green="0.70851434243170797" blue="0.7828759517766497" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="nWv-L4-90k"/>
                                         </constraints>
@@ -1592,18 +1599,35 @@
                                             <action selector="Vegetariano:" destination="o30-GB-fbN" eventType="touchUpInside" id="voh-7P-S07"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XR-Zd-uLD">
+                                        <rect key="frame" x="10" y="310" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.64210671190000002" green="0.52636563780000001" blue="0.99612218139999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7Vd-Mm-zcq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <state key="normal" title="Otros">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="otros:" destination="o30-GB-fbN" eventType="touchUpInside" id="DhO-P7-s3e"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="2XR-Zd-uLD" firstAttribute="top" secondItem="HuM-K4-e3v" secondAttribute="bottom" constant="10" id="03b-MS-V5O"/>
                                     <constraint firstItem="eIQ-W1-Ius" firstAttribute="top" secondItem="d9f-D1-Gyq" secondAttribute="bottom" constant="10" id="0gZ-Kd-OCJ"/>
                                     <constraint firstItem="HuM-K4-e3v" firstAttribute="top" secondItem="R3t-lH-Nqv" secondAttribute="bottom" constant="10" id="2q8-2N-MgL"/>
                                     <constraint firstItem="R3t-lH-Nqv" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="Bmc-MG-ce9"/>
                                     <constraint firstItem="HuM-K4-e3v" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="C9Q-aj-979"/>
+                                    <constraint firstItem="2XR-Zd-uLD" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="CR4-he-8vv"/>
                                     <constraint firstItem="R3t-lH-Nqv" firstAttribute="top" secondItem="RsI-Da-GSi" secondAttribute="bottom" constant="10" id="FL0-Zb-CfI"/>
                                     <constraint firstAttribute="trailing" secondItem="d9f-D1-Gyq" secondAttribute="trailing" constant="10" id="Khx-jy-vre"/>
                                     <constraint firstAttribute="trailing" secondItem="R3t-lH-Nqv" secondAttribute="trailing" constant="10" id="PWu-1e-r2I"/>
                                     <constraint firstItem="d9f-D1-Gyq" firstAttribute="top" secondItem="JI3-k4-T0N" secondAttribute="top" constant="10" id="Tga-TY-kNq"/>
                                     <constraint firstItem="RsI-Da-GSi" firstAttribute="top" secondItem="eIQ-W1-Ius" secondAttribute="bottom" constant="10" id="b4d-HM-1Yw"/>
+                                    <constraint firstAttribute="trailing" secondItem="2XR-Zd-uLD" secondAttribute="trailing" constant="10" id="b96-ea-gL1"/>
                                     <constraint firstAttribute="trailing" secondItem="HuM-K4-e3v" secondAttribute="trailing" constant="10" id="ed9-wb-aqS"/>
                                     <constraint firstItem="RsI-Da-GSi" firstAttribute="leading" secondItem="JI3-k4-T0N" secondAttribute="leading" constant="10" id="gP1-Iy-mF6"/>
                                     <constraint firstAttribute="trailing" secondItem="RsI-Da-GSi" secondAttribute="trailing" constant="10" id="uzN-iB-dOP"/>
@@ -1644,6 +1668,7 @@
                         <outlet property="bttnAntojos" destination="RsI-Da-GSi" id="pLw-PC-2ol"/>
                         <outlet property="bttnDesayunos" destination="d9f-D1-Gyq" id="mmh-Kc-0e7"/>
                         <outlet property="bttnEnsaladas" destination="eIQ-W1-Ius" id="Neu-so-K1o"/>
+                        <outlet property="bttnOtros" destination="2XR-Zd-uLD" id="ldN-Tu-OGm"/>
                         <outlet property="bttnSmoothies" destination="R3t-lH-Nqv" id="xU3-lL-Gck"/>
                         <outlet property="bttnVegetarianos" destination="HuM-K4-e3v" id="8xz-0i-zt2"/>
                     </connections>
@@ -1966,7 +1991,7 @@
                                             <action selector="tapDerecha:" destination="Bzg-Qu-g9L" eventType="touchUpInside" id="ouX-Gy-Gu2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presiona para avanzar o retroceder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcG-OL-RSZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presiona para avanzar o retroceder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcG-OL-RSZ">
                                         <rect key="frame" x="82" y="330" width="210" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

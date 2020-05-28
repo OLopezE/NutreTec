@@ -12,6 +12,7 @@
 		008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D8532246E36A900FB2A60 /* historialViewController.swift */; };
 		00AC4522247F029300B24BA6 /* creditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4521247F029300B24BA6 /* creditosViewController.swift */; };
 		00AC4524247F03C100B24BA6 /* creditosExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4523247F03C100B24BA6 /* creditosExplicadoViewController.swift */; };
+		00AC4526247F359500B24BA6 /* navegacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4525247F359400B24BA6 /* navegacionViewController.swift */; };
 		00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */; };
 		00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */; };
 		00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */; };
@@ -51,6 +52,7 @@
 		008D8532246E36A900FB2A60 /* historialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historialViewController.swift; sourceTree = "<group>"; };
 		00AC4521247F029300B24BA6 /* creditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditosViewController.swift; sourceTree = "<group>"; };
 		00AC4523247F03C100B24BA6 /* creditosExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditosExplicadoViewController.swift; sourceTree = "<group>"; };
+		00AC4525247F359400B24BA6 /* navegacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navegacionViewController.swift; sourceTree = "<group>"; };
 		00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationTableViewController.swift; sourceTree = "<group>"; };
 		00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteViewController.swift; sourceTree = "<group>"; };
 		00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquivalenteExplicadoViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		00FED2F82450FDAE00AF31C4 = {
 			isa = PBXGroup;
 			children = (
+				00AC4525247F359400B24BA6 /* navegacionViewController.swift */,
 				00FED3032450FDAE00AF31C4 /* NutreTec */,
 				00FED3022450FDAE00AF31C4 /* Products */,
 				A96D98085BE67DC1C7E7AA35 /* Pods */,
@@ -279,6 +282,7 @@
 				773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */,
 				00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */,
 				00FED31B24515AD900AF31C4 /* dias.swift in Sources */,
+				00AC4526247F359500B24BA6 /* navegacionViewController.swift in Sources */,
 				00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */,
 				00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */,
 			);
