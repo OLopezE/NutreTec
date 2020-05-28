@@ -31,12 +31,21 @@ class MiPerfilViewController: UIViewController {
         
         self.estaEditando = !self.estaEditando
 
+        // Ocultar el teclado al presionar "Guardar".
+        if !estaEditando {
+            view.endEditing(true)
+        }
+        
         self.btnEditarGuardar.setTitle(self.estaEditando ? "Guardar" : "Editar", for: .normal)
         
         self.tfNombre.isUserInteractionEnabled = self.estaEditando
         self.tfSexo.isUserInteractionEnabled = self.estaEditando
         self.tfFechaNacimiento.isUserInteractionEnabled = self.estaEditando
         
+    }
+    
+    @IBAction func hideKeyboardOnTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     /*
@@ -49,4 +58,6 @@ class MiPerfilViewController: UIViewController {
     }
     */
 
+    
+    
 }
