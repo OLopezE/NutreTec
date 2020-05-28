@@ -28,6 +28,9 @@ class creditosExplicadoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
         lblNombre.text = nombre
         lblInfo.text = info
         lblAprendi.text = aprendi

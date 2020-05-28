@@ -139,6 +139,10 @@ class FirstViewController: UIViewController {
         
         misDias = []
         
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
+        
         misDias.append(dias(carne: 0, vegetal: 0, leche: 0, grasa: 0, fruta: 0, agua: 0, leguminosa: 0, azucar: 0, cereales: 0, dia: lblMidia.text!))
         super.viewDidLoad()
         vwAzucar.layer.cornerRadius = 10
@@ -813,6 +817,7 @@ class FirstViewController: UIViewController {
         }
         obtenDia()
     }
+    
     
     
 }

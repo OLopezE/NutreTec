@@ -19,6 +19,9 @@ class recetarioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
         bttnAntojos.layer.cornerRadius = 10
         bttnDesayunos.layer.cornerRadius = 10
         bttnEnsaladas.layer.cornerRadius = 10

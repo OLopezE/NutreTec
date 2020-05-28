@@ -46,6 +46,9 @@ class EquivalenteExplicadoViewController: UIViewController, UITableViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
         scrollView.contentSize = tablaInfo.frame.size
         lbldesc1.text = desc
         lblTitulo.text = titulo

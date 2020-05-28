@@ -27,6 +27,9 @@ class EquivalenteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
         bttnAzucar.layer.cornerRadius = 10
         bttnGrasa.layer.cornerRadius = 10
         bttnFrutas.layer.cornerRadius = 10

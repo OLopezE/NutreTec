@@ -20,6 +20,9 @@ class MiPerfilViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
         // Do any additional setup after loading the view.
         
         self.tfNombre.isUserInteractionEnabled = false

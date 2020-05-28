@@ -39,6 +39,9 @@ class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
         lblTitulo.text = titulo
         lblTitulo.font = lblTitulo.font.withSize(CGFloat(tamano))
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
 
         // Do any additional setup after loading the view.
         

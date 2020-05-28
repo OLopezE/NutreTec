@@ -51,6 +51,9 @@ class SemaforoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
         btVerde.layer.cornerRadius = 75
         btRojo.layer.cornerRadius = 75
         btAmarillo.layer.cornerRadius = 75

@@ -37,6 +37,9 @@ class historialViewController: UIViewController {
         vwGrasa.layer.cornerRadius = 10
         bttnGeneral.layer.cornerRadius = 10
         super.viewDidLoad()
+        if #available(iOS 13.0, *){
+            overrideUserInterfaceStyle = .light
+        }
 
         diaString = obtenDia()
         lblFecha.text = diaString
