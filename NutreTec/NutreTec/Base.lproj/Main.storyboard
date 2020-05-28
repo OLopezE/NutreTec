@@ -1520,9 +1520,9 @@
                     <navigationItem key="navigationItem" id="LJb-8S-DRE"/>
                     <connections>
                         <outlet property="btnEditarGuardar" destination="dCj-kq-dle" id="ET0-bn-PaR"/>
-                        <outlet property="tfFechaNacimiento" destination="zSG-Vb-9Ae" id="ho7-Ib-vnh"/>
+                        <outlet property="dateFechaNacimiento" destination="zSG-Vb-9Ae" id="ho7-Ib-vnh"/>
+                        <outlet property="segmentedSexo" destination="QW3-gS-R7d" id="g9Q-mw-Rvl"/>
                         <outlet property="tfNombre" destination="8iy-kx-2Tv" id="zpg-QK-fjk"/>
-                        <outlet property="tfSexo" destination="QW3-gS-R7d" id="g9Q-mw-Rvl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdV-Ln-wbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
