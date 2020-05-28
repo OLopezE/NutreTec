@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1104,7 +1104,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvJ-FY-LLg">
                                         <rect key="frame" x="281" y="97" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Jesus"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Jesus">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="oo6-Gm-xXU" kind="show" identifier="jesus" id="q2r-UN-2vD"/>
                                         </connections>
@@ -1141,6 +1145,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qpy-kb-F2Q"/>
                     <connections>
+                        <outlet property="btJesus" destination="AvJ-FY-LLg" id="BRt-1P-n15"/>
                         <outlet property="btnMariano" destination="o1H-X9-YQI" id="OCt-2R-ne5"/>
                         <outlet property="bttnOscar" destination="xsz-c8-sUc" id="FT4-5t-Qlf"/>
                     </connections>
@@ -2682,23 +2687,28 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9ck-M3-W7I"/>
+        <segue reference="2Hg-7D-wcQ"/>
+        <segue reference="BP4-3e-AyX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="agua" width="64" height="64"/>
         <image name="agua-2" width="64" height="64"/>
-        <image name="arrowtriangle.left.fill" catalog="system" width="64" height="56"/>
-        <image name="arrowtriangle.right.fill" catalog="system" width="64" height="56"/>
-        <image name="book.fill" catalog="system" width="64" height="50"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
         <image name="caramelo" width="128" height="128"/>
         <image name="caramelo-2" width="128" height="128"/>
         <image name="carne" width="128" height="128"/>
         <image name="carne-2" width="64" height="64"/>
         <image name="cereales" width="128" height="128"/>
         <image name="cereales-2" width="128" height="128"/>
-        <image name="chevron.left.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="chevron.right.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chicharos" width="128" height="128"/>
         <image name="chicharos-2" width="128" height="128"/>
-        <image name="doc.on.doc" catalog="system" width="58" height="64"/>
+        <image name="doc.on.doc" catalog="system" width="117" height="128"/>
         <image name="fruit" width="64" height="64"/>
         <image name="fruit-2" width="64" height="64"/>
         <image name="grasa" width="64" height="64"/>
@@ -2711,18 +2721,13 @@
         <image name="leche-2" width="64" height="64"/>
         <image name="nutreteclogotransparente" width="1280" height="1280"/>
         <image name="panamiguel" width="512" height="512"/>
-        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="personalhotspot" catalog="system" width="64" height="36"/>
-        <image name="rectangle.grid.1x2" catalog="system" width="64" height="50"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="personalhotspot" catalog="system" width="128" height="75"/>
+        <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
         <image name="red" width="256" height="256"/>
-        <image name="sunset.fill" catalog="system" width="64" height="48"/>
+        <image name="sunset.fill" catalog="system" width="128" height="97"/>
         <image name="vegetable" width="64" height="64"/>
         <image name="vegetable-2" width="64" height="64"/>
         <image name="yellow" width="880" height="920"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="9ck-M3-W7I"/>
-        <segue reference="2Hg-7D-wcQ"/>
-        <segue reference="BP4-3e-AyX"/>
-    </inferredMetricsTieBreakers>
 </document>
