@@ -34,7 +34,11 @@ class SemaforoViewController: UIViewController {
     @IBOutlet weak var lbGrasa: UILabel!
     @IBOutlet weak var lbGrasaS: UILabel!
     @IBOutlet weak var lbSal: UILabel!
-
+    @IBOutlet weak var lbAzucar1: UILabel!
+    @IBOutlet weak var lbGrasa1: UILabel!
+    @IBOutlet weak var lbGrasas1: UILabel!
+    @IBOutlet weak var lbSal1: UILabel!
+    
     
     
     var VerdeCentro : CGPoint!
@@ -75,6 +79,10 @@ class SemaforoViewController: UIViewController {
         lbGrasa.isHidden = true
         lbGrasaS.isHidden = true
         lbSal.isHidden = true
+        lbAzucar1.isHidden = true
+        lbSal1.isHidden = true
+        lbGrasa1.isHidden = true
+        lbGrasas1.isHidden = true
         view.backgroundColor = UIColor.white
         
     }
@@ -85,6 +93,10 @@ class SemaforoViewController: UIViewController {
         self.lbGrasa.isHidden = false
         self.lbGrasaS.isHidden = false
         self.lbSal.isHidden = false
+        lbAzucar1.isHidden = false
+        lbSal1.isHidden = false
+        lbGrasa1.isHidden = false
+        lbGrasas1.isHidden = false
     }
     
     @IBAction func clickRojo(_ sender: Any) {
@@ -99,10 +111,14 @@ class SemaforoViewController: UIViewController {
                 vwsep3.backgroundColor = colorRojo
                 ///labels
                 lbEs.text = "ALTO"
-                lbAzucar.text = "Azúcares\nmayor a 15g"
-                lbGrasa.text = "Grasa \nmayor a 20g"
-                lbGrasaS.text = "Grasas saturadas \nmayor a 5g"
-                lbSal.text = "Sal\n mayor a 1.5g"
+                lbAzucar.text = "Azúcar"
+                lbGrasa.text = "Grasa"
+                lbGrasaS.text = "Grasas saturadas"
+                lbSal.text = "Sal"
+                lbAzucar1.text = "mayor a 15g"
+                lbGrasa1.text = "mayor a 20g"
+                lbGrasas1.text = "mayor a 5g"
+                lbSal1.text = "mayor a 1.5g"
                 muestra()
                 tmp = false
             } else{
@@ -128,10 +144,14 @@ class SemaforoViewController: UIViewController {
                 vwsep3.backgroundColor = colorAmarillo
                 ///labels
                 lbEs.text = "REGULAR"
-                lbAzucar.text = "Azúcares\n5g - 15g"
-                lbGrasa.text = "Grasa\n3g - 20g"
-                lbGrasaS.text = "Grasas saturadas\n1.5g - 5g"
-                lbSal.text = "Sal\n0.3g - 1.5g"
+                lbAzucar.text = "Azúcares"
+                lbGrasa.text = "Grasa"
+                lbGrasaS.text = "Grasas saturadas"
+                lbSal.text = "Sal"
+                lbAzucar1.text = "5g - 15g"
+                lbGrasa1.text = "3g - 20g"
+                lbGrasas1.text = "1.5g - 5g"
+                lbSal1.text = "0.3g - 1.5g"
                 ///labels
                 muestra()
                 tmp = false
@@ -158,10 +178,14 @@ class SemaforoViewController: UIViewController {
                 vwsep3.backgroundColor = colorVerde
                 ///labels
                 lbEs.text = "BAJO"
-                lbAzucar.text = "Azucar\n5g o menos"
-                lbGrasa.text = "Grasa\n3g o menos"
-                lbGrasaS.text = "Grasas saturadas\n1.5g o menos"
-                lbSal.text = "Sal\n0.3g o menos"
+                lbAzucar.text = "Azucar"
+                lbGrasa.text = "Grasa"
+                lbGrasaS.text = "Grasas saturadas"
+                lbSal.text = "Sal"
+                lbAzucar1.text = "5g o menos"
+                lbGrasa1.text = "3g o menos"
+                lbGrasas1.text = "1.5g o menos"
+                lbSal1.text = "0.3g o menos"
                 ///labels
                 muestra()
                 tmp = false

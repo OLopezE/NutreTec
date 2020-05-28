@@ -12,6 +12,7 @@ class creditosViewController: UIViewController {
 
     @IBOutlet weak var bttnOscar: UIButton!
     @IBOutlet weak var btnMariano: UIButton!
+    @IBOutlet weak var btJesus: UIButton!
     
     override func viewDidLoad() {
         
@@ -19,6 +20,7 @@ class creditosViewController: UIViewController {
         
         bttnOscar.layer.cornerRadius = 10
         btnMariano.layer.cornerRadius = 10
+        btJesus.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }
@@ -40,6 +42,13 @@ class creditosViewController: UIViewController {
             vista.colorTexto = UIColor.white
             
         } else if segue.identifier == "jesus" {
+            vista.nombre = "Jesus Javier Lozano Martinez"
+            vista.info = "Correo: jesuslozanomar109@gmail.com"
+            vista.aprendi = "We've always defined ourself by the ability to overcome the impossible."
+            vista.imagen = UIImage(named: "astronaut-guy")
+            vista.colorPrincipal = UIColor(red: 0/255, green: 0/255, blue: 128/255, alpha: 1)
+            vista.colorSecundario = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1)
+            vista.colorTexto = UIColor.white
             
         } else if segue.identifier == "mariano" {
             vista.nombre = "Mariano García Alipi"
