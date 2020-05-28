@@ -24,7 +24,7 @@ class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
     // Los valores para la gráfica.
     var valores = [ChartDataEntry]()
     // valores2 y valores3 se usan si se deben graficar todas las métricas.
-    // (tipo == "general")
+    // (Cuando tipo == "general")
     var valores2 = [ChartDataEntry]()
     var valores3 = [ChartDataEntry]()
     // Arreglo de strings con fechas para usar en el eje x de la gráfica.
@@ -169,7 +169,7 @@ for reg in misRegistros {
             
         }
         
-        // Voltear el arreglo para que esté en orden cronológico.
+        // Voltear los arreglos para que estén en orden cronológico.
         valores.reverse()
         valores2.reverse()
         valores3.reverse()
@@ -203,6 +203,7 @@ for reg in misRegistros {
         return (j + 1, (jInicial <= misRegistros.count - 1) ? jInicial : misRegistros.count - 1)
     }
     
+    // Generar la gráfica.
     func setChartValues(tipo : String) {
 
         let data = LineChartData()
@@ -213,8 +214,7 @@ for reg in misRegistros {
             let label = tipo == "peso" ? "Peso (kg)" : (tipo == "masa") ? "Masa muscular (kg)" : (tipo == "grasa") ? "Porcentaje de grasa (%)" : ""
             
             let set1 = LineChartDataSet(entries: valores, label: label)
-
-            // self.chartView.data = data
+            
             data.addDataSet(set1)
         }
         
@@ -248,17 +248,22 @@ for reg in misRegistros {
             set2.colors = [colors2[0]]
             set2.circleColors = colors2
             
+            data.setValueTextColor(UIColor.black)
+            
             data.addDataSet(set1)
             data.addDataSet(set2)
             data.addDataSet(set3)
+            
         }
 
-        /*
-        self.chartView.xAxis.axisMinimum = -1
-        self.chartView.xAxis.axisMaximum = data.dataSets[0].xMax + 1
-         */
         self.chartView.xAxis.valueFormatter = self
+        self.chartView.xAxis.labelTextColor = UIColor.black
+        self.chartView.leftAxis.labelTextColor = UIColor.black
+        self.chartView.rightAxis.labelTextColor = UIColor.black
+        self.chartView.legend.textColor = UIColor.black
+
         self.chartView.data = data
+
 
     }
     

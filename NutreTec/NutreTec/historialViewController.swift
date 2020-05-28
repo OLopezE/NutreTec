@@ -115,6 +115,10 @@ class historialViewController: UIViewController {
         }
     }
     
+    @IBAction func hideKeyboardOnTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     //MARK: - Codable
     
     func dataFileURL() -> URL {
@@ -146,6 +150,9 @@ class historialViewController: UIViewController {
     
     // Botón guardar.
     @IBAction func guardar(_ sender: UIButton) {
+        
+        // Ocultar el teclado.
+        view.endEditing(true)
         
         // Ya se cargó o creó el registro de hoy en registroHoy.
         
