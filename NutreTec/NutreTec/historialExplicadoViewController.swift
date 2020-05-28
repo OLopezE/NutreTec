@@ -169,7 +169,7 @@ for reg in misRegistros {
             
         }
         
-        // Voltear el arreglo para que esté en orden cronológico.
+        // Voltear los arreglos para que estén en orden cronológico.
         valores.reverse()
         valores2.reverse()
         valores3.reverse()
@@ -258,6 +258,7 @@ for reg in misRegistros {
         self.chartView.xAxis.axisMaximum = data.dataSets[0].xMax + 1
          */
         self.chartView.xAxis.valueFormatter = self
+        self.chartView.xAxis.labelTextColor = UIColor(red: 52/255, green: 94/255, blue: 235/255, alpha: 1.0)
         self.chartView.data = data
 
     }
