@@ -11,9 +11,14 @@ import UIKit
 class creditosViewController: UIViewController {
 
     @IBOutlet weak var bttnOscar: UIButton!
+    @IBOutlet weak var btnMariano: UIButton!
+    
     override func viewDidLoad() {
-        bttnOscar.layer.cornerRadius = 10
+        
         super.viewDidLoad()
+        
+        bttnOscar.layer.cornerRadius = 10
+        btnMariano.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }
@@ -34,9 +39,16 @@ class creditosViewController: UIViewController {
             vista.colorSecundario = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
             vista.colorTexto = UIColor.white
             
-        }else if segue.identifier == "jesus"{
+        } else if segue.identifier == "jesus" {
             
-        }else if segue.identifier == "mariano"{
+        } else if segue.identifier == "mariano" {
+            vista.nombre = "Mariano García Alipi"
+            vista.info = "Correo:\nmarianoalipi@gmail.com\n\nGitHub:\ngithub.com/MarianoAlipi"
+            vista.aprendi = "El flujo del tiempo siempre es cruel."
+            vista.imagen = UIImage(named: "harp")
+            vista.colorPrincipal = UIColor(red: 80/255, green: 108/255, blue: 186/255, alpha: 1)
+            vista.colorSecundario = UIColor(red: 120/255, green: 147/255, blue: 222/255, alpha: 1)
+            vista.colorTexto = UIColor.white
             
         }
         // Get the new view controller using segue.destination.

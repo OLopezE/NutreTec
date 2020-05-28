@@ -1068,26 +1068,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://icons8.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM1-dt-CJG">
-                                        <rect key="frame" x="8" y="350" width="343" height="21"/>
+                                        <rect key="frame" x="8" y="348" width="343" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1H-X9-YQI">
-                                        <rect key="frame" x="151" y="97" width="56" height="31"/>
+                                        <rect key="frame" x="159" y="97" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Mariano"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Mariano">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="oo6-Gm-xXU" kind="show" identifier="jesus" id="BP4-3e-AyX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvJ-FY-LLg">
-                                        <rect key="frame" x="287" y="97" width="40" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Jesus"/>
-                                        <connections>
-                                            <segue destination="oo6-Gm-xXU" kind="show" identifier="mariano" id="q2r-UN-2vD"/>
+                                            <segue destination="oo6-Gm-xXU" kind="show" identifier="mariano" id="BP4-3e-AyX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsz-c8-sUc">
@@ -1105,6 +1101,21 @@
                                             <segue destination="oo6-Gm-xXU" kind="show" identifier="oscar" id="bcP-pf-gsp"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvJ-FY-LLg">
+                                        <rect key="frame" x="281" y="97" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Jesus"/>
+                                        <connections>
+                                            <segue destination="oo6-Gm-xXU" kind="show" identifier="jesus" id="q2r-UN-2vD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://www.deviantart.com/blueamnesiac" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="582-Ga-pJH">
+                                        <rect key="frame" x="8" y="368" width="272" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1130,6 +1141,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qpy-kb-F2Q"/>
                     <connections>
+                        <outlet property="btnMariano" destination="o1H-X9-YQI" id="OCt-2R-ne5"/>
                         <outlet property="bttnOscar" destination="xsz-c8-sUc" id="FT4-5t-Qlf"/>
                     </connections>
                 </viewController>
@@ -1157,20 +1169,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información de contacto(?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACi-V2-lvp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información de contacto(?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACi-V2-lvp">
                                                 <rect key="frame" x="10" y="49" width="354" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qué aprendi, qué hice." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCB-CW-pjG">
-                                                <rect key="frame" x="20" y="86.5" width="334" height="24"/>
+                                                <rect key="frame" x="20" y="147" width="334" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nro-2h-ZRZ">
-                                                <rect key="frame" x="112" y="150.5" width="150" height="150"/>
+                                                <rect key="frame" x="112" y="211" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="5dm-Hg-jaW"/>
                                                     <constraint firstAttribute="height" constant="150" id="TfT-Ws-Ut9"/>
@@ -1185,7 +1197,7 @@
                                             <constraint firstItem="lmr-of-7yl" firstAttribute="leading" secondItem="MHR-Su-5do" secondAttribute="leading" constant="10" id="FP4-3V-02X"/>
                                             <constraint firstItem="Nro-2h-ZRZ" firstAttribute="centerX" secondItem="MHR-Su-5do" secondAttribute="centerX" id="Jgd-zn-LCc"/>
                                             <constraint firstItem="qCB-CW-pjG" firstAttribute="leading" secondItem="MHR-Su-5do" secondAttribute="leading" constant="20" id="QmB-I7-QMk"/>
-                                            <constraint firstItem="qCB-CW-pjG" firstAttribute="top" secondItem="ACi-V2-lvp" secondAttribute="bottom" constant="10" id="YXv-nZ-dNe"/>
+                                            <constraint firstItem="qCB-CW-pjG" firstAttribute="top" secondItem="ACi-V2-lvp" secondAttribute="bottom" constant="70.5" id="YXv-nZ-dNe"/>
                                             <constraint firstAttribute="trailing" secondItem="qCB-CW-pjG" secondAttribute="trailing" constant="20" id="Yi6-0b-tYT"/>
                                             <constraint firstItem="ACi-V2-lvp" firstAttribute="top" secondItem="lmr-of-7yl" secondAttribute="bottom" constant="10" id="dKj-hA-nJa"/>
                                             <constraint firstAttribute="trailing" secondItem="ACi-V2-lvp" secondAttribute="trailing" constant="10" id="heX-pl-Id6"/>
