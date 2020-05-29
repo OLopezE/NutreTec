@@ -261,9 +261,8 @@ for reg in misRegistros {
         self.chartView.xAxis.labelTextColor = UIColor.black
         self.chartView.leftAxis.labelTextColor = UIColor.black
         self.chartView.xAxis.drawGridLinesEnabled = false
-        self.chartView.leftAxis.drawGridLinesEnabled = false
        
-
+        self.chartView.leftAxis.enabled = false
         self.chartView.rightAxis.enabled = false
         self.chartView.rightAxis.labelTextColor = UIColor.black
         self.chartView.legend.textColor = UIColor.black
