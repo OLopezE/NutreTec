@@ -39,7 +39,6 @@ class EquivalenteViewController: UIViewController {
         bttnCarnes.layer.cornerRadius = 10
         bttnVegetales.layer.cornerRadius = 10
         vwTitulo.layer.cornerRadius = 10
-        vwTitulo.backgroundColor = UIColor.white
         lblTitulo.textColor = UIColor.black
         // Do any additional setup after loading the view.
     }

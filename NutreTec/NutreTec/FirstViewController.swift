@@ -123,6 +123,8 @@ class FirstViewController: UIViewController {
     var colorTmp = UIColor.white
     var colorLetra = UIColor.black
     var mike = 0
+    var alerta = UIColor(red: 235/255, green: 63/255, blue: 52/255, alpha: 1)
+    var sigue = UIColor(red: 139/255, green: 211/255, blue: 126/255, alpha: 1)
     
     var metaCarne = UserDefaults.standard.integer(forKey: "carnes")
     var metaVegetales = UserDefaults.standard.integer(forKey: "vegetales")
@@ -368,7 +370,12 @@ class FirstViewController: UIViewController {
         vegetalesDataSet.selectionShift = 0
         vegetalesDataSet.drawValuesEnabled = false
         let vegetalChartData = PieChartData(dataSet: vegetalesDataSet)
-        let colorsveg = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        
+        var colorsveg = [UIColor.red.withAlphaComponent(0), sigue]
+        
+        if Int(lblVegetales.text!)! > Int(metaVegetales)  {
+            colorsveg = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         vegetalesDataSet.colors = colorsveg
         pieChartVerdura.data = vegetalChartData
         pieChartVerdura.holeRadiusPercent = 0.8
@@ -379,7 +386,10 @@ class FirstViewController: UIViewController {
         proteinaDataSet.selectionShift = 0
         proteinaDataSet.drawValuesEnabled = false
         let proteinaChartData = PieChartData(dataSet: proteinaDataSet)
-        let coloresprot = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        var coloresprot = [UIColor.red.withAlphaComponent(0), sigue]
+        if Int(lblCarne.text!)! > Int(metaCarne)  {
+            coloresprot = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         proteinaDataSet.colors = coloresprot
         pieChartProteina.data = proteinaChartData
         pieChartProteina.holeRadiusPercent = 0.8
@@ -390,7 +400,10 @@ class FirstViewController: UIViewController {
         azucarDataSet.selectionShift = 0
         azucarDataSet.drawValuesEnabled = false
         let AzucarChartData = PieChartData(dataSet: azucarDataSet)
-        let colorsAz = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        var colorsAz = [UIColor.red.withAlphaComponent(0), sigue]
+        if Int(lblAzucar.text!)! > Int(metaAzucar)  {
+            colorsAz = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         azucarDataSet.colors = colorsAz
         pieChartAzucar.data = AzucarChartData
         pieChartAzucar.holeRadiusPercent = 0.8
@@ -401,7 +414,10 @@ class FirstViewController: UIViewController {
         lacteosDataSet.selectionShift = 0
         lacteosDataSet.drawValuesEnabled = false
         let LacteosChartData = PieChartData(dataSet: lacteosDataSet)
-        let colorslac = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        var colorslac = [UIColor.red.withAlphaComponent(0),sigue]
+        if Int(lblLeche.text!)! > Int(metaLacteo)  {
+            colorslac = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         lacteosDataSet.colors = colorslac
         pieChartLacteos.data = LacteosChartData
         pieChartLacteos.holeRadiusPercent = 0.8
@@ -412,7 +428,10 @@ class FirstViewController: UIViewController {
         frutaDataSet.selectionShift = 0
         frutaDataSet.drawValuesEnabled = false
         let FrutaChartData = PieChartData(dataSet: frutaDataSet)
-        let colorsfrut = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        var colorsfrut = [UIColor.red.withAlphaComponent(0), sigue]
+        if Int(lblFrutas.text!)! > Int(metaFrutas)  {
+            colorsfrut = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         frutaDataSet.colors = colorsfrut
         pieChartFrutas.data = FrutaChartData
         pieChartFrutas.holeRadiusPercent = 0.8
@@ -423,7 +442,10 @@ class FirstViewController: UIViewController {
         leguminosasDataSet.selectionShift = 0
         leguminosasDataSet.drawValuesEnabled = false
         let LeguminosasChartData = PieChartData(dataSet: leguminosasDataSet)
-        let colorsleg = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        var colorsleg = [UIColor.red.withAlphaComponent(0), sigue]
+        if Int(lblLeguminosas.text!)! > Int(metaLeguminosas)  {
+            colorsleg = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         leguminosasDataSet.colors = colorsleg
         pieChartLeguminosas.data = LeguminosasChartData
         pieChartLeguminosas.holeRadiusPercent = 0.8
@@ -434,7 +456,10 @@ class FirstViewController: UIViewController {
         grasasDataSet.selectionShift = 0
         grasasDataSet.drawValuesEnabled = false
         let GrasasChartData = PieChartData(dataSet: grasasDataSet)
-        let colorsgras = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        var colorsgras = [UIColor.red.withAlphaComponent(0), sigue]
+        if Int(lblGrasas.text!)! > Int(metaGrasas)  {
+            colorsgras = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         grasasDataSet.colors = colorsgras
         pieChartGrasas.data = GrasasChartData
         pieChartGrasas.holeRadiusPercent = 0.8
@@ -445,7 +470,10 @@ class FirstViewController: UIViewController {
         cerealDataSet.selectionShift = 0
         cerealDataSet.drawValuesEnabled = false
         let CerealChartData = PieChartData(dataSet: cerealDataSet)
-        let colorscer = [UIColor.red.withAlphaComponent(0), UIColor.blue]
+        var colorscer = [UIColor.red.withAlphaComponent(0), sigue]
+        if Int(lblCereales.text!)! > Int(metaCereales)  {
+            colorscer = [UIColor.red.withAlphaComponent(0), alerta]
+        }
         cerealDataSet.colors = colorscer
         pieChartCereales.data = CerealChartData
         pieChartCereales.holeRadiusPercent = 0.8
