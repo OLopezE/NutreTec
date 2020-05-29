@@ -38,7 +38,7 @@ class creditosViewController: UIViewController {
         if segue.identifier == "oscar"{
             vista.nombre = "Oscar Francisco López Escobar"
             vista.info = "Correo: oscarfco1998@gmail.com"
-            vista.aprendi = "Aquellos que no entienden el verdadero dolor no pueden entender la verdadera paz"
+            vista.aprendi = "Dale clic 10 veces al logo de NutreTec en la pantalla de mi día"
             vista.imagen = UIImage(named: "logoakatsuki")
             vista.colorPrincipal = UIColor(red: 50/255, green: 50/255, blue: 50/255, alpha: 1)
             vista.colorSecundario = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
