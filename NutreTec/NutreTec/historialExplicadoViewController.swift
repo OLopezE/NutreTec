@@ -53,6 +53,7 @@ class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
         let pathArchivo = url.appendingPathComponent("registrosProgreso.plist")
 
         misRegistros.removeAll()
+        
         do {
             let data = try Data.init(contentsOf: pathArchivo)
             misRegistros = try PropertyListDecoder().decode([RegistroProgreso].self, from: data)
@@ -70,8 +71,11 @@ class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
         
 // DEBUGGING
 // Llenar de datos
-for z in 1..<21 {
-    let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(86400 * z))), peso: Double(z * 2), masaMuscular: Double(z * 3), porcentajeGrasa: Double(z * 4))
+let pesos = [67.2, 65.4, 66.1, 63.0, 61.8, 59.5, 61.2, 59.7, 57.2, 56.3, 57.2, 59.6, 56.2]
+let masas = [18.2, 18.7, 19.4, 20.1, 21.5, 24.5, 23.9, 20.4, 21.8, 20.3, 22.0, 21.3, 20.6]
+let grasas = [27.2, 26.3, 25.1, 23.9, 22.8, 23.6, 20.1, 18.4, 19.2, 20.7, 18.9, 18.2, 16.9]
+for z in 0..<13 {
+    let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(-1 * (86400 * 60) + 86400 * (z + 1) * 3))), peso: pesos[z], masaMuscular: masas[z], porcentajeGrasa: grasas[z])
     misRegistros.append(reg)
 }
 
