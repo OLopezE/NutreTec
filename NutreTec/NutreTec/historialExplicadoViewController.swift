@@ -68,23 +68,6 @@ class historialExplicadoViewController: UIViewController, IAxisValueFormatter {
         
         let dayDateFormatter = DateFormatter()
         dayDateFormatter.dateFormat = "dd"
-        
-// DEBUGGING
-// Llenar de datos
-let pesos = [67.2, 65.4, 66.1, 63.0, 61.8, 59.5, 61.2, 59.7, 57.2, 56.3, 57.2, 59.6, 56.2]
-let masas = [18.2, 18.7, 19.4, 20.1, 21.5, 24.5, 23.9, 20.4, 21.8, 20.3, 22.0, 21.3, 20.6]
-let grasas = [27.2, 26.3, 25.1, 23.9, 22.8, 23.6, 20.1, 18.4, 19.2, 20.7, 18.9, 18.2, 16.9]
-for z in 0..<13 {
-    let reg = RegistroProgreso(dia: dateFormatter.string(from: date.addingTimeInterval(TimeInterval(-1 * (86400 * 60) + 86400 * (z + 1) * 3))), peso: pesos[z], masaMuscular: masas[z], porcentajeGrasa: grasas[z])
-    misRegistros.append(reg)
-}
-
-var z = 0
-for reg in misRegistros {
-    print("\(z): \(reg.dia) - \(reg.peso), \(reg.masaMuscular), \(reg.porcentajeGrasa)")
-    z += 1
-}
-//
 
         // Generar máximo 5 puntos y empezar a buscar desde
         // el último elemento del arreglo misRegistros.
