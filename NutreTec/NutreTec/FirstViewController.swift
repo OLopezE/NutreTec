@@ -98,6 +98,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var vwFrutas: UIView!
     @IBOutlet weak var bttnNutretec: UIButton!
     @IBOutlet weak var elPana: UIImageView!
+    @IBOutlet weak var bttnMas: UIButton!
     
     
     @IBOutlet weak var lblCarne: UILabel!
