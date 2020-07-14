@@ -43,7 +43,7 @@ class creditosExplicadoViewController: UIViewController {
         lblNombre.textColor = colorTexto
         lblTitle.textColor = colorTexto
         vwFondo.backgroundColor = colorSecundario
-        vwFondo.layer.cornerRadius = 10
+        vwBody.layer.cornerRadius = 10
         vwTitle.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.

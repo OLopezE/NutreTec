@@ -22,6 +22,8 @@ class historialViewController: UIViewController {
     @IBOutlet weak var tfMasa: UITextField!
     @IBOutlet weak var tfGrasa: UITextField!
     
+    let screenSize: CGRect = UIScreen.main.bounds
+    
     var date = Date()
     var diaString : String!
     var peso = 0.0
@@ -37,6 +39,10 @@ class historialViewController: UIViewController {
         vwGrasa.layer.cornerRadius = 10
         bttnGeneral.layer.cornerRadius = 10
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil )
+        
         if #available(iOS 13.0, *){
             overrideUserInterfaceStyle = .light
         }
@@ -53,6 +59,7 @@ class historialViewController: UIViewController {
             obtenerRegistros()
         }
         
+
         buscaDia()
 
         // Si no se encontró un registro de hoy,
@@ -62,7 +69,9 @@ class historialViewController: UIViewController {
         tfGrasa.text = grasa == 0 ? "" : "\(grasa)"
         
     }
-    
+    deinit{
+        NotificationCenter.default.removeObserver(self)
+    }
 
     
     // MARK: - Navigation
@@ -87,6 +96,29 @@ class historialViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+    
+    @objc func keyboardWillChange(notification: Notification){
+           guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]as? NSValue)?.cgRectValue else {
+               return
+           }
+           if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
+            if screenSize.height < 800{
+                view.frame.origin.y = -keyboardRect.height * 15/24
+                
+            }else {
+                view.frame.origin.y = -keyboardRect.height * 1/2
+
+            }
+           }else{
+               view.frame.origin.y = 0
+
+           }
+           
+           
+
+           
+       }
+       
     
     // Regresa la fecha de hoy en el formato especificado.
     func obtenDia() -> String {
@@ -209,6 +241,10 @@ class historialViewController: UIViewController {
         // Guardar el archivo de registros.
         guardarRegistros()
         
+        //registros los regresa a 0
+        let alert = UIAlertController(title: "Bien hecho", message: "Se han dado de alta los datos de la cita de hoy", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
 }

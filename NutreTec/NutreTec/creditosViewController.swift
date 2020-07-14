@@ -13,6 +13,8 @@ class creditosViewController: UIViewController {
     @IBOutlet weak var bttnOscar: UIButton!
     @IBOutlet weak var btnMariano: UIButton!
     @IBOutlet weak var btJesus: UIButton!
+    @IBOutlet weak var lblCreditos: UILabel!
+    
     
     override func viewDidLoad() {
         
@@ -20,6 +22,9 @@ class creditosViewController: UIViewController {
         if #available(iOS 13.0, *){
             overrideUserInterfaceStyle = .light
         }
+        
+        lblCreditos.text = "NutreTec ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Febrero Junio de 2020, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.\n Icono: proteina (“Icon made by iconixar from www.flaticon.com”) \nIcono: mango (“Icon made by Icongeek26 from www.flaticon.com”)\nIcono: brocoli (“Icon made by Icongeek26 from www.flaticon.com”)\nIcono: agua (“Icon made by photo3idea_studio from www.flaticon.com”)\nIcono: caramelo (“Icon made by Freepik from www.flaticon.com”)\nIcono: leche (“Icon made by Freepik from www.flaticon.com”)\nIcono: grasa/peanut butter (“Icon made by Nhor Phai from www.flaticon.com”)\nIcono: cereal (“Icon made by Freepik from www.flaticon.com”)\nIcono: chicharos (“Icon made by Freepik from www.flaticon.com”)\n https://www.deviantart.com/blueamnesiac\n NutreTec se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.\n"
+  
         
         bttnOscar.layer.cornerRadius = 10
         btnMariano.layer.cornerRadius = 10
@@ -39,9 +44,9 @@ class creditosViewController: UIViewController {
             vista.nombre = "Oscar Francisco López Escobar"
             vista.info = "Correo: oscarfco1998@gmail.com"
             vista.aprendi = "Dale clic 10 veces al logo de NutreTec en la pantalla de mi día"
-            vista.imagen = UIImage(named: "logoakatsuki")
-            vista.colorPrincipal = UIColor(red: 50/255, green: 50/255, blue: 50/255, alpha: 1)
-            vista.colorSecundario = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
+            vista.imagen = UIImage(named: "COOLSODA2")
+            vista.colorPrincipal = UIColor(red: 160/255, green: 123/255, blue: 195/255, alpha: 1)
+            vista.colorSecundario = UIColor(red: 174/255, green: 215/255, blue: 108/255, alpha: 1)
             vista.colorTexto = UIColor.white
             
         } else if segue.identifier == "jesus" {

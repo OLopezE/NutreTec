@@ -192,7 +192,7 @@ class FirstViewController: UIViewController {
             mike = 0
         }else{
             elPana.isHidden = true
-            
+
         }
     }
     
@@ -250,6 +250,7 @@ class FirstViewController: UIViewController {
                 lblVegetales.text = String(n.vegetal)
                 lblLeguminosas.text = String(n.leguminosa)
                 tmp = 1
+                print(n.cereales)
                 //MARK:-PIE CHARTS PARTE 2
                 //Vegetal
                 maxV = Double(metaVegetales)
@@ -525,6 +526,8 @@ class FirstViewController: UIViewController {
                             }
                         }
                         buscaDia()
+                        guardarDias()
+                        break
                     }
                 }
                 
@@ -549,6 +552,8 @@ class FirstViewController: UIViewController {
                             }
                         }
                         buscaDia()
+                        guardarDias()
+                        break
                     }
                 }
                 
@@ -572,6 +577,8 @@ class FirstViewController: UIViewController {
                             }
                         }
                         buscaDia()
+                        guardarDias()
+                        break
                     }
                 }
             }
@@ -594,6 +601,8 @@ class FirstViewController: UIViewController {
                             }
                         }
                         buscaDia()
+                        guardarDias()
+                        break
                     }
                 }
                 
@@ -617,6 +626,8 @@ class FirstViewController: UIViewController {
                             }
                         }
                         buscaDia()
+                        guardarDias()
+                        break
                     }
                 }
                 
@@ -640,6 +651,8 @@ class FirstViewController: UIViewController {
                             }
                         }
                         buscaDia()
+                        guardarDias()
+                        break
                     }
                 }
                 
@@ -653,6 +666,8 @@ class FirstViewController: UIViewController {
                     if f.dia == fecha.text!{
                         f.agua += n * 250
                         buscaDia()
+                        guardarDias()
+                        break
                     }
                 }
                 
