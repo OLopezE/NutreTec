@@ -7,29 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004F082724790B5A0093FF77 /* midiaExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F082624790B5A0093FF77 /* midiaExplicadoViewController.swift */; };
-		004F0829247A56290093FF77 /* recetarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F0828247A56290093FF77 /* recetarioViewController.swift */; };
-		008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D8532246E36A900FB2A60 /* historialViewController.swift */; };
-		00AC4522247F029300B24BA6 /* creditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4521247F029300B24BA6 /* creditosViewController.swift */; };
-		00AC4524247F03C100B24BA6 /* creditosExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4523247F03C100B24BA6 /* creditosExplicadoViewController.swift */; };
-		00AC4526247F359500B24BA6 /* navegacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC4525247F359400B24BA6 /* navegacionViewController.swift */; };
-		00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8D92468D61B005185E4 /* navigationTableViewController.swift */; };
-		00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DB24693178005185E4 /* EquivalenteViewController.swift */; };
-		00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C8DD24693840005185E4 /* EquivalenteExplicadoViewController.swift */; };
-		00FA65662472D5E400D8BB67 /* historialExplicadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FA65652472D5E400D8BB67 /* historialExplicadoViewController.swift */; };
-		00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3042450FDAE00AF31C4 /* AppDelegate.swift */; };
-		00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3062450FDAE00AF31C4 /* SceneDelegate.swift */; };
-		00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3082450FDAE00AF31C4 /* FirstViewController.swift */; };
-		00FED30B2450FDAE00AF31C4 /* MiPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED30A2450FDAE00AF31C4 /* MiPlanViewController.swift */; };
 		00FED30E2450FDAE00AF31C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED30C2450FDAE00AF31C4 /* Main.storyboard */; };
 		00FED3102450FDB300AF31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FED30F2450FDB300AF31C4 /* Assets.xcassets */; };
 		00FED3132450FDB300AF31C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED3112450FDB300AF31C4 /* LaunchScreen.storyboard */; };
-		00FED31B24515AD900AF31C4 /* dias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED31A24515AD900AF31C4 /* dias.swift */; };
-		052ABBA9246D90ED0051CBC8 /* MiPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052ABBA8246D90ED0051CBC8 /* MiPerfilViewController.swift */; };
-		056D165C2476C73000B57B3F /* Pods_NutreTec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90A80D37D22B850C8E5A78 /* Pods_NutreTec.framework */; };
 		056D165D2476C73000B57B3F /* Pods_NutreTec.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE90A80D37D22B850C8E5A78 /* Pods_NutreTec.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		056D1663247B53E900B57B3F /* RegistroProgreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D1662247B53E900B57B3F /* RegistroProgreso.swift */; };
-		773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AB8282451516F0025101D /* SemaforoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,17 +55,6 @@
 		87B13E23A8A9B5C7F426BEE3 /* Pods-NutreTec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutreTec.debug.xcconfig"; path = "Target Support Files/Pods-NutreTec/Pods-NutreTec.debug.xcconfig"; sourceTree = "<group>"; };
 		BE90A80D37D22B850C8E5A78 /* Pods_NutreTec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutreTec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		00FED2FE2450FDAE00AF31C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				056D165C2476C73000B57B3F /* Pods_NutreTec.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		00FED2F82450FDAE00AF31C4 = {
@@ -159,8 +129,6 @@
 			buildConfigurationList = 00FED3172450FDB300AF31C4 /* Build configuration list for PBXNativeTarget "NutreTec" */;
 			buildPhases = (
 				603BB5D435647ADAB503E9B7 /* [CP] Check Pods Manifest.lock */,
-				00FED2FD2450FDAE00AF31C4 /* Sources */,
-				00FED2FE2450FDAE00AF31C4 /* Frameworks */,
 				00FED2FF2450FDAE00AF31C4 /* Resources */,
 				8D68756B1D92B34F2800D5E1 /* [CP] Embed Pods Frameworks */,
 				056D165E2476C73000B57B3F /* Embed Frameworks */,
@@ -261,34 +229,6 @@
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		00FED2FD2450FDAE00AF31C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00FA65662472D5E400D8BB67 /* historialExplicadoViewController.swift in Sources */,
-				004F082724790B5A0093FF77 /* midiaExplicadoViewController.swift in Sources */,
-				052ABBA9246D90ED0051CBC8 /* MiPerfilViewController.swift in Sources */,
-				00AC4522247F029300B24BA6 /* creditosViewController.swift in Sources */,
-				004F0829247A56290093FF77 /* recetarioViewController.swift in Sources */,
-				008D8533246E36A900FB2A60 /* historialViewController.swift in Sources */,
-				00FED30B2450FDAE00AF31C4 /* MiPlanViewController.swift in Sources */,
-				00FED3092450FDAE00AF31C4 /* FirstViewController.swift in Sources */,
-				00AC4524247F03C100B24BA6 /* creditosExplicadoViewController.swift in Sources */,
-				00FED3052450FDAE00AF31C4 /* AppDelegate.swift in Sources */,
-				00E6C8DE24693840005185E4 /* EquivalenteExplicadoViewController.swift in Sources */,
-				056D1663247B53E900B57B3F /* RegistroProgreso.swift in Sources */,
-				773AB8292451516F0025101D /* SemaforoViewController.swift in Sources */,
-				00E6C8DC24693178005185E4 /* EquivalenteViewController.swift in Sources */,
-				00FED31B24515AD900AF31C4 /* dias.swift in Sources */,
-				00AC4526247F359500B24BA6 /* navegacionViewController.swift in Sources */,
-				00E6C8DA2468D61B005185E4 /* navigationTableViewController.swift in Sources */,
-				00FED3072450FDAE00AF31C4 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
 		00FED30C2450FDAE00AF31C4 /* Main.storyboard */ = {
